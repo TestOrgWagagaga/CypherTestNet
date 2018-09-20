@@ -1,1 +1,2 @@
-go-cypherium/make cypher
+cd ../go-cypherium
+make cypher
