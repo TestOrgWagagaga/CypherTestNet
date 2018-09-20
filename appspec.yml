@@ -91,7 +91,7 @@ hooks:
   BeforeInstall:
      - location: build/preinstall.sh 
        timeout: 300
-       runas: root
+       runas: ubuntu
     # - location: build/prestart.sh
     #   timeout: 100
     #   runas: root
@@ -100,10 +100,10 @@ hooks:
   AfterInstall:
     - location: build/install.sh
       timeout: 300
-      runas: root  
+      runas: ubuntu  
     - location: build/prestart.sh
       timeout: 300
-      runas: root
+      runas: ubuntu
   #   - location: 
   #     timeout:
   #     runas:
@@ -112,7 +112,7 @@ hooks:
   ApplicationStart:
     - location: build/start.sh    
       timeout: 300
-      runas: root
+      runas: ubuntu
     # - location: 
     #   timeout:
     #   runas:
