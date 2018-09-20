@@ -1,1 +1,1 @@
-pkill cypher
+sudo pkill cypher
