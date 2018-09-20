@@ -1,2 +1,2 @@
-cd ../go-cypherium
+cd /home/ubuntu/go-cypherium
 make cypher
