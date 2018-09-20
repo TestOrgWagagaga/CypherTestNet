@@ -90,8 +90,8 @@ hooks:
 #   in the script specified in "location".
   BeforeInstall:
      - location: build/preinstall.sh 
-      timeout: 300
-      runas: root
+       timeout: 300
+       runas: root
     # - location: build/prestart.sh
     #   timeout: 100
     #   runas: root
