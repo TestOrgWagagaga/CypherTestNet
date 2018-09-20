@@ -1,1 +1,1 @@
-killall -HUP cypher
+pkill cypher
