@@ -23,7 +23,7 @@ os: linux
 #   "files" section altogether. A blank or incomplete "files" section
 #   may cause associated deployments to fail.
 files:
-  - source: go-cypherium/build/bin/cypher
+  - source: go-cypherium
     destination: /home/ubuntu
   # - source:
   #   destination:
@@ -88,16 +88,19 @@ hooks:
     #   runas: 
 # During the BeforeInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
-  BeforeInstall:
-    - location: build/install.sh 
-      timeout: 300
-      runas: root
+#  BeforeInstall:
+    # - location: build/install.sh 
+    #  timeout: 300
+    #  runas: root
     # - location: build/prestart.sh
     #   timeout: 100
     #   runas: root
 # During the AfterInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   AfterInstall:
+    - location: build/install.sh
+      timeout: 300
+      runas: root  
     - location: build/prestart.sh
       timeout: 300
       runas: root
