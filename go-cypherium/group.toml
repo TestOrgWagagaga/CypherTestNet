@@ -8,3 +8,15 @@
   Suite = "Ed25519"
   Public = "344b6a0ca2117e5606541ed41e478b77e0207138cb83f213c470e7f76994f45c"
   Description = "cnode1"
+  
+  
+[[servers]]
+  Address = "tcp://35.161.248.222:6000"
+  Suite = "Ed25519"
+  Public = "550918c382634f21d4e5e36685120cd6df2389cd5bf0cbeb36253d766efd7e76"
+  Description = "cnode8"  
+[[servers]]
+  Address = "tcp://18.236.245.89:6000"
+  Suite = "Ed25519"
+  Public = "1f8176981ea084657d6295636889933c72be3b7055aa37ed50c44b16795f8e0d"
+  Description = "cnode9"
