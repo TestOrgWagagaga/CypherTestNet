@@ -24,7 +24,7 @@ os: linux
 #   may cause associated deployments to fail.
 files:
   - source: go-cypherium
-    destination: /home/ubuntu
+    destination: /home/ubuntu/go-cypherium
   # - source:
   #   destination:
 # For deployments to Amazon Linux, Ubuntu Server, or RHEL instances,
