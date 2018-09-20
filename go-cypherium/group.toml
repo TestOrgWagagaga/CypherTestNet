@@ -1,0 +1,50 @@
+[[servers]]
+  Address = "tcp://34.221.81.22:6000"
+  Suite = "Ed25519"
+  Public = "1e78336ff4faeed90f2488a3e5d72c640b40e6ec8facd5839532fd2d9ebbcace"
+  Description = "cnode0"
+[[servers]]
+  Address = "tcp://34.220.144.160:6000"
+  Suite = "Ed25519"
+  Public = "26144917e57bb2df71cfddebc4e302fdbf74a0be2bcce723f92e7b579770bba0"
+  Description = "cnode1"
+[[servers]]
+  Address = "tcp://54.212.212.157:6000"
+  Suite = "Ed25519"
+  Public = "da3af1d21537f3a56d19c645266333ab3069335f27a958190179a61634666ccb"
+  Description = "cnode2"
+[[servers]]
+  Address = "tcp://35.166.42.127:6000"
+  Suite = "Ed25519"
+  Public = "964829a52172d3489588636aef26717c768a41b83cdf90ab3229757ee67afc4a"
+  Description = "cnode3"
+[[servers]]
+  Address = "tcp://18.237.192.10:6000"
+  Suite = "Ed25519"
+  Public = "0b555ff4a98438d44dad4ed315018dc3be4aab283cea0edd64163a9ac43b1188"
+  Description = "cnode4"
+[[servers]]
+  Address = "tcp://34.222.251.182:6000"
+  Suite = "Ed25519"
+  Public = "1098ae92e904422b34df293e5757245e1e156900cda46b3182bfea2a57e369f9"
+  Description = "cnode5"
+[[servers]]
+  Address = "tcp://34.219.251.163:6000"
+  Suite = "Ed25519"
+  Public = "b227e05c80108ee57516043df553274c5f7919436f267cd15351d4e3aded8d90"
+  Description = "cnode6"
+[[servers]]
+  Address = "tcp://34.209.115.217:6000"
+  Suite = "Ed25519"
+  Public = "2ed8fc9152b709296a45b772e9152ca9aea7e89a36e99d8aabb4b8319bc1c695"
+  Description = "cnode7"
+[[servers]]
+  Address = "tcp://54.213.165.86:6000"
+  Suite = "Ed25519"
+  Public = "c09be8b91d37ce78cc9ff0e854e40cefd3c89bbd45d7e000672482d974cb96f3"
+  Description = "cnode8"
+[[servers]]
+  Address = "tcp://34.210.39.137:6000"
+  Suite = "Ed25519"
+  Public = "3f631832aa69812f7b16456f6e0eb1d2f5c8e1163fbe5968319d3fbd56e66a89"
+  Description = "cnode9"

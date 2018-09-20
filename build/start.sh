@@ -1,0 +1,1 @@
+~/cypher --onetdebug 1 --onetdir ~/ipaddr/private.toml --publickeydir ~/group.toml --datadir ~/cypher_db --networkid 123666 --port 7000 --rpcport 8000 --verbosity 4 --rpc --rpccorsdomain "*" --rpcaddr 0.0.0.0 --rpcapi eth,web3,personal --nodiscover 2>$co/output.log &

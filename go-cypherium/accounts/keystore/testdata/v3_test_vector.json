@@ -1,0 +1,50 @@
+{
+    "wikipage_test_vector_scrypt": {
+        "json": {
+            "crypto":{
+                "cipher":"aes-128-ctr",
+                "ciphertext":"cc786fa47b0ca9d0834d3b81aff837e78476b1b8553709590f7f5169c3fe2c654e3a029a2fe6af89718a09e49a0d3b169a6b0642b303e577380f0e528e578f67",
+                "cipherparams":{
+                    "iv":"af8299369133caeb0ee1ea048298e511"
+                },
+                "kdf":"scrypt",
+                "kdfparams":{
+                    "dklen":32,
+                    "n":2,
+                    "p":1,
+                    "r":8,
+                    "salt":"2ac2bda8fa8ffad9481ef73bd0de9765ce907b850d450ad135d6763a5b6e157a"
+                },
+                "mac":"035b348303dcc62ac5e35213dce04a6ceb406cc64acdeab41814d14e0e80fb91"
+            },
+            "id":"5f157fb2-399a-4c3d-914e-d9443a2ede11",
+            "version":3
+        },
+        "password": "foo",
+        "priv": "9e305d2f41e194c0664daa00e604fe1294eb864f3b696bc3a137b361b8a3a4bb111230ef7251c6e39daf331ed12101e838a7b8e56cb7cb1a11781c0b05392e50"
+    },
+    "wikipage_test_vector_pbkdf2": {
+        "json": {
+            "crypto":{
+                "cipher":"aes-128-ctr",
+                "ciphertext":"e9296962927bd55f7e5f392e08b0b7f8d4e58db232b947689eb2efc64000796c78a8910f1194ff672186b615f6beb2b96ccbb2eb2bac53852a607a0a3fc1c3a2",
+                "cipherparams":{
+                    "iv":"5af87428fd6383d0e8ec139fddd4cac2"
+                },
+                "kdf":"scrypt",
+                "kdfparams":{
+                    "dklen":32,
+                    "n":2,
+                    "p":1,
+                    "r":8,
+                    "salt":"8d2edb92778061731c88d8bf64bb86a37f93c31b409fc7fc83cb91348032eaaa"
+                },
+                "mac":"71420e00175a0a772629682dd25fa16467a7753bf6666ddd6dd900af019771d4"
+            },
+            "id":"a5df36b4-ad86-496b-bad4-7b717973aabf",
+            "version":3
+        },
+        "password": "foo",
+        "priv": "79e7460926ca137a5388f905c0c4819fe9064931b7c82edab81e7672f26200baf7f4b3dc32f447a734dcf92e41cf9d5b12f48a5fe140c1374e69b75e3062b3e4"
+    }
+}
