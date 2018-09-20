@@ -1,2 +1,2 @@
-rm -rf ~/cypher_db
-~/cypher --datadir ~/cypher_db init ~/genesis.json
+rm -rf /home/ubuntu/cypher_db
+/home/ubuntu/cypher --datadir /home/ubuntu/cypher_db init /home/ubuntu/genesis.json
