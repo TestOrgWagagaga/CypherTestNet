@@ -8,7 +8,7 @@ sudo ln -s /usr/lib/go-1.10/bin/go /usr/bin/go
 sudo rm -rf /home/ubuntu/go-cypherium
 sudo rm -rf /home/ubuntu/genesis.json
 sudo rm -rf /home/ubuntu/group.toml
-sudo rm -rf /home/ubuntu/cypher_db
+sudo rm -rf /home/ubuntu/cypher_db/cypher
 sudo rm -rf /home/ubuntu/cypher
 
 mkdir /home/ubuntu/go-cypherium
