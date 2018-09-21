@@ -1,5 +1,5 @@
 # CypherTestNet
 #TODO
 1.Test CVM
-2.setup bootnodes
+2.Setup bootnodes
 3.
