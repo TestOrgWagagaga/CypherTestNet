@@ -10,5 +10,6 @@ sudo rm -rf /home/ubuntu/genesis.json
 sudo rm -rf /home/ubuntu/group.toml
 sudo rm -rf /home/ubuntu/cypher_db/cypher
 sudo rm -rf /home/ubuntu/cypher
+sudo rm -rf /home/ubuntu/jdk
 
 mkdir /home/ubuntu/go-cypherium
