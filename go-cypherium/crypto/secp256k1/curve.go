@@ -36,7 +36,7 @@ import (
 	"math/big"
 	"unsafe"
 
-	"github.com/cypherium_private/go-cypherium/common/math"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/math"
 )
 
 /*

@@ -5,8 +5,8 @@ import (
 	"io/ioutil"
 	"strings"
 
-	"github.com/cypherium_private/go-cypherium/accounts/keystore"
-	"github.com/cypherium_private/go-cypherium/cmd/utils"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/keystore"
+	"github.com/cypherium/CypherTestNet/go-cypherium/cmd/utils"
 	"gopkg.in/urfave/cli.v1"
 )
 

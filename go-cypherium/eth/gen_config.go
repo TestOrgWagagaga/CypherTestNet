@@ -5,12 +5,12 @@ package eth
 import (
 	"math/big"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/common/hexutil"
-	"github.com/cypherium_private/go-cypherium/consensus/ethash"
-	"github.com/cypherium_private/go-cypherium/core"
-	"github.com/cypherium_private/go-cypherium/eth/downloader"
-	"github.com/cypherium_private/go-cypherium/eth/gasprice"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/hexutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/consensus/ethash"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core"
+	"github.com/cypherium/CypherTestNet/go-cypherium/eth/downloader"
+	"github.com/cypherium/CypherTestNet/go-cypherium/eth/gasprice"
 )
 
 var _ = (*configMarshaling)(nil)

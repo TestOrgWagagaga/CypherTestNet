@@ -28,8 +28,8 @@ import (
 	"strings"
 
 	"github.com/docker/docker/pkg/reexec"
-	"github.com/cypherium_private/go-cypherium/node"
-	"github.com/cypherium_private/go-cypherium/p2p/discover"
+	"github.com/cypherium/CypherTestNet/go-cypherium/node"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/discover"
 )
 
 var (

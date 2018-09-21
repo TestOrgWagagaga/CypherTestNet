@@ -25,15 +25,15 @@ import (
 	"sync/atomic"
 	"time"
 
-	ethereum "github.com/cypherium_private/go-cypherium"
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/core/rawdb"
-	"github.com/cypherium_private/go-cypherium/core/types"
-	"github.com/cypherium_private/go-cypherium/ethdb"
-	"github.com/cypherium_private/go-cypherium/event"
-	"github.com/cypherium_private/go-cypherium/log"
-	"github.com/cypherium_private/go-cypherium/metrics"
-	"github.com/cypherium_private/go-cypherium/params"
+	ethereum "github.com/cypherium/CypherTestNet/go-cypherium"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/rawdb"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/ethdb"
+	"github.com/cypherium/CypherTestNet/go-cypherium/event"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/metrics"
+	"github.com/cypherium/CypherTestNet/go-cypherium/params"
 )
 
 var (

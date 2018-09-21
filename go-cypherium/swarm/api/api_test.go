@@ -26,10 +26,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/core/types"
-	"github.com/cypherium_private/go-cypherium/swarm/log"
-	"github.com/cypherium_private/go-cypherium/swarm/storage"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/storage"
 )
 
 func testAPI(t *testing.T, f func(*API, bool)) {

@@ -25,15 +25,15 @@ import (
 	"math/big"
 	"reflect"
 
-	"github.com/cypherium_private/go-cypherium/accounts"
-	"github.com/cypherium_private/go-cypherium/accounts/keystore"
-	"github.com/cypherium_private/go-cypherium/accounts/usbwallet"
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/common/hexutil"
-	"github.com/cypherium_private/go-cypherium/crypto"
-	"github.com/cypherium_private/go-cypherium/internal/ethapi"
-	"github.com/cypherium_private/go-cypherium/log"
-	"github.com/cypherium_private/go-cypherium/rlp"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/keystore"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/usbwallet"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/hexutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/internal/ethapi"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rlp"
 )
 
 // ExternalAPI defines the external API through which signing requests are made.
@@ -374,7 +374,7 @@ func (api *SignerAPI) SignTransaction(ctx context.Context, args SendTxArgs, meth
 //
 // The key used to calculate the signature is decrypted with the given password.
 //
-// https://github.com/cypherium_private/go-cypherium/wiki/Management-APIs#personal_sign
+// https://github.com/cypherium/CypherTestNet/go-cypherium/wiki/Management-APIs#personal_sign
 func (api *SignerAPI) Sign(ctx context.Context, addr common.MixedcaseAddress, data hexutil.Bytes) (hexutil.Bytes, error) {
 	sighash, msg := SignHash(data)
 	// We make the request prior to looking up if we actually have the account, to prevent
@@ -413,7 +413,7 @@ func (api *SignerAPI) Sign(ctx context.Context, addr common.MixedcaseAddress, da
 // Note, the signature must conform to the secp256k1 curve R, S and V values, where
 // the V value must be be 27 or 28 for legacy reasons.
 //
-// https://github.com/cypherium_private/go-cypherium/wiki/Management-APIs#personal_ecRecover
+// https://github.com/cypherium/CypherTestNet/go-cypherium/wiki/Management-APIs#personal_ecRecover
 func (api *SignerAPI) EcRecover(ctx context.Context, data, sig hexutil.Bytes) (common.Address, error) {
 	if len(sig) != 65 {
 		return common.Address{}, fmt.Errorf("signature must be 65 bytes long")

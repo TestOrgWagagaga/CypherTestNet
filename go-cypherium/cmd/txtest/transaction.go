@@ -19,10 +19,10 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/common/hexutil"
-	"github.com/cypherium_private/go-cypherium/core/types"
-	"github.com/cypherium_private/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/hexutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
 	"golang.org/x/crypto/ed25519"
 )
 

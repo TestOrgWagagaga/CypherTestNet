@@ -23,9 +23,9 @@ import (
 	mrand "math/rand"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/common/hexutil"
-	"github.com/cypherium_private/go-cypherium/crypto"
-	"github.com/cypherium_private/go-cypherium/rlp"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/hexutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rlp"
 )
 
 func generateMessageParams() (*MessageParams, error) {

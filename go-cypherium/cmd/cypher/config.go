@@ -27,12 +27,12 @@ import (
 
 	cli "gopkg.in/urfave/cli.v1"
 
-	"github.com/cypherium_private/go-cypherium/cmd/utils"
-	"github.com/cypherium_private/go-cypherium/dashboard"
-	"github.com/cypherium_private/go-cypherium/eth"
-	"github.com/cypherium_private/go-cypherium/node"
-	"github.com/cypherium_private/go-cypherium/params"
-	whisper "github.com/cypherium_private/go-cypherium/whisper/whisperv6"
+	"github.com/cypherium/CypherTestNet/go-cypherium/cmd/utils"
+	"github.com/cypherium/CypherTestNet/go-cypherium/dashboard"
+	"github.com/cypherium/CypherTestNet/go-cypherium/eth"
+	"github.com/cypherium/CypherTestNet/go-cypherium/node"
+	"github.com/cypherium/CypherTestNet/go-cypherium/params"
+	whisper "github.com/cypherium/CypherTestNet/go-cypherium/whisper/whisperv6"
 	"github.com/naoina/toml"
 )
 

@@ -19,10 +19,10 @@ package core
 import (
 	"math/big"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/consensus"
-	"github.com/cypherium_private/go-cypherium/core/types"
-	"github.com/cypherium_private/go-cypherium/core/vm"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/consensus"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/vm"
 )
 
 // ChainContext supports retrieving headers and consensus parameters from the

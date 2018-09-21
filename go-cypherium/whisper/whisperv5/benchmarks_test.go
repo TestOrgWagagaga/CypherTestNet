@@ -19,7 +19,7 @@ package whisperv5
 import (
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
 )
 
 func BenchmarkDeriveKeyMaterial(b *testing.B) {

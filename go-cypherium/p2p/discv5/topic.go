@@ -23,8 +23,8 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/common/mclock"
-	"github.com/cypherium_private/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/mclock"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 )
 
 const (

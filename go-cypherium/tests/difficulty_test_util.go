@@ -20,11 +20,11 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/common/math"
-	"github.com/cypherium_private/go-cypherium/consensus/ethash"
-	"github.com/cypherium_private/go-cypherium/core/types"
-	"github.com/cypherium_private/go-cypherium/params"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/math"
+	"github.com/cypherium/CypherTestNet/go-cypherium/consensus/ethash"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/params"
 )
 
 //go:generate gencodec -type DifficultyTest -field-override difficultyTestMarshaling -out gen_difficultytest.go

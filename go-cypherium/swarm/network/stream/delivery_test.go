@@ -26,15 +26,15 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/p2p/discover"
-	"github.com/cypherium_private/go-cypherium/p2p/simulations"
-	p2ptest "github.com/cypherium_private/go-cypherium/p2p/testing"
-	"github.com/cypherium_private/go-cypherium/rpc"
-	"github.com/cypherium_private/go-cypherium/swarm/log"
-	"github.com/cypherium_private/go-cypherium/swarm/network"
-	streamTesting "github.com/cypherium_private/go-cypherium/swarm/network/stream/testing"
-	"github.com/cypherium_private/go-cypherium/swarm/storage"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/discover"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/simulations"
+	p2ptest "github.com/cypherium/CypherTestNet/go-cypherium/p2p/testing"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/network"
+	streamTesting "github.com/cypherium/CypherTestNet/go-cypherium/swarm/network/stream/testing"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/storage"
 )
 
 func TestStreamerRetrieveRequest(t *testing.T) {

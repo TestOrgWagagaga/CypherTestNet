@@ -25,13 +25,13 @@ import (
 	"sync"
 	"time"
 
-	ethereum "github.com/cypherium_private/go-cypherium"
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/common/hexutil"
-	"github.com/cypherium_private/go-cypherium/core/types"
-	"github.com/cypherium_private/go-cypherium/ethdb"
-	"github.com/cypherium_private/go-cypherium/event"
-	"github.com/cypherium_private/go-cypherium/rpc"
+	ethereum "github.com/cypherium/CypherTestNet/go-cypherium"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/hexutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/ethdb"
+	"github.com/cypherium/CypherTestNet/go-cypherium/event"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
 )
 
 var (

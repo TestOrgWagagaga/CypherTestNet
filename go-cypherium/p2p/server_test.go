@@ -25,10 +25,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/crypto"
-	"github.com/cypherium_private/go-cypherium/crypto/sha3"
-	"github.com/cypherium_private/go-cypherium/log"
-	"github.com/cypherium_private/go-cypherium/p2p/discover"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto/sha3"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/discover"
 )
 
 func init() {

@@ -20,11 +20,11 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/crypto"
-	"github.com/cypherium_private/go-cypherium/ethdb"
-	"github.com/cypherium_private/go-cypherium/log"
-	"github.com/cypherium_private/go-cypherium/rlp"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/ethdb"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rlp"
 )
 
 // Prove constructs a merkle proof for key. The result contains all encoded nodes

@@ -22,7 +22,7 @@ package cypher
 import (
 	"errors"
 
-	"github.com/cypherium_private/go-cypherium/p2p/discv5"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/discv5"
 )
 
 // Enode represents a host on the network.

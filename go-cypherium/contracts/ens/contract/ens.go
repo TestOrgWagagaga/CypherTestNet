@@ -6,12 +6,12 @@ package contract
 import (
 	"strings"
 
-	ethereum "github.com/cypherium_private/go-cypherium"
-	"github.com/cypherium_private/go-cypherium/accounts/abi"
-	"github.com/cypherium_private/go-cypherium/accounts/abi/bind"
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/core/types"
-	"github.com/cypherium_private/go-cypherium/event"
+	ethereum "github.com/cypherium/CypherTestNet/go-cypherium"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/abi"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/abi/bind"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/event"
 )
 
 // ENSABI is the input ABI used to generate the binding from.

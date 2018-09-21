@@ -20,12 +20,12 @@ import (
 	"errors"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/metrics"
-	"github.com/cypherium_private/go-cypherium/p2p/discover"
-	"github.com/cypherium_private/go-cypherium/swarm/log"
-	"github.com/cypherium_private/go-cypherium/swarm/network"
-	"github.com/cypherium_private/go-cypherium/swarm/storage"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/metrics"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/discover"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/network"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/storage"
 )
 
 const (

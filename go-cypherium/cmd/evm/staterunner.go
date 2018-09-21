@@ -23,10 +23,10 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/cypherium_private/go-cypherium/core/state"
-	"github.com/cypherium_private/go-cypherium/core/vm"
-	"github.com/cypherium_private/go-cypherium/log"
-	"github.com/cypherium_private/go-cypherium/tests"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/state"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/vm"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/tests"
 
 	cli "gopkg.in/urfave/cli.v1"
 )

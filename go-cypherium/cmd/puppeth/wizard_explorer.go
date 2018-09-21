@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 )
 
 // deployExplorer creates a new block explorer based on some user input.

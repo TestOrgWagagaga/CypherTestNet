@@ -24,13 +24,13 @@ import (
 	"net"
 	"os"
 
-	"github.com/cypherium_private/go-cypherium/cmd/utils"
-	"github.com/cypherium_private/go-cypherium/crypto"
-	"github.com/cypherium_private/go-cypherium/log"
-	"github.com/cypherium_private/go-cypherium/p2p/discover"
-	"github.com/cypherium_private/go-cypherium/p2p/discv5"
-	"github.com/cypherium_private/go-cypherium/p2p/nat"
-	"github.com/cypherium_private/go-cypherium/p2p/netutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/cmd/utils"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/discover"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/discv5"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/nat"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/netutil"
 )
 
 func main() {

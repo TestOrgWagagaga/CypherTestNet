@@ -25,7 +25,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/cypherium_private/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 )
 
 // walletDockerfile is the Dockerfile required to run a web wallet.

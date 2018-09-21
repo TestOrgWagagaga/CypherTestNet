@@ -23,8 +23,8 @@ import (
 	"crypto/elliptic"
 	"fmt"
 
-	"github.com/cypherium_private/go-cypherium/common/math"
-	"github.com/cypherium_private/go-cypherium/crypto/secp256k1"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/math"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto/secp256k1"
 	"golang.org/x/crypto/ed25519"
 )
 

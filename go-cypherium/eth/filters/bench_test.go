@@ -23,14 +23,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/common/bitutil"
-	"github.com/cypherium_private/go-cypherium/core/bloombits"
-	"github.com/cypherium_private/go-cypherium/core/rawdb"
-	"github.com/cypherium_private/go-cypherium/core/types"
-	"github.com/cypherium_private/go-cypherium/ethdb"
-	"github.com/cypherium_private/go-cypherium/event"
-	"github.com/cypherium_private/go-cypherium/node"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/bitutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/bloombits"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/rawdb"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/ethdb"
+	"github.com/cypherium/CypherTestNet/go-cypherium/event"
+	"github.com/cypherium/CypherTestNet/go-cypherium/node"
 )
 
 func BenchmarkBloomBits512(b *testing.B) {

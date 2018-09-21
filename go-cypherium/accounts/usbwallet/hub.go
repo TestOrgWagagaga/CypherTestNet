@@ -22,9 +22,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/accounts"
-	"github.com/cypherium_private/go-cypherium/event"
-	"github.com/cypherium_private/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts"
+	"github.com/cypherium/CypherTestNet/go-cypherium/event"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 	"github.com/karalabe/hid"
 )
 

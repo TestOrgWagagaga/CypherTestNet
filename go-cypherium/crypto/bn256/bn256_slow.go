@@ -19,7 +19,7 @@
 // Package bn256 implements the Optimal Ate pairing over a 256-bit Barreto-Naehrig curve.
 package bn256
 
-import "github.com/cypherium_private/go-cypherium/crypto/bn256/google"
+import "github.com/cypherium/CypherTestNet/go-cypherium/crypto/bn256/google"
 
 // G1 is an abstract cyclic group. The zero value is suitable for use as the
 // output of an operation, but cannot be used as an input.

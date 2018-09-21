@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/cypherium_private/go-cypherium/crypto/sha3"
-	"github.com/cypherium_private/go-cypherium/swarm/storage/encryption"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto/sha3"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/storage/encryption"
 )
 
 type chunkEncryption struct {

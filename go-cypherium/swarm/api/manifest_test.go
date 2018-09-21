@@ -25,7 +25,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/swarm/storage"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/storage"
 )
 
 func manifest(paths ...string) (manifestReader storage.LazySectionReader) {

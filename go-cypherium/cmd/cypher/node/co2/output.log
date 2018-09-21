@@ -1,0 +1,15 @@
+INFO [09/21/2018|14:34:43.635] Maximum peer count                       Cypherium=25 LES=0 total=25
+INFO [09/21/2018|14:34:43.748] Starting peer-to-peer node               instance=Cypher/v0.1.0-unstable/windows-amd64/go1.10.2
+INFO [09/21/2018|14:34:43.748] Allocated cache and file handles         database=E:\\golang\\src\\github.com\\cypherium\\CypherTestNet\\go-cypherium\\cmd\\cypher\\node\\co2\\cypher\\chaindata cache=768 handles=1024
+INFO [09/21/2018|14:34:43.873] Initialised chain configuration          config id=123666
+INFO [09/21/2018|14:34:43.873] Initialising Cypherium protocol          versions="[63 62]" network=123666
+INFO [09/21/2018|14:34:43.874] Loaded most recent local header          number=0 hash=af7105…debaa3 td=131174
+INFO [09/21/2018|14:34:43.874] Loaded most recent local full block      number=0 hash=af7105…debaa3 td=131174
+INFO [09/21/2018|14:34:43.874] Loaded most recent local fast block      number=0 hash=af7105…debaa3 td=131174
+INFO [09/21/2018|14:34:43.879] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [09/21/2018|14:34:43.949] Starting P2P networking 
+INFO [09/21/2018|14:34:43.950] RLPx listener up                         self="cnode://e667a2ded62d9ac91b410218076b463e4fb1af8d345936d5418e3588a4faf8a7200e8225397717c7096fab4cb54ab401f93f9b9344cbdfb92b36909afc6c9349@[::]:5004?discport=0"
+INFO [09/21/2018|14:34:43.957] IPC endpoint opened                      url=\\\\.\\pipe\\cypher.ipc
+INFO [09/21/2018|14:34:43.958] HTTP endpoint opened                     url=http://0.0.0.0:8004     cors=* vhosts=localhost
+INFO [09/21/2018|14:34:44.215] Mapped network port                      proto=tcp extport=5004 intport=5004 interface=NAT-PMP(192.168.31.1)
+INFO [09/21/2018|15:34:43.895] Regenerated local transaction journal    transactions=0 accounts=0

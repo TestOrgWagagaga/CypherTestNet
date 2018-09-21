@@ -27,8 +27,8 @@ import (
 
 	"reflect"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
 )
 
 const jsondata = `

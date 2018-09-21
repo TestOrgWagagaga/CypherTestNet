@@ -20,9 +20,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/core/rawdb"
-	"github.com/cypherium_private/go-cypherium/eth/downloader"
-	"github.com/cypherium_private/go-cypherium/light"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/rawdb"
+	"github.com/cypherium/CypherTestNet/go-cypherium/eth/downloader"
+	"github.com/cypherium/CypherTestNet/go-cypherium/light"
 )
 
 // syncer is responsible for periodically synchronising with the network, both

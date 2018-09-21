@@ -26,10 +26,10 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/cypherium_private/go-cypherium/cmd/internal/browser"
-	"github.com/cypherium_private/go-cypherium/params"
+	"github.com/cypherium/CypherTestNet/go-cypherium/cmd/internal/browser"
+	"github.com/cypherium/CypherTestNet/go-cypherium/params"
 
-	"github.com/cypherium_private/go-cypherium/cmd/utils"
+	"github.com/cypherium/CypherTestNet/go-cypherium/cmd/utils"
 	cli "gopkg.in/urfave/cli.v1"
 )
 
@@ -41,7 +41,7 @@ var bugCommand = cli.Command{
 	Category:  "MISCELLANEOUS COMMANDS",
 }
 
-const issueURL = "https://github.com/cypherium_private/go-cypherium/issues/new"
+const issueURL = "https://github.com/cypherium/CypherTestNet/go-cypherium/issues/new"
 
 // reportBug reports a bug by opening a new URL to the go-ethereum GH issue
 // tracker and setting default values as the issue body.

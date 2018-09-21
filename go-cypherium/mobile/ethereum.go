@@ -21,8 +21,8 @@ package cypher
 import (
 	"errors"
 
-	ethereum "github.com/cypherium_private/go-cypherium"
-	"github.com/cypherium_private/go-cypherium/common"
+	ethereum "github.com/cypherium/CypherTestNet/go-cypherium"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
 )
 
 // Subscription represents an event subscription where events are

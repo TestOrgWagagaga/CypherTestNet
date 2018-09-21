@@ -20,7 +20,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/common/math"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/math"
 )
 
 func TestBlockNumberJSONUnmarshal(t *testing.T) {

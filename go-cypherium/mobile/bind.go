@@ -22,10 +22,10 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/cypherium_private/go-cypherium/accounts/abi"
-	"github.com/cypherium_private/go-cypherium/accounts/abi/bind"
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/abi"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/abi/bind"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
 )
 
 // Signer is an interaface defining the callback when a contract requires a

@@ -17,7 +17,7 @@
 package api
 
 import (
-	"github.com/cypherium_private/go-cypherium/swarm/network"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/network"
 )
 
 type Control struct {

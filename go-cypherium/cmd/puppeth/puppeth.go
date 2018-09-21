@@ -23,7 +23,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 	"gopkg.in/urfave/cli.v1"
 )
 

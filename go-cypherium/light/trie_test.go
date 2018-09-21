@@ -23,13 +23,13 @@ import (
 	"testing"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/cypherium_private/go-cypherium/consensus/ethash"
-	"github.com/cypherium_private/go-cypherium/core"
-	"github.com/cypherium_private/go-cypherium/core/state"
-	"github.com/cypherium_private/go-cypherium/core/vm"
-	"github.com/cypherium_private/go-cypherium/ethdb"
-	"github.com/cypherium_private/go-cypherium/params"
-	"github.com/cypherium_private/go-cypherium/trie"
+	"github.com/cypherium/CypherTestNet/go-cypherium/consensus/ethash"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/state"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/vm"
+	"github.com/cypherium/CypherTestNet/go-cypherium/ethdb"
+	"github.com/cypherium/CypherTestNet/go-cypherium/params"
+	"github.com/cypherium/CypherTestNet/go-cypherium/trie"
 )
 
 func TestNodeIterator(t *testing.T) {

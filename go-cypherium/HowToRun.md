@@ -5,7 +5,7 @@ run_cypher.sh is used for runs n local cypher quickly.
 ## Which version of the source code is available
 
 ```
-$ git clone https://github.com/cypherium/cypherium_private.git -b committee
+$ git clone https://github.com/cypherium/cypherium/CypherTestNet.git -b committee
 $ git checkout 5fa8b9b474c17903b2121c74b58c58c3fde8b759
 ```
 

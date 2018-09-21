@@ -21,7 +21,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/cypherium_private/go-cypherium/core/vm"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/vm"
 )
 
 // Iterator for disassembled EVM instructions

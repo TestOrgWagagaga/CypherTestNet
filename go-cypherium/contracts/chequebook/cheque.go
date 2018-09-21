@@ -36,14 +36,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/accounts/abi/bind"
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/common/hexutil"
-	"github.com/cypherium_private/go-cypherium/contracts/chequebook/contract"
-	"github.com/cypherium_private/go-cypherium/core/types"
-	"github.com/cypherium_private/go-cypherium/crypto"
-	"github.com/cypherium_private/go-cypherium/log"
-	"github.com/cypherium_private/go-cypherium/swarm/services/swap/swap"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/abi/bind"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/hexutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/contracts/chequebook/contract"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/services/swap/swap"
 )
 
 // TODO(zelig): watch peer solvency and notify of bouncing cheques

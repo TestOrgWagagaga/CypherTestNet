@@ -21,9 +21,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/eth/downloader"
-	"github.com/cypherium_private/go-cypherium/p2p"
-	"github.com/cypherium_private/go-cypherium/p2p/discover"
+	"github.com/cypherium/CypherTestNet/go-cypherium/eth/downloader"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/discover"
 )
 
 // Tests that fast sync gets disabled as soon as a real block is successfully

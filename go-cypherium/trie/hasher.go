@@ -20,9 +20,9 @@ import (
 	"hash"
 	"sync"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/crypto/sha3"
-	"github.com/cypherium_private/go-cypherium/rlp"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto/sha3"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rlp"
 )
 
 type hasher struct {

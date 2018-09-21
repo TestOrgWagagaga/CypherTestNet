@@ -29,9 +29,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/event"
-	"github.com/cypherium_private/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/event"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 )
 
 const (

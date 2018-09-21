@@ -24,7 +24,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/swarm/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/log"
 )
 
 func newTestMemStore() *MemStore {

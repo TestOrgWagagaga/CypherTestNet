@@ -220,9 +220,9 @@ func (this *ExecutionEngine) InvokeMethod(method *Method, params ... Value) Valu
 		}
 		caller := thread.currentFrame() // can be nil, when VM directly call a method
 		thread.push(frame)
-		thread.ExecuteFrame()
+		ok := thread.ExecuteFrame()
 
-		if frame.exception.IsNull() { // normal return
+		if ok && frame.exception.IsNull() { // normal return
 			if method.returnDescriptor != JVM_SIGNATURE_VOID {
 				//if caller == nil ||  // directly call in bootstrap when stack is empty
 				//   len(caller.operandStack) == cap(caller.operandStack)  {  // class loading call: loadClass(..)Ljava/lang/Class {
@@ -423,7 +423,7 @@ func (this *Thread) NewFrame(method *Method) *Frame {
 
 Only run one single frame
 */
-func (this *Thread) ExecuteFrame() /* this return is throwable if this method is return exceptionally, otherwise nil */ {
+func (this *Thread) ExecuteFrame() bool /* this return is throwable if this method is return exceptionally, otherwise nil */ {
 	f := this.currentFrame()
 	bytecode := f.method.code
 	if f.pc == 0 {
@@ -432,6 +432,18 @@ func (this *Thread) ExecuteFrame() /* this return is throwable if this method is
 
 	for f.pc < len(f.method.code) {
 		pc := f.pc
+		if VM.startCount {
+			VM.totalPc += 1
+			if VM.totalPc > pc_MaxCount {
+				//f.jumpPc(-1) // move pc
+				f.clear()
+				//f.push(throwable)
+				//f.exception = m_throwable
+				//this.pop()
+				return false
+			}
+		}
+
 		opcode := bytecode[pc]
 		instruction := VM.GetInstruction(opcode)
 		this.Trace("\n%s%04d ➢ %-18s", repeat("\t", this.indexOf(f)), int(pc), instruction.mnemonic)
@@ -487,6 +499,7 @@ func (this *Thread) ExecuteFrame() /* this return is throwable if this method is
 		// jump instruction can operate pc; some instruction also have variable length: tableswitch...
 		// these instructions will control pc themselves, if instruction operates the stack, we follow it
 	}
+	return true
 }
 
 func (this *Thread) interceptBefore(frame *Frame) {

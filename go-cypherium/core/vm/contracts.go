@@ -21,11 +21,11 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/common/math"
-	"github.com/cypherium_private/go-cypherium/crypto"
-	"github.com/cypherium_private/go-cypherium/crypto/bn256"
-	"github.com/cypherium_private/go-cypherium/params"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/math"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto/bn256"
+	"github.com/cypherium/CypherTestNet/go-cypherium/params"
 	"golang.org/x/crypto/ripemd160"
 )
 

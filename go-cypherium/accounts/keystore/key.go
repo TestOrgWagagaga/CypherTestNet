@@ -25,9 +25,9 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/accounts"
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
 	"github.com/pborman/uuid"
 	"golang.org/x/crypto/ed25519"
 )

@@ -25,9 +25,9 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/swarm/api"
-	swarmhttp "github.com/cypherium_private/go-cypherium/swarm/api/http"
-	"github.com/cypherium_private/go-cypherium/swarm/testutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/api"
+	swarmhttp "github.com/cypherium/CypherTestNet/go-cypherium/swarm/api/http"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/testutil"
 )
 
 func serverFunc(api *api.API) testutil.TestServer {

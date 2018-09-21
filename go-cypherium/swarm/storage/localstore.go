@@ -22,9 +22,9 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/cypherium_private/go-cypherium/metrics"
-	"github.com/cypherium_private/go-cypherium/swarm/log"
-	"github.com/cypherium_private/go-cypherium/swarm/storage/mock"
+	"github.com/cypherium/CypherTestNet/go-cypherium/metrics"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/storage/mock"
 )
 
 type LocalStoreParams struct {

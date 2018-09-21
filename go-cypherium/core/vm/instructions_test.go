@@ -20,8 +20,8 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/params"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/params"
 )
 
 type twoOperandTest struct {

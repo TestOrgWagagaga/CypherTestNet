@@ -29,7 +29,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 	"golang.org/x/net/websocket"
 	"gopkg.in/fatih/set.v0"
 )

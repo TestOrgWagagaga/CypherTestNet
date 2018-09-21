@@ -27,22 +27,22 @@ import (
 	"strconv"
 	"strings"
 	"time"
-
+ 
 	onetLog "github.com/dedis/onet/log"
 	"github.com/elastic/gosigar"
-	"github.com/cypherium_private/go-cypherium/accounts"
-	"github.com/cypherium_private/go-cypherium/accounts/keystore"
-	"github.com/cypherium_private/go-cypherium/cmd/utils"
-	"github.com/cypherium_private/go-cypherium/console"
-	"github.com/cypherium_private/go-cypherium/eth"
-	"github.com/cypherium_private/go-cypherium/ethclient"
-	"github.com/cypherium_private/go-cypherium/internal/debug"
-	"github.com/cypherium_private/go-cypherium/log"
-	"github.com/cypherium_private/go-cypherium/metrics"
-	"github.com/cypherium_private/go-cypherium/node"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/keystore"
+	"github.com/cypherium/CypherTestNet/go-cypherium/cmd/utils"
+	"github.com/cypherium/CypherTestNet/go-cypherium/console"
+	"github.com/cypherium/CypherTestNet/go-cypherium/eth"
+	"github.com/cypherium/CypherTestNet/go-cypherium/ethclient"
+	"github.com/cypherium/CypherTestNet/go-cypherium/internal/debug"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/metrics"
+	"github.com/cypherium/CypherTestNet/go-cypherium/node"
 	"gopkg.in/urfave/cli.v1"
 )
-
+ 
 const (
 	clientIdentifier = "cypher" // Client identifier to advertise over the network
 )

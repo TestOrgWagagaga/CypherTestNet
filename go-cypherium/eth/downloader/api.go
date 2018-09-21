@@ -20,9 +20,9 @@ import (
 	"context"
 	"sync"
 
-	ethereum "github.com/cypherium_private/go-cypherium"
-	"github.com/cypherium_private/go-cypherium/event"
-	"github.com/cypherium_private/go-cypherium/rpc"
+	ethereum "github.com/cypherium/CypherTestNet/go-cypherium"
+	"github.com/cypherium/CypherTestNet/go-cypherium/event"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
 )
 
 // PublicDownloaderAPI provides an API which gives information about the current synchronisation status.

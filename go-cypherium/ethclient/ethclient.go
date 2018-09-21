@@ -24,12 +24,12 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/cypherium_private/go-cypherium"
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/common/hexutil"
-	"github.com/cypherium_private/go-cypherium/core/types"
-	"github.com/cypherium_private/go-cypherium/rlp"
-	"github.com/cypherium_private/go-cypherium/rpc"
+	"github.com/cypherium/CypherTestNet/go-cypherium"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/hexutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rlp"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
 )
 
 // Client defines typed wrappers for the Ethereum RPC API.

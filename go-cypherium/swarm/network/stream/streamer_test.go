@@ -21,8 +21,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/crypto/sha3"
-	p2ptest "github.com/cypherium_private/go-cypherium/p2p/testing"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto/sha3"
+	p2ptest "github.com/cypherium/CypherTestNet/go-cypherium/p2p/testing"
 )
 
 func TestStreamerSubscribe(t *testing.T) {

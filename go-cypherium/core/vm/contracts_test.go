@@ -21,7 +21,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
 )
 
 // precompiledTest defines the input/output pairs for precompiled contract tests.

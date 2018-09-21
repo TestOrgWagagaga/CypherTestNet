@@ -33,11 +33,11 @@ import (
 	"time"
 
 	"github.com/elastic/gosigar"
-	"github.com/cypherium_private/go-cypherium/log"
-	"github.com/cypherium_private/go-cypherium/metrics"
-	"github.com/cypherium_private/go-cypherium/p2p"
-	"github.com/cypherium_private/go-cypherium/params"
-	"github.com/cypherium_private/go-cypherium/rpc"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/metrics"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p"
+	"github.com/cypherium/CypherTestNet/go-cypherium/params"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
 	"golang.org/x/net/websocket"
 )
 

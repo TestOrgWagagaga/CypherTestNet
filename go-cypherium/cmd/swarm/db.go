@@ -22,10 +22,10 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/cypherium_private/go-cypherium/cmd/utils"
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/log"
-	"github.com/cypherium_private/go-cypherium/swarm/storage"
+	"github.com/cypherium/CypherTestNet/go-cypherium/cmd/utils"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/storage"
 	"gopkg.in/urfave/cli.v1"
 )
 

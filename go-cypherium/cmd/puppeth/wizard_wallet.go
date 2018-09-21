@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 )
 
 // deployWallet creates a new web wallet based on some user input.

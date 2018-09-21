@@ -25,9 +25,9 @@ import (
 	"sync"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/internal/ethapi"
-	"github.com/cypherium_private/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/internal/ethapi"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 	"golang.org/x/crypto/ssh/terminal"
 )
 

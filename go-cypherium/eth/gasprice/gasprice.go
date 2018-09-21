@@ -22,11 +22,11 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/core/types"
-	"github.com/cypherium_private/go-cypherium/internal/ethapi"
-	"github.com/cypherium_private/go-cypherium/params"
-	"github.com/cypherium_private/go-cypherium/rpc"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/internal/ethapi"
+	"github.com/cypherium/CypherTestNet/go-cypherium/params"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
 )
 
 var maxPrice = big.NewInt(500 * params.Shannon)

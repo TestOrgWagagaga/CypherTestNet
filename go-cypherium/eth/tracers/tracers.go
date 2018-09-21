@@ -21,7 +21,7 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/cypherium_private/go-cypherium/eth/tracers/internal/tracers"
+	"github.com/cypherium/CypherTestNet/go-cypherium/eth/tracers/internal/tracers"
 )
 
 // all contains all the built in JavaScript tracers by name.

@@ -20,7 +20,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/cypherium_private/go-cypherium/common/hexutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/hexutil"
 )
 
 type MyType [5]byte

@@ -25,11 +25,11 @@ import (
 	"net"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/crypto"
-	"github.com/cypherium_private/go-cypherium/log"
-	"github.com/cypherium_private/go-cypherium/p2p/nat"
-	"github.com/cypherium_private/go-cypherium/p2p/netutil"
-	"github.com/cypherium_private/go-cypherium/rlp"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/nat"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/netutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rlp"
 )
 
 // Errors

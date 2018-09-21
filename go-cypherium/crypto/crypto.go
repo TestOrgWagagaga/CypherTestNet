@@ -28,10 +28,10 @@ import (
 	"math/big"
 	"os"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/common/math"
-	"github.com/cypherium_private/go-cypherium/crypto/sha3"
-	"github.com/cypherium_private/go-cypherium/rlp"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/math"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto/sha3"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rlp"
 	"golang.org/x/crypto/ed25519"
 	"golang.org/x/crypto/ripemd160"
 )

@@ -22,7 +22,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/cypherium_private/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
 )
 
 type keyStorePlain struct {

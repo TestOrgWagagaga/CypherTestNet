@@ -20,7 +20,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/swarm/state"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/state"
 )
 
 var ErrNotFound = errors.New("not found")

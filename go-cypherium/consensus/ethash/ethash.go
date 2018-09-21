@@ -33,10 +33,10 @@ import (
 	"unsafe"
 
 	mmap "github.com/edsrzf/mmap-go"
-	"github.com/cypherium_private/go-cypherium/consensus"
-	"github.com/cypherium_private/go-cypherium/log"
-	"github.com/cypherium_private/go-cypherium/metrics"
-	"github.com/cypherium_private/go-cypherium/rpc"
+	"github.com/cypherium/CypherTestNet/go-cypherium/consensus"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/metrics"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
 	"github.com/hashicorp/golang-lru/simplelru"
 )
 

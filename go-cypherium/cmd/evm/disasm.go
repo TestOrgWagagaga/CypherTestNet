@@ -22,7 +22,7 @@ import (
 	"io/ioutil"
 	"strings"
 
-	"github.com/cypherium_private/go-cypherium/core/asm"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/asm"
 	cli "gopkg.in/urfave/cli.v1"
 )
 

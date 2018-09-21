@@ -20,11 +20,11 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/crypto"
-	"github.com/cypherium_private/go-cypherium/log"
-	"github.com/cypherium_private/go-cypherium/rlp"
-	whisper "github.com/cypherium_private/go-cypherium/whisper/whisperv6"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rlp"
+	whisper "github.com/cypherium/CypherTestNet/go-cypherium/whisper/whisperv6"
 	"github.com/syndtr/goleveldb/leveldb"
 	"github.com/syndtr/goleveldb/leveldb/util"
 )

@@ -21,7 +21,7 @@ package p2p
 import (
 	"net"
 
-	"github.com/cypherium_private/go-cypherium/metrics"
+	"github.com/cypherium/CypherTestNet/go-cypherium/metrics"
 )
 
 var (

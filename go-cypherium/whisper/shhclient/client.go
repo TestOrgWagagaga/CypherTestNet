@@ -19,10 +19,10 @@ package shhclient
 import (
 	"context"
 
-	"github.com/cypherium_private/go-cypherium"
-	"github.com/cypherium_private/go-cypherium/common/hexutil"
-	"github.com/cypherium_private/go-cypherium/rpc"
-	whisper "github.com/cypherium_private/go-cypherium/whisper/whisperv6"
+	"github.com/cypherium/CypherTestNet/go-cypherium"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/hexutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
+	whisper "github.com/cypherium/CypherTestNet/go-cypherium/whisper/whisperv6"
 )
 
 // Client defines typed wrappers for the Whisper v6 RPC API.

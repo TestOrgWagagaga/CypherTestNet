@@ -22,7 +22,7 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/cypherium_private/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
 )
 
 // A BigInt represents a signed multi-precision integer.

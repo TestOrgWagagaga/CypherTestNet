@@ -26,7 +26,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
 	"github.com/stretchr/testify/require"
 )
 

@@ -3,10 +3,11 @@ package vm
 import (
 	"fmt"
 	"math/big"
+	"strconv"
 	"strings"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/cvm"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/cvm"
 )
 
 func register_javax_cypher_cypnet() {
@@ -89,11 +90,17 @@ func JDK_javax_cypher_cypnet_GetState(key cvm.JavaLangString) cvm.JavaLangString
 	skey := key.ToNativeString()
 	in := cvm.VM.In.(*JVMInterpreter)
 	s := in.evm.StateDB
-	v := s.GetState(in.contract.Address(), common.BytesToHash([]byte("@"+skey)))
-	if v == (common.Hash{}) {
-		return cvm.NULL
+	sValue := ""
+	i := 0
+	for {
+		sNextkey := "@" + strconv.Itoa(i) + skey
+		v := s.GetState(in.contract.Address(), common.BytesToHash([]byte(sNextkey)))
+		if v == (common.Hash{}) {
+			break
+		}
+		sValue += string(VM_GetSBytes(v.Bytes(), -1))
+		i = i + 1
 	}
-	sValue := string(VM_GetSBytes(v.Bytes(), -1))
 	return cvm.VM.NewJavaLangString(sValue)
 }
 
@@ -104,8 +111,24 @@ func JDK_javax_cypher_cypnet_SetState(key cvm.JavaLangString, value cvm.JavaLang
 	in := cvm.VM.In.(*JVMInterpreter)
 	s := in.evm.StateDB
 
-	hashV := common.BytesToHash([]byte(svalue))
-	s.SetState(in.contract.Address(), common.BytesToHash([]byte("@"+skey)), hashV)
+	i := 0
+	n := len(svalue)
+	N := common.HashLength
+	for {
+	        num := N
+		if n < N{
+		   num = n
+		}
+		sv := svalue[i:num]
+		hashV := common.BytesToHash([]byte(sv))
+		sNextkey := "@" + strconv.Itoa(i) + skey
+		s.SetState(in.contract.Address(), common.BytesToHash([]byte(sNextkey)), hashV)
+		n = n - N
+		if n <= 0 {
+			break
+		}
+		i = i + N
+	}
 
 	return cvm.TRUE
 }

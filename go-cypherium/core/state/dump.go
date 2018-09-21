@@ -20,9 +20,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/rlp"
-	"github.com/cypherium_private/go-cypherium/trie"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rlp"
+	"github.com/cypherium/CypherTestNet/go-cypherium/trie"
 )
 
 type DumpAccount struct {

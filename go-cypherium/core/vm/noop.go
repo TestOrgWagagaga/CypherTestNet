@@ -19,8 +19,8 @@ package vm
 import (
 	"math/big"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
 )
 
 func NoopCanTransfer(db StateDB, from common.Address, balance *big.Int) bool {

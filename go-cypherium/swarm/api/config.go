@@ -23,16 +23,16 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/contracts/ens"
-	"github.com/cypherium_private/go-cypherium/crypto"
-	"github.com/cypherium_private/go-cypherium/node"
-	"github.com/cypherium_private/go-cypherium/p2p/discover"
-	"github.com/cypherium_private/go-cypherium/swarm/log"
-	"github.com/cypherium_private/go-cypherium/swarm/network"
-	"github.com/cypherium_private/go-cypherium/swarm/pss"
-	"github.com/cypherium_private/go-cypherium/swarm/services/swap"
-	"github.com/cypherium_private/go-cypherium/swarm/storage"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/contracts/ens"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/node"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/discover"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/network"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/pss"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/services/swap"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/storage"
 )
 
 const (

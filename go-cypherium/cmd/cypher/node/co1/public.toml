@@ -1,0 +1,5 @@
+[[servers]]
+  Address = "tcp://localhost:7002"
+  Suite = "Ed25519"
+  Public = "5f8157c7b63c01b2f18d2fd248486f54ad55505e942c809f83dbc6c1be33260f"
+  Description = "Conode_1"

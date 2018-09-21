@@ -28,7 +28,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
 )
 
 // In this test, nodes try to randomly resolve each other.

@@ -20,7 +20,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/params"
+	"github.com/cypherium/CypherTestNet/go-cypherium/params"
 )
 
 func TestTransaction(t *testing.T) {

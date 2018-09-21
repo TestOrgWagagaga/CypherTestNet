@@ -21,7 +21,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
 )
 
 // Tests that batched bloom bits are correctly rotated from the input bloom

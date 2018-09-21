@@ -19,7 +19,7 @@ package trie
 import (
 	"fmt"
 
-	"github.com/cypherium_private/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
 )
 
 // MissingNodeError is returned by the trie functions (TryGet, TryUpdate, TryDelete)

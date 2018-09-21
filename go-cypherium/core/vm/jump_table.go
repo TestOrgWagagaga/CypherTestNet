@@ -20,7 +20,7 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/cypherium_private/go-cypherium/params"
+	"github.com/cypherium/CypherTestNet/go-cypherium/params"
 )
 
 type (

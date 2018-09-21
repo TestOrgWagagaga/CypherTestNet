@@ -19,7 +19,7 @@ package rpc
 import (
 	"net"
 
-	"github.com/cypherium_private/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 )
 
 // StartHTTPEndpoint starts the HTTP RPC endpoint, configured with cors/vhosts/modules

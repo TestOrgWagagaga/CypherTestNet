@@ -22,8 +22,8 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/ethdb"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/ethdb"
 )
 
 func TestIterator(t *testing.T) {

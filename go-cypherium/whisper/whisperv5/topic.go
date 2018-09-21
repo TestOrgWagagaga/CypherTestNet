@@ -19,8 +19,8 @@
 package whisperv5
 
 import (
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/common/hexutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/hexutil"
 )
 
 // TopicType represents a cryptographically secure, probabilistic partial

@@ -25,9 +25,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/rpc"
-	"github.com/cypherium_private/go-cypherium/swarm"
-	"github.com/cypherium_private/go-cypherium/swarm/api"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/api"
 
 	"github.com/docker/docker/pkg/reexec"
 )

@@ -24,8 +24,8 @@ import (
 	"time"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/cypherium_private/go-cypherium/p2p/discover"
-	"github.com/cypherium_private/go-cypherium/p2p/netutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/discover"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/netutil"
 )
 
 func init() {

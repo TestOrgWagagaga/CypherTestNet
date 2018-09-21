@@ -20,8 +20,8 @@ package rawdb
 import (
 	"encoding/binary"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/metrics"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/metrics"
 )
 
 // The fields below define the low level database schema prefixing.

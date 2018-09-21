@@ -21,7 +21,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/swarm/state"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/state"
 )
 
 // TestDBStore tests basic functionality of DBStore.

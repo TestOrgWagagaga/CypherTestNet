@@ -25,7 +25,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 	"github.com/jackpal/go-nat-pmp"
 )
 

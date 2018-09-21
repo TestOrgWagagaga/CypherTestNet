@@ -26,8 +26,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/common/bitutil"
-	"github.com/cypherium_private/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/bitutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
 )
 
 // bloomIndexes represents the bit indexes inside the bloom filter that belong

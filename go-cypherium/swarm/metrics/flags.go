@@ -19,10 +19,10 @@ package metrics
 import (
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/cmd/utils"
-	gethmetrics "github.com/cypherium_private/go-cypherium/metrics"
-	"github.com/cypherium_private/go-cypherium/metrics/influxdb"
-	"github.com/cypherium_private/go-cypherium/swarm/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/cmd/utils"
+	gethmetrics "github.com/cypherium/CypherTestNet/go-cypherium/metrics"
+	"github.com/cypherium/CypherTestNet/go-cypherium/metrics/influxdb"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/log"
 	"gopkg.in/urfave/cli.v1"
 )
 

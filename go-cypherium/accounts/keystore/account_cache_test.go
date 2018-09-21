@@ -29,8 +29,8 @@ import (
 
 	"github.com/cespare/cp"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/cypherium_private/go-cypherium/accounts"
-	"github.com/cypherium_private/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
 )
 
 var (

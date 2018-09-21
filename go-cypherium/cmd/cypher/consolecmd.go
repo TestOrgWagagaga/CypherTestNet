@@ -24,10 +24,10 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/cypherium_private/go-cypherium/cmd/utils"
-	"github.com/cypherium_private/go-cypherium/console"
-	"github.com/cypherium_private/go-cypherium/node"
-	"github.com/cypherium_private/go-cypherium/rpc"
+	"github.com/cypherium/CypherTestNet/go-cypherium/cmd/utils"
+	"github.com/cypherium/CypherTestNet/go-cypherium/console"
+	"github.com/cypherium/CypherTestNet/go-cypherium/node"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
 	"gopkg.in/urfave/cli.v1"
 )
 
@@ -43,7 +43,7 @@ var (
 		Description: `
 The Cypher console is an interactive shell for the JavaScript runtime environment
 which exposes a node admin interface as well as the Ðapp JavaScript API.
-See https://github.com/cypherium_private/go-cypherium/wiki/JavaScript-Console.`,
+See https://github.com/cypherium/CypherTestNet/go-cypherium/wiki/JavaScript-Console.`,
 	}
 
 	attachCommand = cli.Command{
@@ -56,7 +56,7 @@ See https://github.com/cypherium_private/go-cypherium/wiki/JavaScript-Console.`,
 		Description: `
 The Cypher console is an interactive shell for the JavaScript runtime environment
 which exposes a node admin interface as well as the Ðapp JavaScript API.
-See https://github.com/cypherium_private/go-cypherium/wiki/JavaScript-Console.
+See https://github.com/cypherium/CypherTestNet/go-cypherium/wiki/JavaScript-Console.
 This command allows to open a console on a running cypher node.`,
 	}
 
@@ -69,7 +69,7 @@ This command allows to open a console on a running cypher node.`,
 		Category:  "CONSOLE COMMANDS",
 		Description: `
 The JavaScript VM exposes a node admin interface as well as the Ðapp
-JavaScript API. See https://github.com/cypherium_private/go-cypherium/wiki/JavaScript-Console`,
+JavaScript API. See https://github.com/cypherium/CypherTestNet/go-cypherium/wiki/JavaScript-Console`,
 	}
 )
 

@@ -19,8 +19,8 @@ package les
 import (
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/common/bitutil"
-	"github.com/cypherium_private/go-cypherium/light"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/bitutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/light"
 )
 
 const (

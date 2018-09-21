@@ -25,8 +25,8 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/cypherium_private/go-cypherium/common/hexutil"
-	"github.com/cypherium_private/go-cypherium/crypto/sha3"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/hexutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto/sha3"
 )
 
 // Lengths of hashes and addresses in bytes.

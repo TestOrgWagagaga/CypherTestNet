@@ -23,7 +23,7 @@ import (
 	"testing"
 
 	"github.com/docker/docker/pkg/reexec"
-	"github.com/cypherium_private/go-cypherium/internal/cmdtest"
+	"github.com/cypherium/CypherTestNet/go-cypherium/internal/cmdtest"
 )
 
 func tmpdir(t *testing.T) string {

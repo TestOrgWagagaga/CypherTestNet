@@ -24,7 +24,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 	set "gopkg.in/fatih/set.v0"
 )
 

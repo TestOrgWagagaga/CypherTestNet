@@ -23,10 +23,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/cmd/utils"
-	"github.com/cypherium_private/go-cypherium/node"
-	"github.com/cypherium_private/go-cypherium/rpc"
-	"github.com/cypherium_private/go-cypherium/swarm/fuse"
+	"github.com/cypherium/CypherTestNet/go-cypherium/cmd/utils"
+	"github.com/cypherium/CypherTestNet/go-cypherium/node"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/fuse"
 	"gopkg.in/urfave/cli.v1"
 )
 

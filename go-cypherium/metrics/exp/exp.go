@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/cypherium_private/go-cypherium/metrics"
+	"github.com/cypherium/CypherTestNet/go-cypherium/metrics"
 )
 
 type exp struct {

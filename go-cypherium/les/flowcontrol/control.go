@@ -21,7 +21,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/common/mclock"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/mclock"
 )
 
 const fcTimeConst = time.Millisecond

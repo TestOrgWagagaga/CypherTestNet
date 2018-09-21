@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	"github.com/cypherium_private/go-cypherium/common/math"
-	"github.com/cypherium_private/go-cypherium/params"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/math"
+	"github.com/cypherium/CypherTestNet/go-cypherium/params"
 )
 
 // Config are the configuration options for the Interpreter

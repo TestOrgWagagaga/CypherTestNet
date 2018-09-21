@@ -19,10 +19,10 @@ package les
 import (
 	"context"
 
-	"github.com/cypherium_private/go-cypherium/core"
-	"github.com/cypherium_private/go-cypherium/ethdb"
-	"github.com/cypherium_private/go-cypherium/light"
-	"github.com/cypherium_private/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core"
+	"github.com/cypherium/CypherTestNet/go-cypherium/ethdb"
+	"github.com/cypherium/CypherTestNet/go-cypherium/light"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 )
 
 // LesOdr implements light.OdrBackend

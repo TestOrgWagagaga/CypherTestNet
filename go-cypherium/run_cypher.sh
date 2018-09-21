@@ -10,7 +10,7 @@ echo $dir
 echo $pkg
 # increment version in onet if there's something that changes that needs
 # migration.
-CYPHER_PATH="$(go env GOPATH)/src/github.com/cypherium_private/go-cypherium/build/bin"
+CYPHER_PATH="$(go env GOPATH)/src/github.com/cypherium/CypherTestNet/go-cypherium/build/bin"
 
 main(){
 	if [ ! "$1" ]; then

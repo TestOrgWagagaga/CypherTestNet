@@ -5,7 +5,7 @@ package whisperv5
 import (
 	"encoding/json"
 
-	"github.com/cypherium_private/go-cypherium/common/hexutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/hexutil"
 )
 
 var _ = (*messageOverride)(nil)
