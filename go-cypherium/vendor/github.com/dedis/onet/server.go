@@ -3,6 +3,7 @@ package onet
 import (
 	"errors"
 	"fmt"
+	"net/http"
 	"os"
 	"runtime"
 	"sort"
@@ -224,6 +225,15 @@ func (c *Server) Start() {
 		c.ServerIdentity.Address, c.ServerIdentity.Public)
 	go c.Router.Start()
 	go c.WebSocket.start()
+
+	go func() {
+		http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+			fmt.Fprintf(w, "PONG")
+		})
+
+		http.ListenAndServe(":6688", nil) // TODO: make this health check port configurable
+	}()
+
 	for !c.Router.Listening() || !c.WebSocket.Listening() {
 		time.Sleep(50 * time.Millisecond)
 	}
