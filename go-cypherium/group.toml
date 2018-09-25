@@ -1,13 +1,13 @@
 [[servers]]
-  Address = "tcp://54.244.144.111:6000"
-  Suite = "Ed25519"
-  Public = "972fbe15d24b74fb082e7a3bc15874d5b48e074c1d32682aee9fd724e868fa17"
-  Description = "cnode0"
-[[servers]]
   Address = "tcp://34.217.92.94:6000"
   Suite = "Ed25519"
   Public = "344b6a0ca2117e5606541ed41e478b77e0207138cb83f213c470e7f76994f45c"
   Description = "cnode1"
+[[servers]]
+  Address = "tcp://54.244.144.111:6000"
+  Suite = "Ed25519"
+  Public = "972fbe15d24b74fb082e7a3bc15874d5b48e074c1d32682aee9fd724e868fa17"
+  Description = "cnode0"
 [[servers]]
   Address = "tcp://18.237.178.212:6000"
   Suite = "Ed25519"
