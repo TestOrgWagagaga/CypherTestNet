@@ -3,6 +3,7 @@ package vm
 import (
 	"fmt"
 	"math/big"
+	"strconv"
 	"strings"
 
 	"github.com/cypherium/CypherTestNet/go-cypherium/common"
@@ -23,7 +24,6 @@ func register_javax_cypher_cypnet() {
 func JDK_javax_cypher_cypnet_SetTokenInfo(symbol cvm.JavaLangString, name cvm.JavaLangString, totalSupply cvm.Long, owner cvm.JavaLangString) cvm.Boolean {
 	JDK_setContractValue("symbol()", symbol.ToNativeString())
 	JDK_setContractValue("name()", name.ToNativeString())
-
 	addr := JDK_getCheckedAddress(owner.ToNativeString())
 	if addr == "" {
 		addr = JDK_getCheckedAddress("caller")
@@ -89,11 +89,17 @@ func JDK_javax_cypher_cypnet_GetState(key cvm.JavaLangString) cvm.JavaLangString
 	skey := key.ToNativeString()
 	in := cvm.VM.In.(*JVMInterpreter)
 	s := in.evm.StateDB
-	v := s.GetState(in.contract.Address(), common.BytesToHash([]byte("@"+skey)))
-	if v == (common.Hash{}) {
-		return cvm.NULL
+	sValue := ""
+	i := 0
+	for {
+		sNextkey := "@" + strconv.Itoa(i) + skey
+		v := s.GetState(in.contract.Address(), common.BytesToHash([]byte(sNextkey)))
+		if v == (common.Hash{}) {
+			break
+		}
+		sValue += string(VM_GetSBytes(v.Bytes(), -1))
+		i = i + 1
 	}
-	sValue := string(VM_GetSBytes(v.Bytes(), -1))
 	return cvm.VM.NewJavaLangString(sValue)
 }
 
@@ -104,8 +110,24 @@ func JDK_javax_cypher_cypnet_SetState(key cvm.JavaLangString, value cvm.JavaLang
 	in := cvm.VM.In.(*JVMInterpreter)
 	s := in.evm.StateDB
 
-	hashV := common.BytesToHash([]byte(svalue))
-	s.SetState(in.contract.Address(), common.BytesToHash([]byte("@"+skey)), hashV)
+	i := 0
+	n := len(svalue)
+	N := common.HashLength
+	for {
+		num := N
+		if n < N {
+			num = n
+		}
+		sv := svalue[i:num]
+		hashV := common.BytesToHash([]byte(sv))
+		sNextkey := "@" + strconv.Itoa(i) + skey
+		s.SetState(in.contract.Address(), common.BytesToHash([]byte(sNextkey)), hashV)
+		n = n - N
+		if n <= 0 {
+			break
+		}
+		i = i + N
+	}
 
 	return cvm.TRUE
 }
@@ -190,13 +212,16 @@ func JDK_getCheckedAddress(addr string) string {
 		//case "owner"
 	}
 
-	if len(addr) != 42 { //？？ find the constant value
+	n := len(addr) //？？ find the constant value
+	if n >= 40 && addr[0] != '0' && (addr[1] != 'x' || addr[1] != 'X') {
+		addr = "0X" + addr
+		n = n + 2
+	}
+	if n != 42 {
 		return ""
 	}
+
 	addr = strings.ToUpper(addr)
-	if addr[0] != '0' && addr[1] != 'X' {
-		return ""
-	}
 
 	return addr
 }

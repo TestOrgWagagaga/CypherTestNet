@@ -2,6 +2,7 @@ package cvm
 
 import (
 	"fmt"
+	"math/big"
 	"path/filepath"
 	"reflect"
 	"strconv"
@@ -10,9 +11,12 @@ import (
 	//	"os"
 	"path"
 
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/abi"
 	"github.com/cypherium/CypherTestNet/go-cypherium/common"
 	"github.com/orcaman/concurrent-map"
 )
+
+const pc_MaxCount = 20000000
 
 type SystemSettings map[string]string
 
@@ -32,9 +36,14 @@ type CVM struct {
 	*OS
 	*LoggerFactory
 	*Logger
+
+	classloader JavaLangClassLoader
+
 	memCode      []byte
 	contractPath string
 	In           interface{}
+	totalPc      int
+	startCount   bool
 }
 
 var VM_CurrentPath = ""
@@ -49,6 +58,7 @@ func NewVM() *CVM {
 	}
 
 	vm := &CVM{}
+	vm.classloader = NULL
 	vm.SystemSettings = map[string]string{
 		"log.base":              path.Join(VM_CurrentPath, "log"),
 		"log.level.threads":     strconv.Itoa(WARN),
@@ -102,17 +112,25 @@ func (this *CVM) Init() {
 	this.Logger = this.LoggerFactory.NewLogger("misc", miscLogLevel, "misc.log")
 }
 
-func (this *CVM) StarMain(memCode []byte, className string) {
+func (this *CVM) StarMain(memCode []byte, className string, registerNative func()) {
+	if this.classloader == NULL {
+		this.Init()
+		registerNative()
+	}
+	VM.Heap = &Heap{}
 	VM.memCode = memCode
 	VM.contractPath = VM_CurrentPath + "/" + className + ".class"
 
 	// bootstrap thread don't run in a new go routine, just in Go startup routine
 	VM.RunBootstrapThread(
 		func() {
-			VM.InvokeMethodOf("java/lang/System", "initializeSystemClass", "()V")
-			// Use AppClassLoader to load initial class
-			systemClassLoaderObject := VM.InvokeMethodOf("java/lang/ClassLoader", "getSystemClassLoader", "()Ljava/lang/ClassLoader;").(JavaLangClassLoader)
-			initialClass := VM.createClass(className, systemClassLoaderObject, TRIGGER_BY_ACCESS_MEMBER)
+
+			if VM.classloader == NULL {
+				VM.InvokeMethodOf("java/lang/System", "initializeSystemClass", "()V")
+				// Use AppClassLoader to load initial class
+				VM.classloader = VM.InvokeMethodOf("java/lang/ClassLoader", "getSystemClassLoader", "()Ljava/lang/ClassLoader;").(JavaLangClassLoader)
+			}
+			initialClass := VM.createClass(className, VM.classloader, TRIGGER_BY_ACCESS_MEMBER)
 			method := initialClass.FindMethod("main", "([Ljava/lang/String;)V")
 			if method == nil {
 				return
@@ -130,28 +148,36 @@ func (this *CVM) StarMain(memCode []byte, className string) {
 	VM_WG.Wait()
 }
 
-func (this *CVM) StartFunction(memCode []byte, className, methodName string, javaArgs [][]byte) {
+func (this *CVM) StartFunction(memCode []byte, className, methodName string, javaArgs []byte) string {
+	if this.classloader == NULL {
+		this.Init()
+	}
+
+	VM.Heap = &Heap{}
+	isRunningOK := false
 	VM.memCode = memCode
 	VM.contractPath = VM_CurrentPath + "/" + className + ".class"
 
 	i := strings.Index(methodName, "(")
 	if i < 1 {
-		return
+		return ""
 	}
 	desc := methodName[i+1 : len(methodName)-1]
-	methodName = methodName[:i]
+	descLists := strings.Split(desc, ",")
 
+	values, methodDesc, err := VM.getInputArgsValue(descLists, javaArgs)
+	if err != nil {
+		return ""
+	}
+	methodName = methodName[:i]
+	retValue := ""
 	// bootstrap thread don't run in a new go routine, just in Go startup routine
 	VM.RunBootstrapThread(func() {
-		VM.InvokeMethodOf("java/lang/System", "initializeSystemClass", "()V")
-
-		// Use AppClassLoader to load initial class
-		systemClassLoaderObject := VM.InvokeMethodOf("java/lang/ClassLoader", "getSystemClassLoader", "()Ljava/lang/ClassLoader;").(JavaLangClassLoader)
-		initialClass := VM.createClass(className, systemClassLoaderObject, TRIGGER_BY_ACCESS_MEMBER)
-		methodDesc, _, err := VM.getParaList(desc, nil)
-		if err != nil {
-			return
+		if VM.classloader == NULL {
+			VM.InvokeMethodOf("java/lang/System", "initializeSystemClass", "()V")
+			VM.classloader = VM.InvokeMethodOf("java/lang/ClassLoader", "getSystemClassLoader", "()Ljava/lang/ClassLoader;").(JavaLangClassLoader)
 		}
+		initialClass := VM.createClass(className, VM.classloader, TRIGGER_BY_ACCESS_MEMBER)
 		method := initialClass.FindMethod(methodName, methodDesc)
 		if method == nil {
 			return
@@ -160,11 +186,24 @@ func (this *CVM) StartFunction(memCode []byte, className, methodName string, jav
 		// initial a thread
 		VM.NewThread("main",
 			func() {
-				_, params, err := VM.getParaList(desc, javaArgs)
+				params, err := VM.covertToJavaParams(descLists, values)
 				if err != nil {
 					return
 				}
-				VM.InvokeMethod(method, params...)
+				VM.startCount = true
+				VM.totalPc = 0
+				ret := VM.InvokeMethod(method, params...)
+				isRunningOK = true
+				VM.startCount = false
+				switch ret.(type) {
+				case JavaLangString:
+					p := ret.(JavaLangString)
+					if !p.IsNull() {
+						retValue = p.ToNativeString()
+					}
+				default:
+					fmt.Println(ret)
+				}
 			},
 			func() {
 				VM.exitDaemonThreads()
@@ -172,85 +211,91 @@ func (this *CVM) StartFunction(memCode []byte, className, methodName string, jav
 	})
 
 	VM_WG.Wait()
-}
-
-func (this *CVM) getParaList(argDesc string, javaArgs [][]byte) (string, []Value, error) {
-	//methodDesc = VM_GetDescFromMethod(methodName)
-	desc := "("
-	descLists := strings.Split(argDesc, ",")
-	n := len(descLists)
-	if n == 0 {
-		return "", nil, nil
+	VM.startCount = false
+	if !isRunningOK {
+		this.classloader = NULL //reinit and reload for next time
 	}
 
-	params := make([]Value, n)
-	for i, stype := range descLists {
+	return retValue
+}
+
+func (this *CVM) getInputArgsValue(typeList []string, encb []byte) ([]interface{}, string, error) {
+
+	desc := "("
+	s := "["
+	for _, stype := range typeList {
+		s += fmt.Sprintf(`{"type": "%s"},`, stype)
+
 		if strings.Index(stype, "uint") == 0 {
 			desc += "J"
-			if javaArgs != nil && javaArgs[i] != nil {
-				s := common.Bytes2Hex(javaArgs[i])
-				v, err := strconv.ParseInt(s, 16, 64)
-				if err != nil {
-					return "", nil, fmt.Errorf("Type uint conversion error.")
-				}
-				params[i] = Long(v)
-			}
 		} else if strings.Index(stype, "int") == 0 {
 			desc += "J"
-			if javaArgs != nil && javaArgs[i] != nil {
-				s := common.Bytes2Hex(javaArgs[i])
-				v, err := strconv.ParseInt(s, 16, 64)
-				if err != nil {
-					return "", nil, fmt.Errorf("Type int conversion error.")
-				}
-				params[i] = Long(v)
-			}
 		} else if strings.Index(stype, "fixed") == 0 {
 			desc += "D"
-			if javaArgs != nil && javaArgs[i] != nil {
-				s := common.Bytes2Hex(javaArgs[i])
-				v, err := strconv.ParseFloat(s, 64)
-				if err != nil {
-					return "", nil, fmt.Errorf("Type fixed conversion error.")
-				}
-				params[i] = Double(v)
-			}
 		} else if strings.Index(stype, "bytes") == 0 {
-			desc += "D"
-			if javaArgs != nil && javaArgs[i] != nil {
-				s := common.Bytes2Hex(javaArgs[i])
-				v, err := strconv.ParseFloat(s, 64)
-				if err != nil {
-					return "", nil, fmt.Errorf("Type bytes conversion error.")
-				}
-				params[i] = Double(v)
-			}
-		} else {
-			switch stype {
-			case "address":
-				desc += "Ljava/lang/String;"
-				if javaArgs != nil && javaArgs[i] != nil {
-					s := common.Bytes2Hex(javaArgs[i])
-					if !(s[0] == '0' && (s[0] == 'x' || s[0] == 'X')) {
-						s = "0X" + s
-					}
-					params[i] = VM.NewJavaLangString(strings.ToUpper(s))
-				}
-			case "bool":
-				desc += "Z"
-				if javaArgs != nil && javaArgs[i] != nil {
-					params[i] = Boolean(javaArgs[i][0])
-				}
-			case "string":
-				desc += "Ljava/lang/String;"
-				if javaArgs != nil && javaArgs[i] != nil {
-					params[i] = VM.NewJavaLangString(string(javaArgs[i]))
-				}
-			}
+			desc += "Ljava/lang/String;"
+		} else if strings.Index(stype, "address") == 0 {
+			desc += "Ljava/lang/String;"
+		} else if strings.Index(stype, "string") == 0 {
+			desc += "Ljava/lang/String;"
+		} else if strings.Index(stype, "bool") == 0 {
+			desc += "Z"
 		}
 	}
 
+	s = s[:len(s)-1] + "]"
 	desc += ")Ljava/lang/String;"
 
-	return desc, params, nil
+	def := fmt.Sprintf(`[{ "name" : "method", "outputs": %s }]`, s)
+	abi, err := abi.JSON(strings.NewReader(def))
+	if err != nil {
+		return nil, "", err
+	}
+	values, err1 := abi.Methods["method"].Outputs.UnpackValues(encb)
+
+	return values, desc, err1
+}
+
+func (this *CVM) covertToJavaParams(typeList []string, values []interface{}) ([]Value, error) {
+
+	n := len(values)
+	if n != len(typeList) {
+		return nil, fmt.Errorf("typeList not correspond with values")
+	}
+	params := make([]Value, n)
+	for i, stype := range typeList {
+		v := values[i]
+		if strings.Index(stype, "uint") == 0 {
+			a := v.(*big.Int)
+			params[i] = Long(a.Int64())
+		} else if strings.Index(stype, "int") == 0 {
+			a := v.(*big.Int)
+			params[i] = Long(a.Int64())
+		} else if strings.Index(stype, "fixed") == 0 {
+			//b := v.(big.Float)
+			//params[i] = Double(v.Float())
+			return nil, fmt.Errorf("Type conversion error! not support fixed")
+		} else if strings.Index(stype, "address") == 0 {
+			a := v.(common.Address)
+			s := a.String()
+			params[i] = VM.NewJavaLangString(s)
+		} else if strings.Index(stype, "bytes") == 0 {
+			a := v.([]byte)
+			params[i] = VM.NewJavaLangString(string(a))
+		} else if strings.Index(stype, "string") == 0 {
+			a := v.([]byte)
+			params[i] = VM.NewJavaLangString(string(a))
+		} else if strings.Index(stype, "bool") == 0 {
+			a := v.(bool)
+			if a {
+				params[i] = Boolean(1)
+			} else {
+				params[i] = Boolean(0)
+			}
+		} else {
+			return nil, fmt.Errorf("Type conversion error!")
+		}
+	}
+
+	return params, nil
 }

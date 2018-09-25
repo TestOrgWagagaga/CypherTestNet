@@ -1,13 +1,14 @@
 package cvm
 
 import (
-	"strconv"
-	"github.com/orcaman/concurrent-map"
 	"fmt"
-	"time"
-	"sync"
 	"reflect"
+	"strconv"
 	"strings"
+	"sync"
+	"time"
+
+	"github.com/orcaman/concurrent-map"
 )
 
 /*
@@ -181,7 +182,7 @@ func (this *ExecutionEngine) CurrentClass() *Class {
 	return D
 }
 
-func (this *ExecutionEngine) InvokeMethodOf(className string, methodName string, methodDescriptor string, params ... Value) Value {
+func (this *ExecutionEngine) InvokeMethodOf(className string, methodName string, methodDescriptor string, params ...Value) Value {
 	class := VM.ResolveClass(className, TRIGGER_BY_ACCESS_MEMBER)
 	method := class.GetMethod(methodName, methodDescriptor)
 	return this.InvokeMethod(method, params...)
@@ -189,8 +190,8 @@ func (this *ExecutionEngine) InvokeMethodOf(className string, methodName string,
 
 /*
 This method is used to run a method and return value (even void method return a void value)
- */
-func (this *ExecutionEngine) InvokeMethod(method *Method, params ... Value) Value {
+*/
+func (this *ExecutionEngine) InvokeMethod(method *Method, params ...Value) Value {
 	thread := this.CurrentThread()
 	if method.isSynchronized() {
 		var monitor *Monitor
@@ -220,9 +221,9 @@ func (this *ExecutionEngine) InvokeMethod(method *Method, params ... Value) Valu
 		}
 		caller := thread.currentFrame() // can be nil, when VM directly call a method
 		thread.push(frame)
-		thread.ExecuteFrame()
+		ok := thread.ExecuteFrame()
 
-		if frame.exception.IsNull() { // normal return
+		if ok && frame.exception.IsNull() { // normal return
 			if method.returnDescriptor != JVM_SIGNATURE_VOID {
 				//if caller == nil ||  // directly call in bootstrap when stack is empty
 				//   len(caller.operandStack) == cap(caller.operandStack)  {  // class loading call: loadClass(..)Ljava/lang/Class {
@@ -291,7 +292,7 @@ const (
 
 /*
 The whole project should use panic only here !!!!!
- */
+*/
 func (this *ExecutionEngine) Throw0(throwable Reference, thrownReason string) {
 	thread := this.CurrentThread()
 	if thread.currentFrame() != nil {
@@ -423,15 +424,28 @@ func (this *Thread) NewFrame(method *Method) *Frame {
 
 Only run one single frame
 */
-func (this *Thread) ExecuteFrame() /* this return is throwable if this method is return exceptionally, otherwise nil */ {
+func (this *Thread) ExecuteFrame() bool /* this return is throwable if this method is return exceptionally, otherwise nil */ {
 	f := this.currentFrame()
 	bytecode := f.method.code
 	if f.pc == 0 {
 		this.Debug("\n%s🔹[%s]%s", repeat("\t", this.indexOf(f)), this.name, f.method.Qualifier())
 	}
 
-	for f.pc < len(f.method.code) {
+	codeLen := len(f.method.code)
+	for f.pc < codeLen {
 		pc := f.pc
+		if VM.startCount {
+			VM.totalPc += 1
+			if VM.totalPc > pc_MaxCount {
+				f.jumpPc(codeLen) // move pc
+				f.clear()
+				//f.push(throwable)
+				//f.exception = m_throwable
+				//this.pop()
+				return false
+			}
+		}
+
 		opcode := bytecode[pc]
 		instruction := VM.GetInstruction(opcode)
 		this.Trace("\n%s%04d ➢ %-18s", repeat("\t", this.indexOf(f)), int(pc), instruction.mnemonic)
@@ -487,6 +501,7 @@ func (this *Thread) ExecuteFrame() /* this return is throwable if this method is
 		// jump instruction can operate pc; some instruction also have variable length: tableswitch...
 		// these instructions will control pc themselves, if instruction operates the stack, we follow it
 	}
+	return true
 }
 
 func (this *Thread) interceptBefore(frame *Frame) {
@@ -519,7 +534,7 @@ type Frame struct {
 
 /*
 Should be called only by Run() method
- */
+*/
 func (this *Frame) nextPc() {
 	opcode := this.method.code[this.pc]
 	this.pc += JVM_OPCODE_LENGTH_INITIALIZER[opcode]
@@ -561,7 +576,7 @@ func (this *Frame) opcode() uint8 {
 
 /*
 padding operand start pos to multiply of 4
- */
+*/
 func (this *Frame) operandPadding() {
 	var start int
 	for i := 0; i <= 3; i++ {
@@ -685,7 +700,7 @@ func (this *Frame) loadParameters(callee *Method) []Value {
 
 /*
 Parameters are passed in a reversed order from operand stack in JVM
- */
+*/
 func (this *Frame) passParameters(callee *Frame) {
 	method := callee.method
 	start := len(method.parameterDescriptors) - 1
@@ -706,9 +721,9 @@ func (this *Frame) passReturn(caller *Frame) {
 	ret := this.pop()
 
 	if caller == nil || // directly call in bootstrap when stack is empty
-	// not invoked by normal invokeXXXX instruction, e.g.
-	// 1) class loading call: loadClass(..)Ljava/lang/Class
-	// 2) class initialisation: <clinit>
+		// not invoked by normal invokeXXXX instruction, e.g.
+		// 1) class loading call: loadClass(..)Ljava/lang/Class
+		// 2) class initialisation: <clinit>
 		len(caller.operandStack) == cap(caller.operandStack) {
 		this.danglingReturn = ret
 		return
@@ -789,7 +804,7 @@ func (this *Frame) clear() {
 
 /*
 Should be called only by VM_invokeMethod(..)
- */
+*/
 func (this *Thread) push(stackFrame *Frame) {
 	size := len(this.vmStack)
 	if size == DEFAULT_VM_STACK_SIZE {

@@ -2,8 +2,10 @@ package vm
 
 import (
 	"fmt"
+	"reflect"
 	"strings"
 
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/abi"
 	"github.com/cypherium/CypherTestNet/go-cypherium/common"
 	"github.com/cypherium/CypherTestNet/go-cypherium/cvm"
 	"github.com/cypherium/CypherTestNet/go-cypherium/params"
@@ -61,15 +63,13 @@ func (in *JVMInterpreter) Run(contract *Contract, input []byte) (ret []byte, err
 	const NP = 32
 	n := len(input)
 	methodName := ""
-	methodArgs := [][]byte{}
+	methodArgs := []byte{}
 
 	if n >= (4+NP) && input[0] == 0xfe && input[1] == 0xfe && input[2] == 0xfe && input[3] == 0xfe {
 		i := 4
 		methodName = string(VM_GetSBytes(input[i:], NP))
-		i = i + NP
-		for i+NP <= n {
-			methodArgs = append(methodArgs, VM_GetSBytes(input[i:], NP))
-			i = i + NP
+		if n > i+NP {
+			methodArgs = input[i+NP:]
 		}
 	}
 
@@ -103,7 +103,7 @@ func (in *JVMInterpreter) Run(contract *Contract, input []byte) (ret []byte, err
 		return nil, err
 	}
 
-	if res == nil {
+	if res == nil && methodName == "" {
 		return contract.Code, nil
 	}
 
@@ -139,15 +139,13 @@ func (in *JVMInterpreter) SetReadOnly(ro bool) {
 	in.readOnly = ro
 }
 
-func (in *JVMInterpreter) startVM(memCode []byte, className, methodName string, javaArgs [][]byte) ([]byte, error) {
+func (in *JVMInterpreter) startVM(memCode []byte, className, methodName string, javaArgs []byte) ([]byte, error) {
 	argsLen := len(javaArgs)
 
 	if className == "" {
 		className = "cypherium_@Contract"
 		if methodName == "" { //main,create contract
-			in.cvm.Init()
-			register_javax_cypher_cypnet()
-			in.cvm.StarMain(memCode, className)
+			in.cvm.StarMain(memCode, className, register_javax_cypher_cypnet)
 			return memCode, nil
 
 		} else if argsLen == 0 {
@@ -160,13 +158,17 @@ func (in *JVMInterpreter) startVM(memCode []byte, className, methodName string, 
 				//fmt.Println(s)
 				return s, nil
 			} else if methodName == "decimals()" {
-				decimals := []byte{8} //the float fixed = 8
-				s := VM_HashByteToRes(decimals)
-				//fmt.Println(s)
-				return s, nil
+				s, err := VM_PackToRes("uint32", uint32(8))
+				return s, err
+				/*
+					decimals := []byte{8} //the float fixed = 8
+					s := VM_HashByteToRes(decimals)
+					//fmt.Println(s)
+					return s, nil
+				*/
 			}
 		} else { //argsLen > 0
-			if methodName == "transfer(address,uint256)" && argsLen == 2 { //call Transfer in java class
+			if methodName == "transfer(address,uint256)" && argsLen == 64 { //32*2 call Transfer in java class
 				methodName = "Transfer(address,uint256)"
 				//methodDesc = "(Ljava/lang/String;J)Ljava/lang/String;"
 
@@ -174,8 +176,8 @@ func (in *JVMInterpreter) startVM(memCode []byte, className, methodName string, 
 				if argsLen == 0 {
 					return nil, fmt.Errorf("balanceOf: not found address")
 				}
-				addr := strings.ToUpper("0X" + common.Bytes2Hex(javaArgs[0]))
-				hashv, err := JDK_getContractBalance(addr)
+				s := common.Bytes2Hex(VM_GetSBytes(javaArgs, -1))
+				hashv, err := JDK_getContractBalance(s)
 				if err != nil {
 					return nil, err
 				}
@@ -186,11 +188,20 @@ func (in *JVMInterpreter) startVM(memCode []byte, className, methodName string, 
 		fmt.Println("Support other class names in the future!")
 	}
 
-	in.cvm.Init()
-	register_javax_cypher_cypnet()
-	in.cvm.StartFunction(memCode, className, methodName, javaArgs)
+	ret := in.cvm.StartFunction(memCode, className, methodName, javaArgs)
+	if ret == "" {
+		return nil, nil
+	}
+	s, err := VM_PackToRes("string", reflect.ValueOf(ret)) //only return string
+	return s, err
 
-	return nil, nil
+	//return nil, nil
+}
+
+func VM_PackToRes(stype string, v interface{}) ([]byte, error) {
+	def := fmt.Sprintf(`[{"type":"function","name":"return","inputs":[{"type": "%s" }] }]`, stype)
+	abi, _ := abi.JSON(strings.NewReader(def))
+	return abi.PackArgs("return", v)
 }
 
 func VM_HashByteToRes(inBuf []byte) []byte {
