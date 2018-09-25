@@ -1,0 +1,8 @@
+### Custom ###
+# Allow developers to maintain a local todo file
+go-cypherium/cmd/cypher/node/
+go-cypherium/cmd/cypher/co1/
+go-cypherium/cmd/cypher/log/
+go-cypherium/cmd/cypher/testdata/
+go-cypherium/cmd/cypher/public.toml
+go-cypherium/cmd/cypher/debug*
