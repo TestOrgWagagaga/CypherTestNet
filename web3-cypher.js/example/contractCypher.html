@@ -22,7 +22,7 @@
 	,{"inputs":[{"name":"initialSupply","type":"uint256"},{"name":"tokenName","type":"string"},{"name":"tokenSymbol","type":"string"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"}
 	,{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"}]
 	
-	
+	 
 	var sFrom = "0x250b93d742f90868cd82f4428f0f3237e76aff78";
 	var sTo =   "0x98cd76671368f34fad8e5477c1abe80e3c20a5b9";
 	
@@ -59,7 +59,6 @@
 			+ "\n symbol=" + ethContract.symbol() 
 			+ "\n totalSupply=" + ethContract.totalSupply() );
 		}
-		
 	}
 	function getBalanceOf(stype,addr){
 		if( stype=="java" ) {
