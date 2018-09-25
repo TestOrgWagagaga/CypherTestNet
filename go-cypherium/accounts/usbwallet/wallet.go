@@ -25,11 +25,11 @@ import (
 	"sync"
 	"time"
 
-	ethereum "github.com/cypherium_private/go-cypherium"
-	"github.com/cypherium_private/go-cypherium/accounts"
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/core/types"
-	"github.com/cypherium_private/go-cypherium/log"
+	ethereum "github.com/cyphertestnet/go-cypherium"
+	"github.com/cyphertestnet/go-cypherium/accounts"
+	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/core/types"
+	"github.com/cyphertestnet/go-cypherium/log"
 	"github.com/karalabe/hid"
 )
 

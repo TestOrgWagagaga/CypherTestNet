@@ -21,8 +21,8 @@ package cypher
 import (
 	"math/big"
 
-	"github.com/cypherium_private/go-cypherium/core/types"
-	"github.com/cypherium_private/go-cypherium/ethclient"
+	"github.com/cyphertestnet/go-cypherium/core/types"
+	"github.com/cyphertestnet/go-cypherium/ethclient"
 )
 
 // EthereumClient provides access to the Ethereum APIs.

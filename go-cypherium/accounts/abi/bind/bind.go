@@ -17,7 +17,7 @@
 // Package bind generates Ethereum contract Go bindings.
 //
 // Detailed usage document and tutorial available on the go-ethereum Wiki page:
-// https://github.com/cypherium_private/go-cypherium/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts
+// https://github.com/cyphertestnet/go-cypherium/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts
 package bind
 
 import (
@@ -28,7 +28,7 @@ import (
 	"text/template"
 	"unicode"
 
-	"github.com/cypherium_private/go-cypherium/accounts/abi"
+	"github.com/cyphertestnet/go-cypherium/accounts/abi"
 	"golang.org/x/tools/imports"
 )
 

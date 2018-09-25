@@ -19,8 +19,8 @@ package state
 import (
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/ethdb"
+	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/ethdb"
 )
 
 var addr = common.BytesToAddress([]byte("test"))

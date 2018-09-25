@@ -23,10 +23,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/cypherium_private/go-cypherium/cmd/utils"
-	"github.com/cypherium_private/go-cypherium/consensus/ethash"
-	"github.com/cypherium_private/go-cypherium/eth"
-	"github.com/cypherium_private/go-cypherium/params"
+	"github.com/cyphertestnet/go-cypherium/cmd/utils"
+	"github.com/cyphertestnet/go-cypherium/consensus/ethash"
+	"github.com/cyphertestnet/go-cypherium/eth"
+	"github.com/cyphertestnet/go-cypherium/params"
 	"gopkg.in/urfave/cli.v1"
 	"github.com/dedis/kyber/suites"
 

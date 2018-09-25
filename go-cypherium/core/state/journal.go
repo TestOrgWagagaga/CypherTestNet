@@ -19,7 +19,7 @@ package state
 import (
 	"math/big"
 
-	"github.com/cypherium_private/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/common"
 )
 
 // journalEntry is a modification entry in the state change journal that can be

@@ -27,7 +27,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/cypherium_private/go-cypherium/common/math"
+	"github.com/cyphertestnet/go-cypherium/common/math"
 	"gopkg.in/urfave/cli.v1"
 )
 

@@ -23,10 +23,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/core/rawdb"
-	"github.com/cypherium_private/go-cypherium/ethdb"
-	"github.com/cypherium_private/go-cypherium/params"
+	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/core/rawdb"
+	"github.com/cyphertestnet/go-cypherium/ethdb"
+	"github.com/cyphertestnet/go-cypherium/params"
 )
 
 // Genesis block for nodes which don't care about the DAO fork (i.e. not configured)

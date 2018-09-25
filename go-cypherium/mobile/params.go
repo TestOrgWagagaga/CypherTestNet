@@ -21,9 +21,9 @@ package cypher
 import (
 	"encoding/json"
 
-	"github.com/cypherium_private/go-cypherium/core"
-	"github.com/cypherium_private/go-cypherium/p2p/discv5"
-	"github.com/cypherium_private/go-cypherium/params"
+	"github.com/cyphertestnet/go-cypherium/core"
+	"github.com/cyphertestnet/go-cypherium/p2p/discv5"
+	"github.com/cyphertestnet/go-cypherium/params"
 )
 
 // MainnetGenesis returns the JSON spec to use for the main Ethereum network. It

@@ -24,13 +24,13 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/common/math"
-	"github.com/cypherium_private/go-cypherium/consensus"
-	"github.com/cypherium_private/go-cypherium/consensus/misc"
-	"github.com/cypherium_private/go-cypherium/core/state"
-	"github.com/cypherium_private/go-cypherium/core/types"
-	"github.com/cypherium_private/go-cypherium/params"
+	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/common/math"
+	"github.com/cyphertestnet/go-cypherium/consensus"
+	"github.com/cyphertestnet/go-cypherium/consensus/misc"
+	"github.com/cyphertestnet/go-cypherium/core/state"
+	"github.com/cyphertestnet/go-cypherium/core/types"
+	"github.com/cyphertestnet/go-cypherium/params"
 	set "gopkg.in/fatih/set.v0"
 )
 

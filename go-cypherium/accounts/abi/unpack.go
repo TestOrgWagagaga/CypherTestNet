@@ -22,7 +22,7 @@ import (
 	"math/big"
 	"reflect"
 
-	"github.com/cypherium_private/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/common"
 )
 
 // reads the integer based on its kind

@@ -21,7 +21,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/common/hexutil"
+	"github.com/cyphertestnet/go-cypherium/common/hexutil"
 )
 
 // Tests that data bitset encoding and decoding works and is bijective.

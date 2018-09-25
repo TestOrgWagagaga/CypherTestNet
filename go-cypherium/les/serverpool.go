@@ -27,13 +27,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/common/mclock"
-	"github.com/cypherium_private/go-cypherium/ethdb"
-	"github.com/cypherium_private/go-cypherium/log"
-	"github.com/cypherium_private/go-cypherium/p2p"
-	"github.com/cypherium_private/go-cypherium/p2p/discover"
-	"github.com/cypherium_private/go-cypherium/p2p/discv5"
-	"github.com/cypherium_private/go-cypherium/rlp"
+	"github.com/cyphertestnet/go-cypherium/common/mclock"
+	"github.com/cyphertestnet/go-cypherium/ethdb"
+	"github.com/cyphertestnet/go-cypherium/log"
+	"github.com/cyphertestnet/go-cypherium/p2p"
+	"github.com/cyphertestnet/go-cypherium/p2p/discover"
+	"github.com/cyphertestnet/go-cypherium/p2p/discv5"
+	"github.com/cyphertestnet/go-cypherium/rlp"
 )
 
 const (

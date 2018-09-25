@@ -23,9 +23,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/cypherium_private/go-cypherium/accounts/keystore"
-	"github.com/cypherium_private/go-cypherium/cmd/utils"
-	"github.com/cypherium_private/go-cypherium/crypto"
+	"github.com/cyphertestnet/go-cypherium/accounts/keystore"
+	"github.com/cyphertestnet/go-cypherium/cmd/utils"
+	"github.com/cyphertestnet/go-cypherium/crypto"
 	"github.com/pborman/uuid"
 	"gopkg.in/urfave/cli.v1"
 )

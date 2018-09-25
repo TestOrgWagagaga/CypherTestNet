@@ -21,10 +21,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/cypherium_private/go-cypherium/cmd/utils"
-	"github.com/cypherium_private/go-cypherium/log"
-	"github.com/cypherium_private/go-cypherium/swarm/api"
-	swarm "github.com/cypherium_private/go-cypherium/swarm/api/client"
+	"github.com/cyphertestnet/go-cypherium/cmd/utils"
+	"github.com/cyphertestnet/go-cypherium/log"
+	"github.com/cyphertestnet/go-cypherium/swarm/api"
+	swarm "github.com/cyphertestnet/go-cypherium/swarm/api/client"
 	"gopkg.in/urfave/cli.v1"
 )
 

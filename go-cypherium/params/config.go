@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/cypherium_private/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/common"
 )
 
 // Genesis hashes to enforce below configs on.

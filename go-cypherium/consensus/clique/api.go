@@ -17,10 +17,10 @@
 package clique
 
 import (
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/consensus"
-	"github.com/cypherium_private/go-cypherium/core/types"
-	"github.com/cypherium_private/go-cypherium/rpc"
+	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/consensus"
+	"github.com/cyphertestnet/go-cypherium/core/types"
+	"github.com/cyphertestnet/go-cypherium/rpc"
 )
 
 // API is a user facing RPC API to allow controlling the signer and voting

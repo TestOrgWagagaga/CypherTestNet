@@ -19,7 +19,7 @@ package ethapi
 import (
 	"sync"
 
-	"github.com/cypherium_private/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/common"
 )
 
 type AddrLocker struct {

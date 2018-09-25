@@ -29,10 +29,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/swarm/api"
-	"github.com/cypherium_private/go-cypherium/swarm/storage"
+	"github.com/cyphertestnet/go-cypherium/swarm/api"
+	"github.com/cyphertestnet/go-cypherium/swarm/storage"
 
-	"github.com/cypherium_private/go-cypherium/log"
+	"github.com/cyphertestnet/go-cypherium/log"
 
 	colorable "github.com/mattn/go-colorable"
 )

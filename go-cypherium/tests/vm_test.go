@@ -19,7 +19,7 @@ package tests
 import (
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/core/vm"
+	"github.com/cyphertestnet/go-cypherium/core/vm"
 )
 
 func TestVM(t *testing.T) {

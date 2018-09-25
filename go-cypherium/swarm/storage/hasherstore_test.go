@@ -20,9 +20,9 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/swarm/storage/encryption"
+	"github.com/cyphertestnet/go-cypherium/swarm/storage/encryption"
 
-	"github.com/cypherium_private/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/common"
 )
 
 func TestHasherStore(t *testing.T) {

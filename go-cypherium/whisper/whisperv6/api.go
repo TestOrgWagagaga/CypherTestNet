@@ -24,12 +24,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/common/hexutil"
-	"github.com/cypherium_private/go-cypherium/crypto"
-	"github.com/cypherium_private/go-cypherium/log"
-	"github.com/cypherium_private/go-cypherium/p2p/discover"
-	"github.com/cypherium_private/go-cypherium/rpc"
+	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/common/hexutil"
+	"github.com/cyphertestnet/go-cypherium/crypto"
+	"github.com/cyphertestnet/go-cypherium/log"
+	"github.com/cyphertestnet/go-cypherium/p2p/discover"
+	"github.com/cyphertestnet/go-cypherium/rpc"
 )
 
 // List of errors

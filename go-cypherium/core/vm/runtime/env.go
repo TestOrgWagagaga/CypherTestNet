@@ -17,9 +17,9 @@
 package runtime
 
 import (
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/core"
-	"github.com/cypherium_private/go-cypherium/core/vm"
+	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/core"
+	"github.com/cyphertestnet/go-cypherium/core/vm"
 )
 
 func NewEnv(cfg *Config) *vm.EVM {

@@ -26,8 +26,8 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/internal/jsre/deps"
+	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/internal/jsre/deps"
 	"github.com/robertkrimen/otto"
 )
 

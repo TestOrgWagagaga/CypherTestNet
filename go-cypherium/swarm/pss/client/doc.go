@@ -28,11 +28,11 @@
 //  	"context"
 //  	"fmt"
 //  	"os"
-//  	pss "github.com/cypherium_private/go-cypherium/swarm/pss/client"
-//  	"github.com/cypherium_private/go-cypherium/p2p/protocols"
-//  	"github.com/cypherium_private/go-cypherium/p2p"
-//  	"github.com/cypherium_private/go-cypherium/swarm/pot"
-//  	"github.com/cypherium_private/go-cypherium/swarm/log"
+//  	pss "github.com/cyphertestnet/go-cypherium/swarm/pss/client"
+//  	"github.com/cyphertestnet/go-cypherium/p2p/protocols"
+//  	"github.com/cyphertestnet/go-cypherium/p2p"
+//  	"github.com/cyphertestnet/go-cypherium/swarm/pot"
+//  	"github.com/cyphertestnet/go-cypherium/swarm/log"
 //  )
 //
 //  type FooMsg struct {

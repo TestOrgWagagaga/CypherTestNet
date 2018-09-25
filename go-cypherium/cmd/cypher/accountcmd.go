@@ -20,12 +20,12 @@ import (
 	"fmt"
 	//"io/ioutil"
 
-	"github.com/cypherium_private/go-cypherium/accounts"
-	"github.com/cypherium_private/go-cypherium/accounts/keystore"
-	"github.com/cypherium_private/go-cypherium/cmd/utils"
-	"github.com/cypherium_private/go-cypherium/console"
-	//"github.com/cypherium_private/go-cypherium/crypto"
-	"github.com/cypherium_private/go-cypherium/log"
+	"github.com/cyphertestnet/go-cypherium/accounts"
+	"github.com/cyphertestnet/go-cypherium/accounts/keystore"
+	"github.com/cyphertestnet/go-cypherium/cmd/utils"
+	"github.com/cyphertestnet/go-cypherium/console"
+	//"github.com/cyphertestnet/go-cypherium/crypto"
+	"github.com/cyphertestnet/go-cypherium/log"
 	"gopkg.in/urfave/cli.v1"
 )
 

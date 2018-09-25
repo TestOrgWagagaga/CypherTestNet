@@ -22,8 +22,8 @@ import (
 	"io"
 	"net"
 
-	"github.com/cypherium_private/go-cypherium/crypto"
-	"github.com/cypherium_private/go-cypherium/rlp"
+	"github.com/cyphertestnet/go-cypherium/crypto"
+	"github.com/cyphertestnet/go-cypherium/rlp"
 )
 
 // Entry is implemented by known node record entry types.

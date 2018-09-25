@@ -21,17 +21,17 @@ import (
 	"context"
 	"math/big"
 
-	"github.com/cypherium_private/go-cypherium/accounts"
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/core"
-	"github.com/cypherium_private/go-cypherium/core/state"
-	"github.com/cypherium_private/go-cypherium/core/types"
-	"github.com/cypherium_private/go-cypherium/core/vm"
-	"github.com/cypherium_private/go-cypherium/eth/downloader"
-	"github.com/cypherium_private/go-cypherium/ethdb"
-	"github.com/cypherium_private/go-cypherium/event"
-	"github.com/cypherium_private/go-cypherium/params"
-	"github.com/cypherium_private/go-cypherium/rpc"
+	"github.com/cyphertestnet/go-cypherium/accounts"
+	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/core"
+	"github.com/cyphertestnet/go-cypherium/core/state"
+	"github.com/cyphertestnet/go-cypherium/core/types"
+	"github.com/cyphertestnet/go-cypherium/core/vm"
+	"github.com/cyphertestnet/go-cypherium/eth/downloader"
+	"github.com/cyphertestnet/go-cypherium/ethdb"
+	"github.com/cyphertestnet/go-cypherium/event"
+	"github.com/cyphertestnet/go-cypherium/params"
+	"github.com/cyphertestnet/go-cypherium/rpc"
 )
 
 // Backend interface provides the common API services (that are provided by

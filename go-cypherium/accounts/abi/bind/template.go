@@ -16,7 +16,7 @@
 
 package bind
 
-import "github.com/cypherium_private/go-cypherium/accounts/abi"
+import "github.com/cyphertestnet/go-cypherium/accounts/abi"
 
 // tmplData is the data structure required to fill the binding template.
 type tmplData struct {

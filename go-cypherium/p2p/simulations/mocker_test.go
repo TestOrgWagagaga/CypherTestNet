@@ -27,7 +27,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/p2p/discover"
+	"github.com/cyphertestnet/go-cypherium/p2p/discover"
 )
 
 func TestMocker(t *testing.T) {

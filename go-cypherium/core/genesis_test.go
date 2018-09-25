@@ -22,12 +22,12 @@ import (
 	"testing"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/consensus/ethash"
-	"github.com/cypherium_private/go-cypherium/core/rawdb"
-	"github.com/cypherium_private/go-cypherium/core/vm"
-	"github.com/cypherium_private/go-cypherium/ethdb"
-	"github.com/cypherium_private/go-cypherium/params"
+	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/consensus/ethash"
+	"github.com/cyphertestnet/go-cypherium/core/rawdb"
+	"github.com/cyphertestnet/go-cypherium/core/vm"
+	"github.com/cyphertestnet/go-cypherium/ethdb"
+	"github.com/cyphertestnet/go-cypherium/params"
 )
 
 func TestDefaultGenesisBlock(t *testing.T) {

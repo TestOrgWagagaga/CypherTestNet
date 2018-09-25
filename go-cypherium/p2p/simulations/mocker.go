@@ -24,9 +24,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/log"
-	"github.com/cypherium_private/go-cypherium/p2p/discover"
-	"github.com/cypherium_private/go-cypherium/p2p/simulations/adapters"
+	"github.com/cyphertestnet/go-cypherium/log"
+	"github.com/cyphertestnet/go-cypherium/p2p/discover"
+	"github.com/cyphertestnet/go-cypherium/p2p/simulations/adapters"
 )
 
 //a map of mocker names to its function

@@ -26,12 +26,12 @@ import (
 	"io"
 	"math/big"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/core"
-	"github.com/cypherium_private/go-cypherium/core/rawdb"
-	"github.com/cypherium_private/go-cypherium/crypto"
-	"github.com/cypherium_private/go-cypherium/crypto/secp256k1"
-	"github.com/cypherium_private/go-cypherium/rlp"
+	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/core"
+	"github.com/cyphertestnet/go-cypherium/core/rawdb"
+	"github.com/cyphertestnet/go-cypherium/crypto"
+	"github.com/cyphertestnet/go-cypherium/crypto/secp256k1"
+	"github.com/cyphertestnet/go-cypherium/rlp"
 )
 
 // Constants to match up protocol versions and messages

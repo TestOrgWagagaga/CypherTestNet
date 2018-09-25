@@ -5,7 +5,7 @@ ENV PATH=/usr/lib/go-1.9/bin:$PATH
 RUN \
   apt-get update && apt-get upgrade -q -y && \
   apt-get install -y --no-install-recommends golang-1.9 git make gcc libc-dev ca-certificates && \
-  git clone --depth 1 https://github.com/cypherium_private/go-cypherium && \
+  git clone --depth 1 https://github.com/cyphertestnet/go-cypherium && \
   (cd go-ethereum && make cypher) && \
   cp go-ethereum/build/bin/cypher /cypher && \
   apt-get remove -y golang-1.9 git make gcc libc-dev && apt autoremove -y && apt-get clean && \

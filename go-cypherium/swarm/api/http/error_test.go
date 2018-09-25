@@ -25,7 +25,7 @@ import (
 
 	"golang.org/x/net/html"
 
-	"github.com/cypherium_private/go-cypherium/swarm/testutil"
+	"github.com/cyphertestnet/go-cypherium/swarm/testutil"
 )
 
 func TestError(t *testing.T) {

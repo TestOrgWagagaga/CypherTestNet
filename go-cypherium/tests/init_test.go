@@ -29,7 +29,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/params"
+	"github.com/cyphertestnet/go-cypherium/params"
 )
 
 var (

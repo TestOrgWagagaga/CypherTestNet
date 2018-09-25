@@ -19,7 +19,7 @@ package core
 import (
 	"runtime"
 
-	"github.com/cypherium_private/go-cypherium/core/types"
+	"github.com/cyphertestnet/go-cypherium/core/types"
 )
 
 // senderCacher is a concurrent tranaction sender recoverer anc cacher.

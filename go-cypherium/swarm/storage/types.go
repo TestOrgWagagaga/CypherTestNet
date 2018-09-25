@@ -26,9 +26,9 @@ import (
 	"io"
 	"sync"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/crypto/sha3"
-	"github.com/cypherium_private/go-cypherium/swarm/bmt"
+	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/crypto/sha3"
+	"github.com/cyphertestnet/go-cypherium/swarm/bmt"
 )
 
 const MaxPO = 16

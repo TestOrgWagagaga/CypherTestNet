@@ -35,12 +35,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/crypto"
-	"github.com/cypherium_private/go-cypherium/crypto/ecies"
-	"github.com/cypherium_private/go-cypherium/crypto/secp256k1"
-	"github.com/cypherium_private/go-cypherium/crypto/sha3"
-	"github.com/cypherium_private/go-cypherium/p2p/discover"
-	"github.com/cypherium_private/go-cypherium/rlp"
+	"github.com/cyphertestnet/go-cypherium/crypto"
+	"github.com/cyphertestnet/go-cypherium/crypto/ecies"
+	"github.com/cyphertestnet/go-cypherium/crypto/secp256k1"
+	"github.com/cyphertestnet/go-cypherium/crypto/sha3"
+	"github.com/cyphertestnet/go-cypherium/p2p/discover"
+	"github.com/cyphertestnet/go-cypherium/rlp"
 	"github.com/golang/snappy"
 )
 

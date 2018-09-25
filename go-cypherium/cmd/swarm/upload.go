@@ -30,8 +30,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/cypherium_private/go-cypherium/cmd/utils"
-	swarm "github.com/cypherium_private/go-cypherium/swarm/api/client"
+	"github.com/cyphertestnet/go-cypherium/cmd/utils"
+	swarm "github.com/cyphertestnet/go-cypherium/swarm/api/client"
 	"gopkg.in/urfave/cli.v1"
 )
 

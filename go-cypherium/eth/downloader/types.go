@@ -19,7 +19,7 @@ package downloader
 import (
 	"fmt"
 
-	"github.com/cypherium_private/go-cypherium/core/types"
+	"github.com/cyphertestnet/go-cypherium/core/types"
 )
 
 // peerDropFn is a callback type for dropping a peer detected as malicious.

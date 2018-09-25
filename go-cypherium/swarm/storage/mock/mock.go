@@ -36,7 +36,7 @@ import (
 	"errors"
 	"io"
 
-	"github.com/cypherium_private/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/common"
 )
 
 // ErrNotFound indicates that the chunk is not found.

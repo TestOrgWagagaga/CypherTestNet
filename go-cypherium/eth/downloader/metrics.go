@@ -19,7 +19,7 @@
 package downloader
 
 import (
-	"github.com/cypherium_private/go-cypherium/metrics"
+	"github.com/cyphertestnet/go-cypherium/metrics"
 )
 
 var (

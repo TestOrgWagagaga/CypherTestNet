@@ -19,7 +19,7 @@ package vm
 import (
 	"math/big"
 
-	"github.com/cypherium_private/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/common"
 )
 
 // ContractRef is a reference to the contract's backing object

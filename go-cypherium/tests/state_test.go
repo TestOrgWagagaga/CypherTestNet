@@ -22,7 +22,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/core/vm"
+	"github.com/cyphertestnet/go-cypherium/core/vm"
 )
 
 func TestState(t *testing.T) {

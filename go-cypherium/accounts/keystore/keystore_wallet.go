@@ -21,9 +21,9 @@ import (
 
 	"math/big"
 
-	ethereum "github.com/cypherium_private/go-cypherium"
-	"github.com/cypherium_private/go-cypherium/accounts"
-	"github.com/cypherium_private/go-cypherium/core/types"
+	ethereum "github.com/cyphertestnet/go-cypherium"
+	"github.com/cyphertestnet/go-cypherium/accounts"
+	"github.com/cyphertestnet/go-cypherium/core/types"
 )
 
 // keystoreWallet implements the accounts.Wallet interface for the original

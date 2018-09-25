@@ -22,8 +22,8 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/cypherium_private/go-cypherium/p2p"
-	"github.com/cypherium_private/go-cypherium/p2p/nat"
+	"github.com/cyphertestnet/go-cypherium/p2p"
+	"github.com/cyphertestnet/go-cypherium/p2p/nat"
 )
 
 const (

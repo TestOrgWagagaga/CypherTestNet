@@ -30,17 +30,17 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/accounts/abi/bind"
-	"github.com/cypherium_private/go-cypherium/accounts/abi/bind/backends"
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/contracts/ens"
-	"github.com/cypherium_private/go-cypherium/contracts/ens/contract"
-	"github.com/cypherium_private/go-cypherium/core"
-	"github.com/cypherium_private/go-cypherium/core/types"
-	"github.com/cypherium_private/go-cypherium/crypto"
-	"github.com/cypherium_private/go-cypherium/log"
-	"github.com/cypherium_private/go-cypherium/swarm/multihash"
-	"github.com/cypherium_private/go-cypherium/swarm/storage"
+	"github.com/cyphertestnet/go-cypherium/accounts/abi/bind"
+	"github.com/cyphertestnet/go-cypherium/accounts/abi/bind/backends"
+	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/contracts/ens"
+	"github.com/cyphertestnet/go-cypherium/contracts/ens/contract"
+	"github.com/cyphertestnet/go-cypherium/core"
+	"github.com/cyphertestnet/go-cypherium/core/types"
+	"github.com/cyphertestnet/go-cypherium/crypto"
+	"github.com/cyphertestnet/go-cypherium/log"
+	"github.com/cyphertestnet/go-cypherium/swarm/multihash"
+	"github.com/cyphertestnet/go-cypherium/swarm/storage"
 )
 
 var (

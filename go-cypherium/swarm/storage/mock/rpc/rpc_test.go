@@ -19,9 +19,9 @@ package rpc
 import (
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/rpc"
-	"github.com/cypherium_private/go-cypherium/swarm/storage/mock/mem"
-	"github.com/cypherium_private/go-cypherium/swarm/storage/mock/test"
+	"github.com/cyphertestnet/go-cypherium/rpc"
+	"github.com/cyphertestnet/go-cypherium/swarm/storage/mock/mem"
+	"github.com/cyphertestnet/go-cypherium/swarm/storage/mock/test"
 )
 
 // TestDBStore is running test for a GlobalStore

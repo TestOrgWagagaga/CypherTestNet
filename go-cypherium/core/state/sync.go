@@ -19,9 +19,9 @@ package state
 import (
 	"bytes"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/rlp"
-	"github.com/cypherium_private/go-cypherium/trie"
+	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/rlp"
+	"github.com/cyphertestnet/go-cypherium/trie"
 )
 
 // NewStateSync create a new state trie download scheduler.

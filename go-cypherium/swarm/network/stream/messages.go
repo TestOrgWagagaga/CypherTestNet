@@ -22,10 +22,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/metrics"
-	"github.com/cypherium_private/go-cypherium/swarm/log"
-	bv "github.com/cypherium_private/go-cypherium/swarm/network/bitvector"
-	"github.com/cypherium_private/go-cypherium/swarm/storage"
+	"github.com/cyphertestnet/go-cypherium/metrics"
+	"github.com/cyphertestnet/go-cypherium/swarm/log"
+	bv "github.com/cyphertestnet/go-cypherium/swarm/network/bitvector"
+	"github.com/cyphertestnet/go-cypherium/swarm/storage"
 )
 
 // Stream defines a unique stream identifier.

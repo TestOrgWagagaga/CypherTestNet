@@ -25,7 +25,7 @@ import (
 
 	"bazil.org/fuse"
 	"bazil.org/fuse/fs"
-	"github.com/cypherium_private/go-cypherium/swarm/log"
+	"github.com/cyphertestnet/go-cypherium/swarm/log"
 	"golang.org/x/net/context"
 )
 

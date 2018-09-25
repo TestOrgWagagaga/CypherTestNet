@@ -22,13 +22,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/metrics"
-	"github.com/cypherium_private/go-cypherium/p2p/protocols"
-	"github.com/cypherium_private/go-cypherium/swarm/log"
-	pq "github.com/cypherium_private/go-cypherium/swarm/network/priorityqueue"
-	"github.com/cypherium_private/go-cypherium/swarm/network/stream/intervals"
-	"github.com/cypherium_private/go-cypherium/swarm/state"
-	"github.com/cypherium_private/go-cypherium/swarm/storage"
+	"github.com/cyphertestnet/go-cypherium/metrics"
+	"github.com/cyphertestnet/go-cypherium/p2p/protocols"
+	"github.com/cyphertestnet/go-cypherium/swarm/log"
+	pq "github.com/cyphertestnet/go-cypherium/swarm/network/priorityqueue"
+	"github.com/cyphertestnet/go-cypherium/swarm/network/stream/intervals"
+	"github.com/cyphertestnet/go-cypherium/swarm/state"
+	"github.com/cyphertestnet/go-cypherium/swarm/storage"
 )
 
 var sendTimeout = 30 * time.Second

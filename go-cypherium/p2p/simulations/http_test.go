@@ -27,12 +27,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/event"
-	"github.com/cypherium_private/go-cypherium/node"
-	"github.com/cypherium_private/go-cypherium/p2p"
-	"github.com/cypherium_private/go-cypherium/p2p/discover"
-	"github.com/cypherium_private/go-cypherium/p2p/simulations/adapters"
-	"github.com/cypherium_private/go-cypherium/rpc"
+	"github.com/cyphertestnet/go-cypherium/event"
+	"github.com/cyphertestnet/go-cypherium/node"
+	"github.com/cyphertestnet/go-cypherium/p2p"
+	"github.com/cyphertestnet/go-cypherium/p2p/discover"
+	"github.com/cyphertestnet/go-cypherium/p2p/simulations/adapters"
+	"github.com/cyphertestnet/go-cypherium/rpc"
 )
 
 // testService implements the node.Service interface and provides protocols

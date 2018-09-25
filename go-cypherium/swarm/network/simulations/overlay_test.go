@@ -26,9 +26,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/p2p/discover"
-	"github.com/cypherium_private/go-cypherium/p2p/simulations"
-	"github.com/cypherium_private/go-cypherium/swarm/log"
+	"github.com/cyphertestnet/go-cypherium/p2p/discover"
+	"github.com/cyphertestnet/go-cypherium/p2p/simulations"
+	"github.com/cyphertestnet/go-cypherium/swarm/log"
 )
 
 var (

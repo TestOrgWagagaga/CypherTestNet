@@ -26,10 +26,10 @@ import (
 	"github.com/dedis/kyber/util/encoding"
 	"github.com/dedis/onet"
 	"github.com/dedis/onet/log"
-	"github.com/cypherium_private/go-cypherium/core/state"
-	"github.com/cypherium_private/go-cypherium/core/types"
-	clog "github.com/cypherium_private/go-cypherium/log"
-	"github.com/cypherium_private/go-cypherium/reconfig/bftcosi/cosi"
+	"github.com/cyphertestnet/go-cypherium/core/state"
+	"github.com/cyphertestnet/go-cypherium/core/types"
+	clog "github.com/cyphertestnet/go-cypherium/log"
+	"github.com/cyphertestnet/go-cypherium/reconfig/bftcosi/cosi"
 )
 
 const defaultTimeout = 5 * time.Second

@@ -23,8 +23,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/metrics"
-	"github.com/cypherium_private/go-cypherium/swarm/log"
+	"github.com/cyphertestnet/go-cypherium/metrics"
+	"github.com/cyphertestnet/go-cypherium/swarm/log"
 )
 
 /*

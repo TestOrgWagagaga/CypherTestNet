@@ -24,10 +24,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/p2p"
-	"github.com/cypherium_private/go-cypherium/p2p/protocols"
-	"github.com/cypherium_private/go-cypherium/rlp"
-	"github.com/cypherium_private/go-cypherium/swarm/log"
+	"github.com/cyphertestnet/go-cypherium/p2p"
+	"github.com/cyphertestnet/go-cypherium/p2p/protocols"
+	"github.com/cyphertestnet/go-cypherium/rlp"
+	"github.com/cyphertestnet/go-cypherium/swarm/log"
 )
 
 const (

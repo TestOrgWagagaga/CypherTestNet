@@ -23,7 +23,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/cypherium_private/go-cypherium/common/hexutil"
+	"github.com/cyphertestnet/go-cypherium/common/hexutil"
 	"gopkg.in/fatih/set.v0"
 )
 

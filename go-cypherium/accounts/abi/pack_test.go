@@ -24,7 +24,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/common"
 )
 
 func TestPack(t *testing.T) {

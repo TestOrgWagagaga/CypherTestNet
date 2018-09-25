@@ -1,6 +1,6 @@
 package discv5
 
-import "github.com/cypherium_private/go-cypherium/metrics"
+import "github.com/cyphertestnet/go-cypherium/metrics"
 
 var (
 	ingressTrafficMeter = metrics.NewRegisteredMeter("discv5/InboundTraffic", nil)

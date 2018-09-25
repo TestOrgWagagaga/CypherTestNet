@@ -27,7 +27,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/swarm"
+	"github.com/cyphertestnet/go-cypherium/swarm"
 )
 
 // TestCLISwarmExportImport perform the following test:

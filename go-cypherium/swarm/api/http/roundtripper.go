@@ -20,17 +20,17 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/cypherium_private/go-cypherium/swarm/log"
+	"github.com/cyphertestnet/go-cypherium/swarm/log"
 )
 
 /*
 http roundtripper to register for bzz url scheme
-see https://github.com/cypherium_private/go-cypherium/issues/2040
+see https://github.com/cyphertestnet/go-cypherium/issues/2040
 Usage:
 
 import (
- "github.com/cypherium_private/go-cypherium/common/httpclient"
- "github.com/cypherium_private/go-cypherium/swarm/api/http"
+ "github.com/cyphertestnet/go-cypherium/common/httpclient"
+ "github.com/cyphertestnet/go-cypherium/swarm/api/http"
 )
 client := httpclient.New()
 // for (private) swarm proxy running locally

@@ -2,7 +2,7 @@ FROM alpine:3.7
 
 RUN \
   apk add --update go git make gcc musl-dev linux-headers ca-certificates && \
-  git clone --depth 1 https://github.com/cypherium_private/go-cypherium && \
+  git clone --depth 1 https://github.com/cyphertestnet/go-cypherium && \
   (cd go-ethereum && make cypher) && \
   cp go-ethereum/build/bin/cypher /cypher && \
   apk del go git make gcc musl-dev linux-headers && \

@@ -27,7 +27,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/params"
+	"github.com/cyphertestnet/go-cypherium/params"
 )
 
 const (

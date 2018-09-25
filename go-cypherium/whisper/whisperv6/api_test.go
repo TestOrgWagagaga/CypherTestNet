@@ -22,7 +22,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/common"
 	set "gopkg.in/fatih/set.v0"
 )
 

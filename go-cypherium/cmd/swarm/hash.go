@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/cypherium_private/go-cypherium/cmd/utils"
-	"github.com/cypherium_private/go-cypherium/swarm/storage"
+	"github.com/cyphertestnet/go-cypherium/cmd/utils"
+	"github.com/cyphertestnet/go-cypherium/swarm/storage"
 	"gopkg.in/urfave/cli.v1"
 )
 

@@ -25,10 +25,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/core/types"
-	"github.com/cypherium_private/go-cypherium/swarm/api"
-	"github.com/cypherium_private/go-cypherium/swarm/storage"
-	"github.com/cypherium_private/go-cypherium/swarm/storage/mru"
+	"github.com/cyphertestnet/go-cypherium/core/types"
+	"github.com/cyphertestnet/go-cypherium/swarm/api"
+	"github.com/cyphertestnet/go-cypherium/swarm/storage"
+	"github.com/cyphertestnet/go-cypherium/swarm/storage/mru"
 )
 
 type TestServer interface {

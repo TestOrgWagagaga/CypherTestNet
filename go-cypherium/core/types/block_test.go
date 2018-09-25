@@ -23,8 +23,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/rlp"
+	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/rlp"
 )
 
 // from bcValidBlockTest.json, "SimpleTx"

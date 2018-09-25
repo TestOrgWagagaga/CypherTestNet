@@ -19,7 +19,7 @@ package vm
 import (
 	"fmt"
 
-	"github.com/cypherium_private/go-cypherium/params"
+	"github.com/cyphertestnet/go-cypherium/params"
 )
 
 func makeStackFunc(pop, push int) stackValidationFunc {

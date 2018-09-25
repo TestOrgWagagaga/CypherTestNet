@@ -26,7 +26,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/cypherium_private/go-cypherium/log"
+	"github.com/cyphertestnet/go-cypherium/log"
 )
 
 // makeWizard creates and returns a new puppeth wizard.

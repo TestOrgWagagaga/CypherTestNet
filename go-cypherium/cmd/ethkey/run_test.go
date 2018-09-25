@@ -22,7 +22,7 @@ import (
 	"testing"
 
 	"github.com/docker/docker/pkg/reexec"
-	"github.com/cypherium_private/go-cypherium/internal/cmdtest"
+	"github.com/cyphertestnet/go-cypherium/internal/cmdtest"
 )
 
 type testEthkey struct {

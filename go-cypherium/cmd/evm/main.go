@@ -22,7 +22,7 @@ import (
 	"math/big"
 	"os"
 
-	"github.com/cypherium_private/go-cypherium/cmd/utils"
+	"github.com/cyphertestnet/go-cypherium/cmd/utils"
 	"gopkg.in/urfave/cli.v1"
 )
 

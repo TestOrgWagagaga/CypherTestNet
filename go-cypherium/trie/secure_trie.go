@@ -19,8 +19,8 @@ package trie
 import (
 	"fmt"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/log"
+	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/log"
 )
 
 // SecureTrie wraps a trie with key hashing. In a secure trie, all

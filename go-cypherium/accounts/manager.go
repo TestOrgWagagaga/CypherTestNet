@@ -21,7 +21,7 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/cypherium_private/go-cypherium/event"
+	"github.com/cyphertestnet/go-cypherium/event"
 )
 
 // Manager is an overarching account manager that can communicate with various

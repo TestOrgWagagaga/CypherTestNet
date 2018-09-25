@@ -22,8 +22,8 @@ package node
 import (
 	"reflect"
 
-	"github.com/cypherium_private/go-cypherium/p2p"
-	"github.com/cypherium_private/go-cypherium/rpc"
+	"github.com/cyphertestnet/go-cypherium/p2p"
+	"github.com/cyphertestnet/go-cypherium/rpc"
 )
 
 // NoopService is a trivial implementation of the Service interface.

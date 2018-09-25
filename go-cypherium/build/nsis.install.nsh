@@ -3,9 +3,9 @@ InstallDir "$InstDir"
 OutFile "${OUTPUTFILE}" # set through command line arguments
 
 # Links for "Add/Remove Programs"
-!define HELPURL "https://github.com/cypherium_private/go-cypherium/issues"
-!define UPDATEURL "https://github.com/cypherium_private/go-cypherium/releases"
-!define ABOUTURL "https://github.com/cypherium_private/go-cypherium#ethereum-go"
+!define HELPURL "https://github.com/cyphertestnet/go-cypherium/issues"
+!define UPDATEURL "https://github.com/cyphertestnet/go-cypherium/releases"
+!define ABOUTURL "https://github.com/cyphertestnet/go-cypherium#ethereum-go"
 !define /date NOW "%Y%m%d"
 
 PageEx license

@@ -42,7 +42,7 @@ import (
 	"fmt"
 	"hash"
 
-	ethcrypto "github.com/cypherium_private/go-cypherium/crypto"
+	ethcrypto "github.com/cyphertestnet/go-cypherium/crypto"
 )
 
 var (

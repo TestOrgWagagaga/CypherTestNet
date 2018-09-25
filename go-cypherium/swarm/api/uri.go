@@ -22,8 +22,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/swarm/storage"
+	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/swarm/storage"
 )
 
 //matches hex swarm hashes

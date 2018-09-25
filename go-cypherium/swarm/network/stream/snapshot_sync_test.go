@@ -29,17 +29,17 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/log"
-	"github.com/cypherium_private/go-cypherium/p2p"
-	"github.com/cypherium_private/go-cypherium/p2p/discover"
-	"github.com/cypherium_private/go-cypherium/p2p/simulations"
-	"github.com/cypherium_private/go-cypherium/p2p/simulations/adapters"
-	"github.com/cypherium_private/go-cypherium/rpc"
-	"github.com/cypherium_private/go-cypherium/swarm/network"
-	streamTesting "github.com/cypherium_private/go-cypherium/swarm/network/stream/testing"
-	"github.com/cypherium_private/go-cypherium/swarm/pot"
-	"github.com/cypherium_private/go-cypherium/swarm/storage"
+	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/log"
+	"github.com/cyphertestnet/go-cypherium/p2p"
+	"github.com/cyphertestnet/go-cypherium/p2p/discover"
+	"github.com/cyphertestnet/go-cypherium/p2p/simulations"
+	"github.com/cyphertestnet/go-cypherium/p2p/simulations/adapters"
+	"github.com/cyphertestnet/go-cypherium/rpc"
+	"github.com/cyphertestnet/go-cypherium/swarm/network"
+	streamTesting "github.com/cyphertestnet/go-cypherium/swarm/network/stream/testing"
+	"github.com/cyphertestnet/go-cypherium/swarm/pot"
+	"github.com/cyphertestnet/go-cypherium/swarm/storage"
 )
 
 const testMinProxBinSize = 2

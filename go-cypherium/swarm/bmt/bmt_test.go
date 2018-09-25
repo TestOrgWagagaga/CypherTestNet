@@ -28,7 +28,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/crypto/sha3"
+	"github.com/cyphertestnet/go-cypherium/crypto/sha3"
 )
 
 // the actual data length generated (could be longer than max datalength of the BMT)

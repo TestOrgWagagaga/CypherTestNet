@@ -19,7 +19,7 @@ package network
 import (
 	"testing"
 
-	p2ptest "github.com/cypherium_private/go-cypherium/p2p/testing"
+	p2ptest "github.com/cyphertestnet/go-cypherium/p2p/testing"
 )
 
 /***

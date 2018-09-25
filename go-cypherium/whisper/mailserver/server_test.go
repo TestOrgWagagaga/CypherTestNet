@@ -25,9 +25,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/common"
-	"github.com/cypherium_private/go-cypherium/crypto"
-	whisper "github.com/cypherium_private/go-cypherium/whisper/whisperv6"
+	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/crypto"
+	whisper "github.com/cyphertestnet/go-cypherium/whisper/whisperv6"
 )
 
 const powRequirement = 0.00001

@@ -25,11 +25,11 @@ import (
 	"io/ioutil"
 	"math/big"
 
-	"github.com/cypherium_private/go-cypherium/accounts/abi/bind"
-	"github.com/cypherium_private/go-cypherium/accounts/abi/bind/backends"
-	"github.com/cypherium_private/go-cypherium/contracts/chequebook/contract"
-	"github.com/cypherium_private/go-cypherium/core"
-	"github.com/cypherium_private/go-cypherium/crypto"
+	"github.com/cyphertestnet/go-cypherium/accounts/abi/bind"
+	"github.com/cyphertestnet/go-cypherium/accounts/abi/bind/backends"
+	"github.com/cyphertestnet/go-cypherium/contracts/chequebook/contract"
+	"github.com/cyphertestnet/go-cypherium/core"
+	"github.com/cyphertestnet/go-cypherium/crypto"
 )
 
 var (

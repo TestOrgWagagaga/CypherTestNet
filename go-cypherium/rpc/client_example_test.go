@@ -22,7 +22,7 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/rpc"
+	"github.com/cyphertestnet/go-cypherium/rpc"
 )
 
 // In this example, our client whishes to track the latest 'block number'

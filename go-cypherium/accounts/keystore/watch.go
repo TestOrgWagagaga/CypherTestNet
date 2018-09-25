@@ -21,7 +21,7 @@ package keystore
 import (
 	"time"
 
-	"github.com/cypherium_private/go-cypherium/log"
+	"github.com/cyphertestnet/go-cypherium/log"
 	"github.com/rjeczalik/notify"
 )
 

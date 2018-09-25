@@ -22,9 +22,9 @@ import (
 
 	"sync/atomic"
 
-	"github.com/cypherium_private/go-cypherium/consensus"
-	"github.com/cypherium_private/go-cypherium/log"
-	recfg "github.com/cypherium_private/go-cypherium/reconfig/consensor"
+	"github.com/cyphertestnet/go-cypherium/consensus"
+	"github.com/cyphertestnet/go-cypherium/log"
+	recfg "github.com/cyphertestnet/go-cypherium/reconfig/consensor"
 )
 
 type CpuAgent struct {

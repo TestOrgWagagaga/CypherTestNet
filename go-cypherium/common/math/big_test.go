@@ -22,7 +22,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/cypherium_private/go-cypherium/common"
+	"github.com/cyphertestnet/go-cypherium/common"
 )
 
 func TestHexOrDecimal256(t *testing.T) {
