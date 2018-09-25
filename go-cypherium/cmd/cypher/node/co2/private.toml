@@ -1,8 +1,8 @@
 # This file contains your private key.
 # Do not give it away lightly!
 Suite = "Ed25519"
-Public = "a6b33f461a67984baf829ace78930ed6b06204df0423c94032f1d0c0217d7e2d"
-Private = "b24d8ce98017a08cdc921a2c792d8e349b1a257466428a48748279f6676e6700"
+Public = "a21aa21ccbc7818daac7bcffecb7e0d69d00f4747b83d895217e416c4fa185cc"
+Private = "a58dd32e46a08639c70fc5a3cdf4383ffd927f0eeb577262d4ad835bc1b8ec0c"
 Address = "tcp://localhost:7004"
 ListenAddress = ""
 Description = "Conode_2"

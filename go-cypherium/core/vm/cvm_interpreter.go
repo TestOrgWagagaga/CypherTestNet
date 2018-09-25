@@ -162,11 +162,7 @@ func (in *JVMInterpreter) startVM(memCode []byte, className, methodName string, 
 				*/
 			}
 		} else { //argsLen > 0
-			if methodName == "transfer(address,uint256)" && argsLen == 64 { //32*2 call Transfer in java class
-				methodName = "Transfer(address,uint256)"
-				//methodDesc = "(Ljava/lang/String;J)Ljava/lang/String;"
-
-			} else if methodName == "balanceOf(address)" {
+			if methodName == "balanceOf(address)" {
 				if argsLen == 0 {
 					return nil, fmt.Errorf("balanceOf: not found address")
 				}
