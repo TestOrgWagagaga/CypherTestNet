@@ -21,8 +21,13 @@ const (
 type LoggerFactory struct{}
 
 func (this *LoggerFactory) NewLogger(category string, level int, logfile string) *Logger {
-	path := VM.GetSystemSetting("log.base") + "/" + logfile
-	var _, err = os.Stat(path)
+	logdir := VM.GetSystemSetting("log.base")
+	_, err := os.Stat(logdir)
+	if os.IsNotExist(err) {
+		os.MkdirAll(logdir, os.ModePerm)
+	}
+	path := logdir + "/" + logfile
+	_, err = os.Stat(path)
 
 	// create file if not exists
 	if os.IsNotExist(err) {
@@ -32,8 +37,8 @@ func (this *LoggerFactory) NewLogger(category string, level int, logfile string)
 		os.Create(path)
 	}
 
-	f, err := os.OpenFile(path, os.O_RDWR, 0666)
-	if err != nil {
+	f, err1 := os.OpenFile(path, os.O_RDWR, 0666)
+	if err1 != nil {
 		Fatal("File does not exists or cannot be created")
 	}
 
@@ -94,14 +99,14 @@ func Fatal(format string, args ...interface{}) {
 	color.New(color.FgHiRed).Fprintf(os.Stderr, "VM internal error: ")
 	color.New(color.FgRed).Fprintf(os.Stderr, format+"\n\n ------------------------\n", args...)
 	debug.PrintStack()
-	//?? os.Exit(1)
+	panic("Fatal") //?? os.Exit(1)
 }
 
 func Bug(format string, args ...interface{}) {
 	color.New(color.FgHiYellow).Fprintf(os.Stderr, "VM implmentation bug: ")
 	color.New(color.FgYellow).Fprintf(os.Stderr, format+"\n\n ------------------------\n", args...)
 	debug.PrintStack()
-	//?? os.Exit(2)
+	panic("Bug") //?? os.Exit(2)
 }
 
 func Assert(expression bool, format string, args ...interface{}) {
@@ -109,6 +114,6 @@ func Assert(expression bool, format string, args ...interface{}) {
 		color.New(color.FgHiYellow).Fprintf(os.Stderr, "VM runtime assertion violation: ")
 		color.New(color.FgYellow).Fprintf(os.Stderr, format+"\n\n ------------------------\n", args...)
 		debug.PrintStack()
-		//?? os.Exit(3)
+		panic("Assert") //?? os.Exit(3)
 	}
 }

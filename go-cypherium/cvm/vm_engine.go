@@ -442,6 +442,7 @@ func (this *Thread) ExecuteFrame() bool /* this return is throwable if this meth
 				//f.push(throwable)
 				//f.exception = m_throwable
 				//this.pop()
+				panic("Exceeding the loop limit")
 				return false
 			}
 		}

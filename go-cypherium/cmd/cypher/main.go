@@ -27,22 +27,23 @@ import (
 	"strconv"
 	"strings"
 	"time"
- 
-	onetLog "github.com/dedis/onet/log"
-	"github.com/elastic/gosigar"
+
 	"github.com/cypherium/CypherTestNet/go-cypherium/accounts"
 	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/keystore"
 	"github.com/cypherium/CypherTestNet/go-cypherium/cmd/utils"
 	"github.com/cypherium/CypherTestNet/go-cypherium/console"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/vm"
 	"github.com/cypherium/CypherTestNet/go-cypherium/eth"
 	"github.com/cypherium/CypherTestNet/go-cypherium/ethclient"
 	"github.com/cypherium/CypherTestNet/go-cypherium/internal/debug"
 	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 	"github.com/cypherium/CypherTestNet/go-cypherium/metrics"
 	"github.com/cypherium/CypherTestNet/go-cypherium/node"
+	onetLog "github.com/dedis/onet/log"
+	"github.com/elastic/gosigar"
 	"gopkg.in/urfave/cli.v1"
 )
- 
+
 const (
 	clientIdentifier = "cypher" // Client identifier to advertise over the network
 )
@@ -258,6 +259,7 @@ func main() {
 // It creates a default node based on the command line arguments and runs it in
 // blocking mode, waiting for it to be shut down.
 func cypher(ctx *cli.Context) error {
+	vm.CVM_init()
 	node := makeFullNode(ctx)
 	startNode(ctx, node)
 	node.Wait()

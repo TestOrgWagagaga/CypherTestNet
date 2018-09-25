@@ -52,3 +52,35 @@
 14:08:39.191271 table@remove removed @8
 14:08:39.192773 table@remove removed @5
 14:08:39.194266 table@remove removed @2
+=============== Sep 25, 2018 (CST) ===============
+14:50:56.819574 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:50:56.820573 version@stat F·[0 1] S·4KiB[0B 4KiB] Sc·[0.00 0.00]
+14:50:56.820573 db@open opening
+14:50:56.821072 journal@recovery F·1
+14:50:56.826560 journal@recovery recovering @12
+14:50:57.079284 memdb@flush created L0@15 N·35098 S·1MiB "Dat..ion,v64":"r\x00\x00..P'\xdf,v35157"
+14:50:57.211029 version@stat F·[1 1] S·1MiB[1MiB 4KiB] Sc·[0.25 0.00]
+14:50:57.250757 db@janitor F·4 G·0
+14:50:57.250757 db@open done T·430.1838ms
+14:50:57.286688 table@compaction L0·1 -> L1·1 S·1MiB Q·35163
+14:50:57.453371 table@build created L1@18 N·23435 S·1MiB "Dat..ion,v64":"\xce\x18\xfe..w8J,v4"
+14:50:57.453870 version@stat F·[0 1] S·1MiB[0B 1MiB] Sc·[0.00 0.01]
+14:50:57.494292 table@compaction committed F-1 S-478KiB Ke·0 D·11706 T·207.6035ms
+14:50:57.497287 table@remove removed @15
+14:50:57.498785 table@remove removed @14
+=============== Sep 25, 2018 (CST) ===============
+17:27:05.616664 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+17:27:05.618161 version@stat F·[0 1] S·1MiB[0B 1MiB] Sc·[0.00 0.01]
+17:27:05.618161 db@open opening
+17:27:05.618661 journal@recovery F·1
+17:27:05.625148 journal@recovery recovering @16
+17:27:05.690105 memdb@flush created L0@19 N·2 S·240B "Dat..ion,v35163":"Las..der,v35164"
+17:27:05.697097 version@stat F·[1 1] S·1MiB[240B 1MiB] Sc·[0.25 0.01]
+17:27:05.752535 db@janitor F·4 G·0
+17:27:05.753036 db@open done T·134.8743ms
+17:27:05.984598 table@compaction L0·1 -> L1·1 S·1MiB Q·35166
+17:27:06.250592 table@build created L1@22 N·23435 S·1MiB "Dat..ion,v35163":"\xce\x18\xfe..w8J,v4"
+17:27:06.251092 version@stat F·[0 1] S·1MiB[0B 1MiB] Sc·[0.00 0.01]
+17:27:30.017765 table@compaction committed F-1 S-233B Ke·0 D·2 T·24.0331679s
+17:27:35.688570 table@remove removed @19
+17:27:35.692563 table@remove removed @18
