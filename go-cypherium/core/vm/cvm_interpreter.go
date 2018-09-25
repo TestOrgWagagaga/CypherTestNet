@@ -97,6 +97,7 @@ func (in *JVMInterpreter) Run(contract *Contract, input []byte) (ret []byte, err
 	//res, err := cvm.StartVM( contract.Code, "", methodName,  methodArgs)
 
 	res, err := in.startVM(contract.Code, "", methodName, methodArgs)
+	fmt.Println("in.startVM end.")
 	//in.startVM(contract.Code, "", methodName,  methodArgs)
 	if err != nil {
 		fmt.Println(err)
