@@ -145,9 +145,7 @@ func (in *JVMInterpreter) startVM(memCode []byte, className, methodName string, 
 	if className == "" {
 		className = "cypherium_@Contract"
 		if methodName == "" { //main,create contract
-			in.cvm.Init()
-			register_javax_cypher_cypnet()
-			in.cvm.StarMain(memCode, className)
+			in.cvm.StarMain(memCode, className, register_javax_cypher_cypnet)
 			return memCode, nil
 
 		} else if argsLen == 0 {
@@ -179,11 +177,7 @@ func (in *JVMInterpreter) startVM(memCode []byte, className, methodName string, 
 					return nil, fmt.Errorf("balanceOf: not found address")
 				}
 				s := common.Bytes2Hex(VM_GetSBytes(javaArgs, -1))
-				if s[0] != '0' && (s[1] != 'x' || s[1] != 'X') {
-					s = "0X" + s
-				}
-
-				hashv, err := JDK_getContractBalance(strings.ToUpper(s))
+				hashv, err := JDK_getContractBalance(s)
 				if err != nil {
 					return nil, err
 				}
@@ -194,13 +188,11 @@ func (in *JVMInterpreter) startVM(memCode []byte, className, methodName string, 
 		fmt.Println("Support other class names in the future!")
 	}
 
-	in.cvm.Init()
-	register_javax_cypher_cypnet()
 	ret := in.cvm.StartFunction(memCode, className, methodName, javaArgs)
 	if ret == "" {
 		return nil, nil
 	}
-	s, err := VM_PackToRes("string", reflect.ValueOf(ret))
+	s, err := VM_PackToRes("string", reflect.ValueOf(ret)) //only return string
 	return s, err
 
 	//return nil, nil

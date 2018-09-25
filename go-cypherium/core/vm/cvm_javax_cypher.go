@@ -24,7 +24,6 @@ func register_javax_cypher_cypnet() {
 func JDK_javax_cypher_cypnet_SetTokenInfo(symbol cvm.JavaLangString, name cvm.JavaLangString, totalSupply cvm.Long, owner cvm.JavaLangString) cvm.Boolean {
 	JDK_setContractValue("symbol()", symbol.ToNativeString())
 	JDK_setContractValue("name()", name.ToNativeString())
-
 	addr := JDK_getCheckedAddress(owner.ToNativeString())
 	if addr == "" {
 		addr = JDK_getCheckedAddress("caller")
@@ -115,9 +114,9 @@ func JDK_javax_cypher_cypnet_SetState(key cvm.JavaLangString, value cvm.JavaLang
 	n := len(svalue)
 	N := common.HashLength
 	for {
-	        num := N
-		if n < N{
-		   num = n
+		num := N
+		if n < N {
+			num = n
 		}
 		sv := svalue[i:num]
 		hashV := common.BytesToHash([]byte(sv))
@@ -213,13 +212,16 @@ func JDK_getCheckedAddress(addr string) string {
 		//case "owner"
 	}
 
-	if len(addr) != 42 { //？？ find the constant value
+	n := len(addr) //？？ find the constant value
+	if n >= 40 && addr[0] != '0' && (addr[1] != 'x' || addr[1] != 'X') {
+		addr = "0X" + addr
+		n = n + 2
+	}
+	if n != 42 {
 		return ""
 	}
+
 	addr = strings.ToUpper(addr)
-	if addr[0] != '0' && addr[1] != 'X' {
-		return ""
-	}
 
 	return addr
 }

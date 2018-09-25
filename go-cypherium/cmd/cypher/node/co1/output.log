@@ -1,17 +1,14 @@
-INFO [09/21/2018|14:34:43.531] Maximum peer count                       Cypherium=25 LES=0 total=25
-INFO [09/21/2018|14:34:43.666] Starting peer-to-peer node               instance=Cypher/v0.1.0-unstable/windows-amd64/go1.10.2
-INFO [09/21/2018|14:34:43.666] Allocated cache and file handles         database=E:\\golang\\src\\github.com\\cypherium\\CypherTestNet\\go-cypherium\\cmd\\cypher\\node\\co1\\cypher\\chaindata cache=768 handles=1024
-INFO [09/21/2018|14:34:44.005] Initialised chain configuration          config id=123666
-INFO [09/21/2018|14:34:44.005] Initialising Cypherium protocol          versions="[63 62]" network=123666
-INFO [09/21/2018|14:34:44.007] Loaded most recent local header          number=0 hash=af7105…debaa3 td=131174
-INFO [09/21/2018|14:34:44.013] Loaded most recent local full block      number=0 hash=af7105…debaa3 td=131174
-INFO [09/21/2018|14:34:44.013] Loaded most recent local fast block      number=0 hash=af7105…debaa3 td=131174
-INFO [09/21/2018|14:34:44.019] Regenerated local transaction journal    transactions=0 accounts=0
-INFO [09/21/2018|14:34:44.119] Starting P2P networking 
-INFO [09/21/2018|14:34:44.119] RLPx listener up                         self="cnode://7a3bfbba7f26fd22a8ed501600ea42002b481ec4099414c3a81e9e6c5b14b9255277efac8a16552d3a413f7d9aa0a63ab9a019735ec2f6d9f7b311157d1b651e@[::]:5002?discport=0"
-INFO [09/21/2018|14:34:44.126] Blockchain manager stopped 
-INFO [09/21/2018|14:34:44.126] Stopping Ethereum protocol 
-INFO [09/21/2018|14:34:44.126] Ethereum protocol stopped 
-INFO [09/21/2018|14:34:44.126] Transaction pool stopped 
-INFO [09/21/2018|14:34:44.131] Database closed                          database=E:\\golang\\src\\github.com\\cypherium\\CypherTestNet\\go-cypherium\\cmd\\cypher\\node\\co1\\cypher\\chaindata
-INFO [09/21/2018|14:34:44.389] Mapped network port                      proto=tcp extport=5002 intport=5002 interface=NAT-PMP(192.168.31.1)
+INFO [09/25/2018|13:54:01.165] Maximum peer count                       Cypherium=25 LES=0 total=25
+INFO [09/25/2018|13:54:01.288] Starting peer-to-peer node               instance=Cypher/v0.1.0-unstable/windows-amd64/go1.10.2
+INFO [09/25/2018|13:54:01.289] Allocated cache and file handles         database=E:\\golang\\src\\github.com\\cypherium\\CypherTestNet\\go-cypherium\\cmd\\cypher\\node\\co1\\cypher\\chaindata cache=768 handles=1024
+INFO [09/25/2018|13:54:01.451] Initialised chain configuration          config id=123666
+INFO [09/25/2018|13:54:01.452] Initialising Cypherium protocol          versions="[63 62]" network=123666
+INFO [09/25/2018|13:54:01.452] Loaded most recent local header          number=0 hash=de7cc9…91cbac td=131174
+INFO [09/25/2018|13:54:01.452] Loaded most recent local full block      number=0 hash=de7cc9…91cbac td=131174
+INFO [09/25/2018|13:54:01.452] Loaded most recent local fast block      number=0 hash=de7cc9…91cbac td=131174
+INFO [09/25/2018|13:54:01.466] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [09/25/2018|13:54:01.537] Starting P2P networking 
+INFO [09/25/2018|13:54:01.538] RLPx listener up                         self="cnode://a7b69e221482826f6aa5868c3698f16d53599b769de89e5298281abb103b1094199e83aff22269ba2911277e1f01e4456900bb70581f66408655cd920a6f98ce@[::]:5002?discport=0"
+INFO [09/25/2018|13:54:01.544] IPC endpoint opened                      url=\\\\.\\pipe\\cypher.ipc
+INFO [09/25/2018|13:54:01.545] HTTP endpoint opened                     url=http://0.0.0.0:8002     cors=* vhosts=localhost
+INFO [09/25/2018|13:54:01.873] Mapped network port                      proto=tcp extport=5002 intport=5002 interface=NAT-PMP(192.168.31.1)

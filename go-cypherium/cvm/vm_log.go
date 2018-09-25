@@ -1,10 +1,11 @@
 package cvm
 
 import (
+	"bufio"
 	"fmt"
 	"os"
-	"bufio"
 	"runtime/debug"
+
 	"github.com/fatih/color"
 )
 
@@ -93,14 +94,14 @@ func Fatal(format string, args ...interface{}) {
 	color.New(color.FgHiRed).Fprintf(os.Stderr, "VM internal error: ")
 	color.New(color.FgRed).Fprintf(os.Stderr, format+"\n\n ------------------------\n", args...)
 	debug.PrintStack()
-	os.Exit(1)
+	//?? os.Exit(1)
 }
 
 func Bug(format string, args ...interface{}) {
 	color.New(color.FgHiYellow).Fprintf(os.Stderr, "VM implmentation bug: ")
 	color.New(color.FgYellow).Fprintf(os.Stderr, format+"\n\n ------------------------\n", args...)
 	debug.PrintStack()
-	os.Exit(2)
+	//?? os.Exit(2)
 }
 
 func Assert(expression bool, format string, args ...interface{}) {
@@ -108,6 +109,6 @@ func Assert(expression bool, format string, args ...interface{}) {
 		color.New(color.FgHiYellow).Fprintf(os.Stderr, "VM runtime assertion violation: ")
 		color.New(color.FgYellow).Fprintf(os.Stderr, format+"\n\n ------------------------\n", args...)
 		debug.PrintStack()
-		os.Exit(3)
+		//?? os.Exit(3)
 	}
 }
