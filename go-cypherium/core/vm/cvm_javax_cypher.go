@@ -12,13 +12,13 @@ import (
 
 func register_javax_cypher_cypnet() {
 
-	cvm.VM.RegisterNative("javax/cypher/cypnet.SetTokenInfo(Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;)Z", JDK_javax_cypher_cypnet_SetTokenInfo)
-	cvm.VM.RegisterNative("javax/cypher/cypnet.BalanceOf(Ljava/lang/String;)J", JDK_javax_cypher_cypnet_BalanceOf)
-	cvm.VM.RegisterNative("javax/cypher/cypnet.ChangeBalance(Ljava/lang/String;J)Z", JDK_javax_cypher_cypnet_ChangeBalance)
-	cvm.VM.RegisterNative("javax/cypher/cypnet.Transfer(Ljava/lang/String;Ljava/lang/String;J)Z", JDK_javax_cypher_cypnet_Transfer)
-	cvm.VM.RegisterNative("javax/cypher/cypnet.GetState(Ljava/lang/String;)Ljava/lang/String;", JDK_javax_cypher_cypnet_GetState)
-	cvm.VM.RegisterNative("javax/cypher/cypnet.SetState(Ljava/lang/String;Ljava/lang/String;)Z", JDK_javax_cypher_cypnet_SetState)
-	cvm.VM.RegisterNative("javax/cypher/cypnet.GetAddress(Ljava/lang/String;)Ljava/lang/String;", JDK_javax_cypher_cypnet_GetAddress)
+	cvm.VM.RegisterNative("javax/cypher/Cypnet.setTokenInfo(Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;)Z", JDK_javax_cypher_cypnet_SetTokenInfo)
+	cvm.VM.RegisterNative("javax/cypher/Cypnet.balanceOf(Ljava/lang/String;)J", JDK_javax_cypher_cypnet_BalanceOf)
+	cvm.VM.RegisterNative("javax/cypher/Cypnet.changeBalance(Ljava/lang/String;J)Z", JDK_javax_cypher_cypnet_ChangeBalance)
+	cvm.VM.RegisterNative("javax/cypher/Cypnet.transfer(Ljava/lang/String;Ljava/lang/String;J)Z", JDK_javax_cypher_cypnet_Transfer)
+	cvm.VM.RegisterNative("javax/cypher/Cypnet.getState(Ljava/lang/String;)Ljava/lang/String;", JDK_javax_cypher_cypnet_GetState)
+	cvm.VM.RegisterNative("javax/cypher/Cypnet.setState(Ljava/lang/String;Ljava/lang/String;)Z", JDK_javax_cypher_cypnet_SetState)
+	cvm.VM.RegisterNative("javax/cypher/Cypnet.getAddress(Ljava/lang/String;)Ljava/lang/String;", JDK_javax_cypher_cypnet_GetAddress)
 }
 
 func JDK_javax_cypher_cypnet_SetTokenInfo(symbol cvm.JavaLangString, name cvm.JavaLangString, totalSupply cvm.Long, owner cvm.JavaLangString) cvm.Boolean {

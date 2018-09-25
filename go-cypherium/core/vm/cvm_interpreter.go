@@ -11,8 +11,6 @@ import (
 	"github.com/cypherium/CypherTestNet/go-cypherium/params"
 )
 
-var is_cvm_Initialized = false
-
 // Config are the configuration options for the Interpreter
 type ConfigJVM struct {
 	// Debug enabled debugging Interpreter options
@@ -47,10 +45,6 @@ type JVMInterpreter struct {
 
 // NewEVMInterpreter returns a new instance of the Interpreter.
 func NewJVMInterpreter(evm *EVM, cfg Config) *JVMInterpreter {
-	if !is_cvm_Initialized {
-		is_cvm_Initialized = true
-	}
-
 	return &JVMInterpreter{
 		evm:      evm,
 		cfg:      cfg,
@@ -97,7 +91,6 @@ func (in *JVMInterpreter) Run(contract *Contract, input []byte) (ret []byte, err
 	//res, err := cvm.StartVM( contract.Code, "", methodName,  methodArgs)
 
 	res, err := in.startVM(contract.Code, "", methodName, methodArgs)
-	fmt.Println("in.startVM end.")
 	//in.startVM(contract.Code, "", methodName,  methodArgs)
 	if err != nil {
 		fmt.Println(err)
@@ -146,7 +139,7 @@ func (in *JVMInterpreter) startVM(memCode []byte, className, methodName string, 
 	if className == "" {
 		className = "cypherium_@Contract"
 		if methodName == "" { //main,create contract
-			in.cvm.StarMain(memCode, className, register_javax_cypher_cypnet)
+			in.cvm.StarMain(memCode, className)
 			return memCode, nil
 
 		} else if argsLen == 0 {
@@ -169,11 +162,7 @@ func (in *JVMInterpreter) startVM(memCode []byte, className, methodName string, 
 				*/
 			}
 		} else { //argsLen > 0
-			if methodName == "transfer(address,uint256)" && argsLen == 64 { //32*2 call Transfer in java class
-				methodName = "Transfer(address,uint256)"
-				//methodDesc = "(Ljava/lang/String;J)Ljava/lang/String;"
-
-			} else if methodName == "balanceOf(address)" {
+			if methodName == "balanceOf(address)" {
 				if argsLen == 0 {
 					return nil, fmt.Errorf("balanceOf: not found address")
 				}
@@ -250,4 +239,8 @@ func VM_GetSBytes(b []byte, n int) []byte {
 	}
 
 	return nil
+}
+
+func CVM_init() {
+	cvm.CVM_init(register_javax_cypher_cypnet)
 }

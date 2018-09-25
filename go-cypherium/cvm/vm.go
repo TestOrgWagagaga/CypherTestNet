@@ -37,7 +37,7 @@ type CVM struct {
 	*LoggerFactory
 	*Logger
 
-	classloader JavaLangClassLoader
+	Classloader JavaLangClassLoader
 
 	memCode      []byte
 	contractPath string
@@ -58,7 +58,7 @@ func NewVM() *CVM {
 	}
 
 	vm := &CVM{}
-	vm.classloader = NULL
+	vm.Classloader = NULL
 	vm.SystemSettings = map[string]string{
 		"log.base":              path.Join(VM_CurrentPath, "log"),
 		"log.level.threads":     strconv.Itoa(WARN),
@@ -112,10 +112,9 @@ func (this *CVM) Init() {
 	this.Logger = this.LoggerFactory.NewLogger("misc", miscLogLevel, "misc.log")
 }
 
-func (this *CVM) StarMain(memCode []byte, className string, registerNative func()) {
-	if this.classloader == NULL {
+func (this *CVM) StarMain(memCode []byte, className string) {
+	if this.Classloader == NULL {
 		this.Init()
-		registerNative()
 	}
 	VM.Heap = &Heap{}
 	VM.memCode = memCode
@@ -125,12 +124,12 @@ func (this *CVM) StarMain(memCode []byte, className string, registerNative func(
 	VM.RunBootstrapThread(
 		func() {
 
-			if VM.classloader == NULL {
+			if VM.Classloader == NULL {
 				VM.InvokeMethodOf("java/lang/System", "initializeSystemClass", "()V")
 				// Use AppClassLoader to load initial class
-				VM.classloader = VM.InvokeMethodOf("java/lang/ClassLoader", "getSystemClassLoader", "()Ljava/lang/ClassLoader;").(JavaLangClassLoader)
+				VM.Classloader = VM.InvokeMethodOf("java/lang/ClassLoader", "getSystemClassLoader", "()Ljava/lang/ClassLoader;").(JavaLangClassLoader)
 			}
-			initialClass := VM.createClass(className, VM.classloader, TRIGGER_BY_ACCESS_MEMBER)
+			initialClass := VM.createClass(className, VM.Classloader, TRIGGER_BY_ACCESS_MEMBER)
 			method := initialClass.FindMethod("main", "([Ljava/lang/String;)V")
 			if method == nil {
 				return
@@ -149,7 +148,7 @@ func (this *CVM) StarMain(memCode []byte, className string, registerNative func(
 }
 
 func (this *CVM) StartFunction(memCode []byte, className, methodName string, javaArgs []byte) string {
-	if this.classloader == NULL {
+	if this.Classloader == NULL {
 		this.Init()
 	}
 
@@ -173,11 +172,11 @@ func (this *CVM) StartFunction(memCode []byte, className, methodName string, jav
 	retValue := ""
 	// bootstrap thread don't run in a new go routine, just in Go startup routine
 	VM.RunBootstrapThread(func() {
-		if VM.classloader == NULL {
+		if VM.Classloader == NULL {
 			VM.InvokeMethodOf("java/lang/System", "initializeSystemClass", "()V")
-			VM.classloader = VM.InvokeMethodOf("java/lang/ClassLoader", "getSystemClassLoader", "()Ljava/lang/ClassLoader;").(JavaLangClassLoader)
+			VM.Classloader = VM.InvokeMethodOf("java/lang/ClassLoader", "getSystemClassLoader", "()Ljava/lang/ClassLoader;").(JavaLangClassLoader)
 		}
-		initialClass := VM.createClass(className, VM.classloader, TRIGGER_BY_ACCESS_MEMBER)
+		initialClass := VM.createClass(className, VM.Classloader, TRIGGER_BY_ACCESS_MEMBER)
 		method := initialClass.FindMethod(methodName, methodDesc)
 		if method == nil {
 			return
@@ -213,7 +212,7 @@ func (this *CVM) StartFunction(memCode []byte, className, methodName string, jav
 	VM_WG.Wait()
 	VM.startCount = false
 	if !isRunningOK {
-		this.classloader = NULL //reinit and reload for next time
+		this.Classloader = NULL //reinit and reload for next time
 	}
 
 	return retValue
@@ -298,4 +297,20 @@ func (this *CVM) covertToJavaParams(typeList []string, values []interface{}) ([]
 	}
 
 	return params, nil
+}
+
+func CVM_init(registerNative func()) {
+	if VM.Classloader != NULL {
+		return
+	}
+
+	VM.Init()
+	registerNative()
+	VM.RunBootstrapThread(
+		func() {
+			VM.InvokeMethodOf("java/lang/System", "initializeSystemClass", "()V")
+			VM.Classloader = VM.InvokeMethodOf("java/lang/ClassLoader", "getSystemClassLoader", "()Ljava/lang/ClassLoader;").(JavaLangClassLoader)
+		})
+
+	VM_WG.Wait()
 }
