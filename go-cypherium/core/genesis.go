@@ -25,16 +25,16 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/common/hexutil"
-	"github.com/cyphertestnet/go-cypherium/common/math"
-	"github.com/cyphertestnet/go-cypherium/core/rawdb"
-	"github.com/cyphertestnet/go-cypherium/core/state"
-	"github.com/cyphertestnet/go-cypherium/core/types"
-	"github.com/cyphertestnet/go-cypherium/ethdb"
-	"github.com/cyphertestnet/go-cypherium/log"
-	"github.com/cyphertestnet/go-cypherium/params"
-	"github.com/cyphertestnet/go-cypherium/rlp"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/hexutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/math"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/rawdb"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/state"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/ethdb"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/params"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rlp"
 )
 
 //go:generate gencodec -type Genesis -field-override genesisSpecMarshaling -out gen_genesis.go

@@ -21,11 +21,11 @@ import (
 	"errors"
 	"math"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/common/hexutil"
-	"github.com/cyphertestnet/go-cypherium/consensus/ethash"
-	"github.com/cyphertestnet/go-cypherium/core"
-	"github.com/cyphertestnet/go-cypherium/params"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/hexutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/consensus/ethash"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core"
+	"github.com/cypherium/CypherTestNet/go-cypherium/params"
 )
 
 // cppEthereumGenesisSpec represents the genesis specification format used by the

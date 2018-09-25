@@ -27,9 +27,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/accounts"
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 	"gopkg.in/fatih/set.v0"
 )
 

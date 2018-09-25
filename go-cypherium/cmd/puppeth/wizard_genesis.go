@@ -25,10 +25,10 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/core"
-	"github.com/cyphertestnet/go-cypherium/log"
-	"github.com/cyphertestnet/go-cypherium/params"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/params"
 )
 
 // makeGenesis creates a new genesis struct based on some user input.

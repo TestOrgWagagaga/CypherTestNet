@@ -22,8 +22,8 @@ import (
 	"io/ioutil"
 	"strings"
 
-	"github.com/cyphertestnet/go-cypherium/accounts/abi"
-	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/abi"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
 
 	"bytes"
 	"os"

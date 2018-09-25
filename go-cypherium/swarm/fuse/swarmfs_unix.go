@@ -29,9 +29,9 @@ import (
 
 	"bazil.org/fuse"
 	"bazil.org/fuse/fs"
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/swarm/api"
-	"github.com/cyphertestnet/go-cypherium/swarm/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/api"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/log"
 )
 
 var (

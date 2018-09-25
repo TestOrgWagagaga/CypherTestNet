@@ -22,9 +22,9 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/common/math"
-	"github.com/cyphertestnet/go-cypherium/core/vm"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/math"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/vm"
 )
 
 type JSONLogger struct {

@@ -22,9 +22,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/common/hexutil"
-	"github.com/cyphertestnet/go-cypherium/common/math"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/hexutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/math"
 )
 
 var (

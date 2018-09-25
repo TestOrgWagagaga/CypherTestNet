@@ -23,13 +23,13 @@ import (
 	"net"
 	"sync"
 
-	"github.com/cyphertestnet/go-cypherium/event"
-	"github.com/cyphertestnet/go-cypherium/log"
-	"github.com/cyphertestnet/go-cypherium/node"
-	"github.com/cyphertestnet/go-cypherium/p2p"
-	"github.com/cyphertestnet/go-cypherium/p2p/discover"
-	"github.com/cyphertestnet/go-cypherium/p2p/simulations/pipes"
-	"github.com/cyphertestnet/go-cypherium/rpc"
+	"github.com/cypherium/CypherTestNet/go-cypherium/event"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/node"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/discover"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/simulations/pipes"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
 )
 
 // SimAdapter is a NodeAdapter which creates in-memory simulation nodes and

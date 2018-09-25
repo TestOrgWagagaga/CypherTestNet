@@ -26,11 +26,11 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/common/math"
-	"github.com/cyphertestnet/go-cypherium/crypto"
-	"github.com/cyphertestnet/go-cypherium/crypto/ecies"
-	"github.com/cyphertestnet/go-cypherium/rlp"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/math"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto/ecies"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rlp"
 )
 
 // Envelope represents a clear-text data packet to transmit through the Whisper

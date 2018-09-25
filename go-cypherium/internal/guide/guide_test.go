@@ -30,8 +30,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/accounts/keystore"
-	"github.com/cyphertestnet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/keystore"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
 )
 
 // Tests that the account management snippets work correctly.

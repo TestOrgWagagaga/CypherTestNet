@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/cyphertestnet/go-cypherium/swarm/pot"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/pot"
 )
 
 // discovery bzz extension for requesting and relaying node address records

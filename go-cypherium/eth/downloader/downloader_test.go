@@ -25,15 +25,15 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/consensus/ethash"
-	"github.com/cyphertestnet/go-cypherium/core"
-	"github.com/cyphertestnet/go-cypherium/core/types"
-	"github.com/cyphertestnet/go-cypherium/crypto"
-	"github.com/cyphertestnet/go-cypherium/ethdb"
-	"github.com/cyphertestnet/go-cypherium/event"
-	"github.com/cyphertestnet/go-cypherium/params"
-	"github.com/cyphertestnet/go-cypherium/trie"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/consensus/ethash"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/ethdb"
+	"github.com/cypherium/CypherTestNet/go-cypherium/event"
+	"github.com/cypherium/CypherTestNet/go-cypherium/params"
+	"github.com/cypherium/CypherTestNet/go-cypherium/trie"
 )
 
 var (

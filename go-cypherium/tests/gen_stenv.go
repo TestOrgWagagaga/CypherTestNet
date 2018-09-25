@@ -7,8 +7,8 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/common/math"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/math"
 )
 
 var _ = (*stEnvMarshaling)(nil)

@@ -23,11 +23,11 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/cyphertestnet/go-cypherium/log"
-	"github.com/cyphertestnet/go-cypherium/p2p"
-	"github.com/cyphertestnet/go-cypherium/p2p/discover"
-	"github.com/cyphertestnet/go-cypherium/p2p/protocols"
-	p2ptest "github.com/cyphertestnet/go-cypherium/p2p/testing"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/discover"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/protocols"
+	p2ptest "github.com/cypherium/CypherTestNet/go-cypherium/p2p/testing"
 )
 
 var (

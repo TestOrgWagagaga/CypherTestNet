@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/cyphertestnet/go-cypherium/cmd/evm/internal/compiler"
+	"github.com/cypherium/CypherTestNet/go-cypherium/cmd/evm/internal/compiler"
 
 	cli "gopkg.in/urfave/cli.v1"
 )

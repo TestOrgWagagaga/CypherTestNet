@@ -23,9 +23,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/crypto"
-	"github.com/cyphertestnet/go-cypherium/ethdb"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/ethdb"
 )
 
 func init() {

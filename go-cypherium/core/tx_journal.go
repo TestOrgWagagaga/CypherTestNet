@@ -21,10 +21,10 @@ import (
 	"io"
 	"os"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/core/types"
-	"github.com/cyphertestnet/go-cypherium/log"
-	"github.com/cyphertestnet/go-cypherium/rlp"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rlp"
 )
 
 // errNoActiveJournal is returned if a transaction is attempted to be inserted

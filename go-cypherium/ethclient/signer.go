@@ -20,8 +20,8 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
 )
 
 // senderFromServer is a types.Signer that remembers the sender address returned by the RPC

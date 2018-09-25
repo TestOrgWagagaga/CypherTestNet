@@ -21,12 +21,12 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/core/state"
-	"github.com/cyphertestnet/go-cypherium/core/vm"
-	"github.com/cyphertestnet/go-cypherium/crypto"
-	"github.com/cyphertestnet/go-cypherium/ethdb"
-	"github.com/cyphertestnet/go-cypherium/params"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/state"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/vm"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/ethdb"
+	"github.com/cypherium/CypherTestNet/go-cypherium/params"
 )
 
 // Config is a basic type specifying certain configuration flags for running

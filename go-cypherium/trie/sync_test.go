@@ -20,8 +20,8 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/ethdb"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/ethdb"
 )
 
 // makeTestTrie create a sample test trie to test node-wise reconstruction.

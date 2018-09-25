@@ -23,7 +23,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/p2p/simulations/pipes"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/simulations/pipes"
 )
 
 func TestTCPPipe(t *testing.T) {

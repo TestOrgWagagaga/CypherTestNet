@@ -19,10 +19,10 @@ package core
 import (
 	"fmt"
 
-	"github.com/cyphertestnet/go-cypherium/consensus"
-	"github.com/cyphertestnet/go-cypherium/core/state"
-	"github.com/cyphertestnet/go-cypherium/core/types"
-	"github.com/cyphertestnet/go-cypherium/params"
+	"github.com/cypherium/CypherTestNet/go-cypherium/consensus"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/state"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/params"
 )
 
 // BlockValidator is responsible for validating block headers, uncles and

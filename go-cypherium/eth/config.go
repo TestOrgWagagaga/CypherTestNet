@@ -24,13 +24,13 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/common/hexutil"
-	"github.com/cyphertestnet/go-cypherium/consensus/ethash"
-	"github.com/cyphertestnet/go-cypherium/core"
-	"github.com/cyphertestnet/go-cypherium/eth/downloader"
-	"github.com/cyphertestnet/go-cypherium/eth/gasprice"
-	"github.com/cyphertestnet/go-cypherium/params"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/hexutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/consensus/ethash"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core"
+	"github.com/cypherium/CypherTestNet/go-cypherium/eth/downloader"
+	"github.com/cypherium/CypherTestNet/go-cypherium/eth/gasprice"
+	"github.com/cypherium/CypherTestNet/go-cypherium/params"
 )
 
 // DefaultConfig contains default settings for use on the Ethereum main net.

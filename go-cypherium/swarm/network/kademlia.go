@@ -24,9 +24,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/swarm/log"
-	"github.com/cyphertestnet/go-cypherium/swarm/pot"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/pot"
 )
 
 /*

@@ -19,7 +19,7 @@ package event_test
 import (
 	"fmt"
 
-	"github.com/cyphertestnet/go-cypherium/event"
+	"github.com/cypherium/CypherTestNet/go-cypherium/event"
 )
 
 func ExampleFeed_acknowledgedEvents() {

@@ -10,11 +10,11 @@ fi
 # Create fake Go workspace if it doesn't exist yet.
 workspace="$PWD/build/_workspace"
 root="$PWD"
-ethdir="$workspace/src/github.com/cyphertestnet"
+ethdir="$workspace/src/github.com/cypherium/CypherTestNet"
 if [ ! -L "$ethdir/go-cypherium" ]; then
     mkdir -p "$ethdir"
     cd "$ethdir"
-    ln -s ../../../../../. go-cypherium
+    ln -s ../../../../../../. go-cypherium
     cd "$root"
 fi
 

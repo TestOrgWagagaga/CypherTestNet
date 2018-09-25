@@ -26,13 +26,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/core/types"
-	"github.com/cyphertestnet/go-cypherium/eth"
-	"github.com/cyphertestnet/go-cypherium/les/flowcontrol"
-	"github.com/cyphertestnet/go-cypherium/light"
-	"github.com/cyphertestnet/go-cypherium/p2p"
-	"github.com/cyphertestnet/go-cypherium/rlp"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/eth"
+	"github.com/cypherium/CypherTestNet/go-cypherium/les/flowcontrol"
+	"github.com/cypherium/CypherTestNet/go-cypherium/light"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rlp"
 )
 
 var (

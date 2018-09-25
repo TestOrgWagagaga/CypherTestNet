@@ -21,10 +21,10 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/cyphertestnet/go-cypherium/common/math"
-	"github.com/cyphertestnet/go-cypherium/crypto"
-	"github.com/cyphertestnet/go-cypherium/crypto/sha3"
-	"github.com/cyphertestnet/go-cypherium/rlp"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/math"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto/sha3"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rlp"
 )
 
 // Registry of known identity schemes.

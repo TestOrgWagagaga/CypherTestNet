@@ -20,11 +20,11 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/cyphertestnet/go-cypherium/accounts/abi/bind"
-	"github.com/cyphertestnet/go-cypherium/accounts/abi/bind/backends"
-	"github.com/cyphertestnet/go-cypherium/contracts/ens/contract"
-	"github.com/cyphertestnet/go-cypherium/core"
-	"github.com/cyphertestnet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/abi/bind"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/abi/bind/backends"
+	"github.com/cypherium/CypherTestNet/go-cypherium/contracts/ens/contract"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
 )
 
 var (

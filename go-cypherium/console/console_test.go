@@ -26,12 +26,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/consensus/ethash"
-	"github.com/cyphertestnet/go-cypherium/core"
-	"github.com/cyphertestnet/go-cypherium/eth"
-	"github.com/cyphertestnet/go-cypherium/internal/jsre"
-	"github.com/cyphertestnet/go-cypherium/node"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/consensus/ethash"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core"
+	"github.com/cypherium/CypherTestNet/go-cypherium/eth"
+	"github.com/cypherium/CypherTestNet/go-cypherium/internal/jsre"
+	"github.com/cypherium/CypherTestNet/go-cypherium/node"
 )
 
 const (

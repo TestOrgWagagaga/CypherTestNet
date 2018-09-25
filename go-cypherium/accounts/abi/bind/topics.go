@@ -22,9 +22,9 @@ import (
 	"math/big"
 	"reflect"
 
-	"github.com/cyphertestnet/go-cypherium/accounts/abi"
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/abi"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
 )
 
 // makeTopics converts a filter query argument list into a filter topic set.

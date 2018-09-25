@@ -25,7 +25,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/cyphertestnet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 )
 
 // explorerDockerfile is the Dockerfile required to run a block explorer.

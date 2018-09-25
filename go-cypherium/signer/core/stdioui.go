@@ -21,9 +21,9 @@ import (
 	"context"
 	"sync"
 
-	"github.com/cyphertestnet/go-cypherium/internal/ethapi"
-	"github.com/cyphertestnet/go-cypherium/log"
-	"github.com/cyphertestnet/go-cypherium/rpc"
+	"github.com/cypherium/CypherTestNet/go-cypherium/internal/ethapi"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
 )
 
 type StdIOUI struct {

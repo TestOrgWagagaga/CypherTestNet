@@ -30,8 +30,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
 )
 
 // Node represents a host on the network.

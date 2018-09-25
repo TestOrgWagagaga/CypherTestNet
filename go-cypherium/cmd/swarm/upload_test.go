@@ -30,8 +30,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/log"
-	swarm "github.com/cyphertestnet/go-cypherium/swarm/api/client"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	swarm "github.com/cypherium/CypherTestNet/go-cypherium/swarm/api/client"
 	colorable "github.com/mattn/go-colorable"
 )
 

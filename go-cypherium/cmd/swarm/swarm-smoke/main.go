@@ -20,7 +20,7 @@ import (
 	"os"
 	"sort"
 
-	"github.com/cyphertestnet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 	colorable "github.com/mattn/go-colorable"
 
 	cli "gopkg.in/urfave/cli.v1"

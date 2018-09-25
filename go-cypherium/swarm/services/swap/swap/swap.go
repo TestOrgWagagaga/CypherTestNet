@@ -22,7 +22,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/swarm/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/log"
 )
 
 // SwAP Swarm Accounting Protocol with

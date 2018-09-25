@@ -24,8 +24,8 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/cyphertestnet/go-cypherium/crypto"
-	"github.com/cyphertestnet/go-cypherium/p2p"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p"
 )
 
 // Tests that datadirs can be successfully created, be them manually configured

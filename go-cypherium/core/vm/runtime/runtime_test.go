@@ -21,11 +21,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cyphertestnet/go-cypherium/accounts/abi"
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/core/state"
-	"github.com/cyphertestnet/go-cypherium/core/vm"
-	"github.com/cyphertestnet/go-cypherium/ethdb"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/abi"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/state"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/vm"
+	"github.com/cypherium/CypherTestNet/go-cypherium/ethdb"
 )
 
 func TestDefaults(t *testing.T) {

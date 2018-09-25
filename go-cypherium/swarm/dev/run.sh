@@ -80,7 +80,7 @@ run_image() {
     --rm \
     --hostname "${name}" \
     --name     "${name}" \
-    --volume   "${ROOT}:/go/src/github.com/cyphertestnet/go-cypherium" \
+    --volume   "${ROOT}:/go/src/github.com/cypherium/CypherTestNet/go-cypherium" \
     --volume   "/var/run/docker.sock:/var/run/docker.sock" \
     ${docker_args} \
     "${name}" \

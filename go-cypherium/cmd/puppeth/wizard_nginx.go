@@ -19,7 +19,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/cyphertestnet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 )
 
 // ensureVirtualHost checks whether a reverse-proxy is running on the specified

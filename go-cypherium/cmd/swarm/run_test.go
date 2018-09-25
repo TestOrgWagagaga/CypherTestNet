@@ -27,13 +27,13 @@ import (
 	"time"
 
 	"github.com/docker/docker/pkg/reexec"
-	"github.com/cyphertestnet/go-cypherium/accounts"
-	"github.com/cyphertestnet/go-cypherium/accounts/keystore"
-	"github.com/cyphertestnet/go-cypherium/internal/cmdtest"
-	"github.com/cyphertestnet/go-cypherium/node"
-	"github.com/cyphertestnet/go-cypherium/p2p"
-	"github.com/cyphertestnet/go-cypherium/rpc"
-	"github.com/cyphertestnet/go-cypherium/swarm"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/keystore"
+	"github.com/cypherium/CypherTestNet/go-cypherium/internal/cmdtest"
+	"github.com/cypherium/CypherTestNet/go-cypherium/node"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm"
 )
 
 func init() {

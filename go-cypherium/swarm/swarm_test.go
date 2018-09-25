@@ -25,10 +25,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/crypto"
-	"github.com/cyphertestnet/go-cypherium/rpc"
-	"github.com/cyphertestnet/go-cypherium/swarm/api"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/api"
 )
 
 // TestNewSwarm validates Swarm fields in repsect to the provided configuration.

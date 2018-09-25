@@ -24,8 +24,8 @@ import (
 
 	"strings"
 
-	"github.com/cyphertestnet/go-cypherium/cmd/utils"
-	"github.com/cyphertestnet/go-cypherium/internal/debug"
+	"github.com/cypherium/CypherTestNet/go-cypherium/cmd/utils"
+	"github.com/cypherium/CypherTestNet/go-cypherium/internal/debug"
 	"gopkg.in/urfave/cli.v1"
 )
 

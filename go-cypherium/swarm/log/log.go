@@ -1,8 +1,8 @@
 package log
 
 import (
-	l "github.com/cyphertestnet/go-cypherium/log"
-	"github.com/cyphertestnet/go-cypherium/metrics"
+	l "github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/metrics"
 )
 
 const (

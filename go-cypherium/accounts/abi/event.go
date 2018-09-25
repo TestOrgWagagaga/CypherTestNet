@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
 )
 
 // Event is an event potentially triggered by the EVM's LOG mechanism. The Event

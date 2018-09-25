@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/ethdb"
-	"github.com/cyphertestnet/go-cypherium/trie"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/ethdb"
+	"github.com/cypherium/CypherTestNet/go-cypherium/trie"
 	lru "github.com/hashicorp/golang-lru"
 )
 

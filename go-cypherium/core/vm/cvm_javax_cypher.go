@@ -5,8 +5,8 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/cvm"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/cvm"
 )
 
 func register_javax_cypher_cypnet() {

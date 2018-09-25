@@ -16,7 +16,7 @@
 
 package ethclient
 
-import "github.com/cyphertestnet/go-cypherium"
+import "github.com/cypherium/CypherTestNet/go-cypherium"
 
 // Verify that Client implements the ethereum interfaces.
 var (

@@ -19,7 +19,7 @@ package mem
 import (
 	"testing"
 
-	"github.com/cyphertestnet/go-cypherium/swarm/storage/mock/test"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/storage/mock/test"
 )
 
 // TestGlobalStore is running test for a GlobalStore

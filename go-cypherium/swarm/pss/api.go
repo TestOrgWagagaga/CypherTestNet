@@ -21,11 +21,11 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/cyphertestnet/go-cypherium/common/hexutil"
-	"github.com/cyphertestnet/go-cypherium/crypto"
-	"github.com/cyphertestnet/go-cypherium/p2p"
-	"github.com/cyphertestnet/go-cypherium/rpc"
-	"github.com/cyphertestnet/go-cypherium/swarm/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/hexutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/log"
 )
 
 // Wrapper for receiving pss messages when using the pss API

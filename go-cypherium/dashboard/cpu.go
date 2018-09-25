@@ -21,7 +21,7 @@ package dashboard
 import (
 	"syscall"
 
-	"github.com/cyphertestnet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 )
 
 // getProcessCPUTime retrieves the process' CPU time since program startup.

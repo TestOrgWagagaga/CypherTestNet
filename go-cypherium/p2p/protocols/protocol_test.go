@@ -23,10 +23,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/p2p"
-	"github.com/cyphertestnet/go-cypherium/p2p/discover"
-	"github.com/cyphertestnet/go-cypherium/p2p/simulations/adapters"
-	p2ptest "github.com/cyphertestnet/go-cypherium/p2p/testing"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/discover"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/simulations/adapters"
+	p2ptest "github.com/cypherium/CypherTestNet/go-cypherium/p2p/testing"
 )
 
 // handshake message type

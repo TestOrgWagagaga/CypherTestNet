@@ -45,12 +45,12 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"github.com/cyphertestnet/go-cypherium/crypto"
-	"github.com/cyphertestnet/go-cypherium/p2p"
-	"github.com/cyphertestnet/go-cypherium/p2p/discover"
-	"github.com/cyphertestnet/go-cypherium/p2p/simulations"
-	"github.com/cyphertestnet/go-cypherium/p2p/simulations/adapters"
-	"github.com/cyphertestnet/go-cypherium/rpc"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/discover"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/simulations"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/simulations/adapters"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
 	"gopkg.in/urfave/cli.v1"
 )
 

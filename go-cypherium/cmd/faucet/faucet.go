@@ -41,23 +41,23 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/accounts"
-	"github.com/cyphertestnet/go-cypherium/accounts/keystore"
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/core"
-	"github.com/cyphertestnet/go-cypherium/core/types"
-	"github.com/cyphertestnet/go-cypherium/eth"
-	"github.com/cyphertestnet/go-cypherium/eth/downloader"
-	"github.com/cyphertestnet/go-cypherium/ethclient"
-	"github.com/cyphertestnet/go-cypherium/ethstats"
-	"github.com/cyphertestnet/go-cypherium/les"
-	"github.com/cyphertestnet/go-cypherium/log"
-	"github.com/cyphertestnet/go-cypherium/node"
-	"github.com/cyphertestnet/go-cypherium/p2p"
-	"github.com/cyphertestnet/go-cypherium/p2p/discover"
-	"github.com/cyphertestnet/go-cypherium/p2p/discv5"
-	"github.com/cyphertestnet/go-cypherium/p2p/nat"
-	"github.com/cyphertestnet/go-cypherium/params"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/keystore"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/eth"
+	"github.com/cypherium/CypherTestNet/go-cypherium/eth/downloader"
+	"github.com/cypherium/CypherTestNet/go-cypherium/ethclient"
+	"github.com/cypherium/CypherTestNet/go-cypherium/ethstats"
+	"github.com/cypherium/CypherTestNet/go-cypherium/les"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/node"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/discover"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/discv5"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/nat"
+	"github.com/cypherium/CypherTestNet/go-cypherium/params"
 	"golang.org/x/net/websocket"
 )
 
@@ -447,7 +447,7 @@ func (f *faucet) apiHandler(conn *websocket.Conn) {
 		case *noauthFlag:
 			username, avatar, address, err = authNoAuth(msg.URL)
 		default:
-			err = errors.New("Something funky happened, please open an issue at https://github.com/cyphertestnet/go-cypherium/issues")
+			err = errors.New("Something funky happened, please open an issue at https://github.com/cypherium/CypherTestNet/go-cypherium/issues")
 		}
 		if err != nil {
 			if err = sendError(conn, err); err != nil {

@@ -21,7 +21,7 @@ package cypher
 import (
 	"errors"
 
-	"github.com/cyphertestnet/go-cypherium/p2p"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p"
 )
 
 // NodeInfo represents pi short summary of the information known about the host.

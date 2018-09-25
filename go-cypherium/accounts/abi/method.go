@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/cyphertestnet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
 )
 
 // Method represents a callable given a `Name` and whether the method is a constant.

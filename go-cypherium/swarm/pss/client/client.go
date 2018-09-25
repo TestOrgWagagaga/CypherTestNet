@@ -25,14 +25,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/common/hexutil"
-	"github.com/cyphertestnet/go-cypherium/p2p"
-	"github.com/cyphertestnet/go-cypherium/p2p/discover"
-	"github.com/cyphertestnet/go-cypherium/p2p/protocols"
-	"github.com/cyphertestnet/go-cypherium/rlp"
-	"github.com/cyphertestnet/go-cypherium/rpc"
-	"github.com/cyphertestnet/go-cypherium/swarm/log"
-	"github.com/cyphertestnet/go-cypherium/swarm/pss"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/hexutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/discover"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/protocols"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rlp"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/pss"
 )
 
 const (

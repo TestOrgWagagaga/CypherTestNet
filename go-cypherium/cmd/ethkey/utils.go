@@ -22,9 +22,9 @@ import (
 	"io/ioutil"
 	"strings"
 
-	"github.com/cyphertestnet/go-cypherium/cmd/utils"
-	"github.com/cyphertestnet/go-cypherium/console"
-	"github.com/cyphertestnet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/cmd/utils"
+	"github.com/cypherium/CypherTestNet/go-cypherium/console"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
 	"gopkg.in/urfave/cli.v1"
 )
 

@@ -25,9 +25,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/cmd/utils"
-	"github.com/cyphertestnet/go-cypherium/node"
-	"github.com/cyphertestnet/go-cypherium/rpc"
+	"github.com/cypherium/CypherTestNet/go-cypherium/cmd/utils"
+	"github.com/cypherium/CypherTestNet/go-cypherium/node"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
 	"github.com/gizak/termui"
 	"gopkg.in/urfave/cli.v1"
 )

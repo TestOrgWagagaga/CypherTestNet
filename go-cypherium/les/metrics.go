@@ -17,8 +17,8 @@
 package les
 
 import (
-	"github.com/cyphertestnet/go-cypherium/metrics"
-	"github.com/cyphertestnet/go-cypherium/p2p"
+	"github.com/cypherium/CypherTestNet/go-cypherium/metrics"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p"
 )
 
 var (

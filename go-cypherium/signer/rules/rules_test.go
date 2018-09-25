@@ -22,13 +22,13 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cyphertestnet/go-cypherium/accounts"
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/common/hexutil"
-	"github.com/cyphertestnet/go-cypherium/core/types"
-	"github.com/cyphertestnet/go-cypherium/internal/ethapi"
-	"github.com/cyphertestnet/go-cypherium/signer/core"
-	"github.com/cyphertestnet/go-cypherium/signer/storage"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/hexutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/internal/ethapi"
+	"github.com/cypherium/CypherTestNet/go-cypherium/signer/core"
+	"github.com/cypherium/CypherTestNet/go-cypherium/signer/storage"
 )
 
 const JS = `

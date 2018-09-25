@@ -19,7 +19,7 @@ package bloombits
 import (
 	"errors"
 
-	"github.com/cyphertestnet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
 )
 
 // errSectionOutOfBounds is returned if the user tried to add more bloom filters

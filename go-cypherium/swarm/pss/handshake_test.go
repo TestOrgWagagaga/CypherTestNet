@@ -24,7 +24,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/swarm/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/log"
 )
 
 // asymmetrical key exchange between two directly connected peers

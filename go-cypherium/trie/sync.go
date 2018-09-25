@@ -20,8 +20,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/ethdb"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/ethdb"
 	"gopkg.in/karalabe/cookiejar.v2/collections/prque"
 )
 

@@ -20,7 +20,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/p2p/discover"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/discover"
 )
 
 // Simulation provides a framework for running actions in a simulated network

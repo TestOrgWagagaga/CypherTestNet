@@ -21,9 +21,9 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/cyphertestnet/go-cypherium/core/state"
-	"github.com/cyphertestnet/go-cypherium/core/types"
-	"github.com/cyphertestnet/go-cypherium/params"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/state"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/params"
 )
 
 var (

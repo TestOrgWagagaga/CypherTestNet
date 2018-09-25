@@ -26,7 +26,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/cyphertestnet/go-cypherium/rlp"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rlp"
 )
 
 var (

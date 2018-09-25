@@ -29,13 +29,13 @@ import (
 
 	"golang.org/x/net/idna"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/contracts/ens"
-	"github.com/cyphertestnet/go-cypherium/core/types"
-	"github.com/cyphertestnet/go-cypherium/crypto"
-	"github.com/cyphertestnet/go-cypherium/swarm/log"
-	"github.com/cyphertestnet/go-cypherium/swarm/multihash"
-	"github.com/cyphertestnet/go-cypherium/swarm/storage"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/contracts/ens"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/multihash"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/storage"
 )
 
 const (

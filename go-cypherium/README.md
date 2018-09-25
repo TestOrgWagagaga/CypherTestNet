@@ -4,10 +4,10 @@ Official golang implementation of the Ethereum protocol.
 
 [![API Reference](
 https://camo.githubusercontent.com/915b7be44ada53c290eb157634330494ebe3e30a/68747470733a2f2f676f646f632e6f72672f6769746875622e636f6d2f676f6c616e672f6764646f3f7374617475732e737667
-)](https://godoc.org/github.com/cyphertestnet/go-cypherium)
-[![Go Report Card](https://goreportcard.com/badge/github.com/cyphertestnet/go-cypherium)](https://goreportcard.com/report/github.com/cyphertestnet/go-cypherium)
-[![Travis](https://travis-ci.org/cyphertestnet/go-cypherium.svg?branch=master)](https://travis-ci.org/cyphertestnet/go-cypherium)
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/cyphertestnet/go-cypherium?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+)](https://godoc.org/github.com/cypherium/CypherTestNet/go-cypherium)
+[![Go Report Card](https://goreportcard.com/badge/github.com/cypherium/CypherTestNet/go-cypherium)](https://goreportcard.com/report/github.com/cypherium/CypherTestNet/go-cypherium)
+[![Travis](https://travis-ci.org/cypherium/CypherTestNet/go-cypherium.svg?branch=master)](https://travis-ci.org/cypherium/CypherTestNet/go-cypherium)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/cypherium/CypherTestNet/go-cypherium?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 Automated builds are available for stable releases and the unstable master branch.
 Binary archives are published at https://cypher.ethereum.org/downloads/.
@@ -15,7 +15,7 @@ Binary archives are published at https://cypher.ethereum.org/downloads/.
 ## Building the source
 
 For prerequisites and detailed build instructions please read the
-[Installation Instructions](https://github.com/cyphertestnet/go-cypherium/wiki/Building-Ethereum)
+[Installation Instructions](https://github.com/cypherium/CypherTestNet/go-cypherium/wiki/Building-Ethereum)
 on the wiki.
 
 Building cypher requires both a Go (version 1.7 or later) and a C compiler.
@@ -34,8 +34,8 @@ The go-ethereum project comes with several wrappers/executables found in the `cm
 
 | Command    | Description |
 |:----------:|-------------|
-| **`cypher`** | Our main Ethereum CLI client. It is the entry point into the Ethereum network (main-, test- or private net), capable of running as a full node (default) archive node (retaining all historical state) or a light node (retrieving data live). It can be used by other processes as a gateway into the Ethereum network via JSON RPC endpoints exposed on top of HTTP, WebSocket and/or IPC transports. `cypher --help` and the [CLI Wiki page](https://github.com/cyphertestnet/go-cypherium/wiki/Command-Line-Options) for command line options. |
-| `abigen` | Source code generator to convert Ethereum contract definitions into easy to use, compile-time type-safe Go packages. It operates on plain [Ethereum contract ABIs](https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI) with expanded functionality if the contract bytecode is also available. However it also accepts Solidity source files, making development much more streamlined. Please see our [Native DApps](https://github.com/cyphertestnet/go-cypherium/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts) wiki page for details. |
+| **`cypher`** | Our main Ethereum CLI client. It is the entry point into the Ethereum network (main-, test- or private net), capable of running as a full node (default) archive node (retaining all historical state) or a light node (retrieving data live). It can be used by other processes as a gateway into the Ethereum network via JSON RPC endpoints exposed on top of HTTP, WebSocket and/or IPC transports. `cypher --help` and the [CLI Wiki page](https://github.com/cypherium/CypherTestNet/go-cypherium/wiki/Command-Line-Options) for command line options. |
+| `abigen` | Source code generator to convert Ethereum contract definitions into easy to use, compile-time type-safe Go packages. It operates on plain [Ethereum contract ABIs](https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI) with expanded functionality if the contract bytecode is also available. However it also accepts Solidity source files, making development much more streamlined. Please see our [Native DApps](https://github.com/cypherium/CypherTestNet/go-cypherium/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts) wiki page for details. |
 | `bootnode` | Stripped down version of our Ethereum client implementation that only takes part in the network node discovery protocol, but does not run any of the higher level application protocols. It can be used as a lightweight bootstrap node to aid in finding peers in private networks. |
 | `evm` | Developer utility version of the EVM (Ethereum Virtual Machine) that is capable of running bytecode snippets within a configurable environment and execution mode. Its purpose is to allow isolated, fine-grained debugging of EVM opcodes (e.g. `evm --code 60ff60ff --debug`). |
 | `gethrpctest` | Developer utility tool to support our [ethereum/rpc-test](https://github.com/ethereum/rpc-tests) test suite which validates baseline conformity to the [Ethereum JSON RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC) specs. Please see the [test suite's readme](https://github.com/ethereum/rpc-tests/blob/master/README.md) for details. |
@@ -46,7 +46,7 @@ The go-ethereum project comes with several wrappers/executables found in the `cm
 ## Running cypher
 
 Going through all the possible command line flags is out of scope here (please consult our
-[CLI Wiki page](https://github.com/cyphertestnet/go-cypherium/wiki/Command-Line-Options)), but we've
+[CLI Wiki page](https://github.com/cypherium/CypherTestNet/go-cypherium/wiki/Command-Line-Options)), but we've
 enumerated a few common parameter combos to get you up to speed quickly on how you can run your
 own Cypher instance.
 
@@ -66,9 +66,9 @@ This command will:
  * Start cypher in fast sync mode (default, can be changed with the `--syncmode` flag), causing it to
    download more data in exchange for avoiding processing the entire history of the Ethereum network,
    which is very CPU intensive.
- * Start up Cypher's built-in interactive [JavaScript console](https://github.com/cyphertestnet/go-cypherium/wiki/JavaScript-Console),
+ * Start up Cypher's built-in interactive [JavaScript console](https://github.com/cypherium/CypherTestNet/go-cypherium/wiki/JavaScript-Console),
    (via the trailing `console` subcommand) through which you can invoke all official [`web3` methods](https://github.com/ethereum/wiki/wiki/JavaScript-API)
-   as well as Cypher's own [management APIs](https://github.com/cyphertestnet/go-cypherium/wiki/Management-APIs).
+   as well as Cypher's own [management APIs](https://github.com/cypherium/CypherTestNet/go-cypherium/wiki/Management-APIs).
    This too is optional and if you leave it out you can always attach to an already running Cypher instance
    with `cypher attach`.
 
@@ -144,7 +144,7 @@ Do not forget `--rpcaddr 0.0.0.0`, if you want to access RPC from other containe
 As a developer, sooner rather than later you'll want to start interacting with Cypher and the Ethereum
 network via your own programs and not manually through the console. To aid this, Cypher has built-in
 support for a JSON-RPC based APIs ([standard APIs](https://github.com/ethereum/wiki/wiki/JSON-RPC) and
-[Cypher specific APIs](https://github.com/cyphertestnet/go-cypherium/wiki/Management-APIs)). These can be
+[Cypher specific APIs](https://github.com/cypherium/CypherTestNet/go-cypherium/wiki/Management-APIs)). These can be
 exposed via HTTP, WebSockets and IPC (unix sockets on unix based platforms, and named pipes on Windows).
 
 The IPC interface is enabled by default and exposes all the APIs supported by Cypher, whereas the HTTP
@@ -284,7 +284,7 @@ anyone on the internet, and are grateful for even the smallest of fixes!
 
 If you'd like to contribute to go-ethereum, please fork, fix, commit and send a pull request
 for the maintainers to review and merge into the main code base. If you wish to submit more
-complex changes though, please check up with the core devs first on [our gitter channel](https://gitter.im/cyphertestnet/go-cypherium)
+complex changes though, please check up with the core devs first on [our gitter channel](https://gitter.im/cypherium/CypherTestNet/go-cypherium)
 to ensure those changes are in line with the general philosophy of the project and/or get some
 early feedback which can make both your efforts much lighter as well as our review and merge
 procedures quick and simple.
@@ -297,7 +297,7 @@ Please make sure your contributions adhere to our coding guidelines:
  * Commit messages should be prefixed with the package(s) they modify.
    * E.g. "eth, rpc: make trace configs optional"
 
-Please see the [Developers' Guide](https://github.com/cyphertestnet/go-cypherium/wiki/Developers'-Guide)
+Please see the [Developers' Guide](https://github.com/cypherium/CypherTestNet/go-cypherium/wiki/Developers'-Guide)
 for more details on configuring your environment, managing project dependencies and testing procedures.
 
 ## License

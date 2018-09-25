@@ -24,7 +24,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
 )
 
 // Hash represents the 32 byte Keccak256 hash of arbitrary data.

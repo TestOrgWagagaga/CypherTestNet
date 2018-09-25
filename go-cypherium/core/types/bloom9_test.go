@@ -54,7 +54,7 @@ func TestBloom(t *testing.T) {
 import (
 	"testing"
 
-	"github.com/cyphertestnet/go-cypherium/core/state"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/state"
 )
 
 func TestBloom9(t *testing.T) {

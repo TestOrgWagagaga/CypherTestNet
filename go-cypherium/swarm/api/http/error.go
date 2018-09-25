@@ -28,10 +28,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/log"
-	"github.com/cyphertestnet/go-cypherium/metrics"
-	"github.com/cyphertestnet/go-cypherium/swarm/api"
-	l "github.com/cyphertestnet/go-cypherium/swarm/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/metrics"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/api"
+	l "github.com/cypherium/CypherTestNet/go-cypherium/swarm/log"
 )
 
 //templateMap holds a mapping of an HTTP error code to a template

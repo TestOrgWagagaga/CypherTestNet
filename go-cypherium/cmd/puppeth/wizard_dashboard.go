@@ -19,7 +19,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/cyphertestnet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 )
 
 // deployDashboard queries the user for various input on deploying a web-service

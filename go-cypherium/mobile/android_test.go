@@ -25,7 +25,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/internal/build"
+	"github.com/cypherium/CypherTestNet/go-cypherium/internal/build"
 )
 
 // androidTestClass is a Java class to do some lightweight tests against the Android
@@ -207,7 +207,7 @@ func TestAndroid(t *testing.T) {
 		}
 	}
 	// Generate the mobile bindings for Cypher and add the tester class
-	gobind := exec.Command("gomobile", "bind", "-javapkg", "org.ethereum", "github.com/cyphertestnet/go-cypherium/mobile")
+	gobind := exec.Command("gomobile", "bind", "-javapkg", "org.ethereum", "github.com/cypherium/CypherTestNet/go-cypherium/mobile")
 	if output, err := gobind.CombinedOutput(); err != nil {
 		t.Logf("%s", output)
 		t.Fatalf("failed to run gomobile bind: %v", err)

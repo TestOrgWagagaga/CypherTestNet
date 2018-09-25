@@ -26,8 +26,8 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 )
 
 // nodeDockerfile is the Dockerfile required to run an Ethereum node.

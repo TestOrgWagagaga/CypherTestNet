@@ -27,9 +27,9 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/cyphertestnet/go-cypherium/internal/jsre"
-	"github.com/cyphertestnet/go-cypherium/internal/web3ext"
-	"github.com/cyphertestnet/go-cypherium/rpc"
+	"github.com/cypherium/CypherTestNet/go-cypherium/internal/jsre"
+	"github.com/cypherium/CypherTestNet/go-cypherium/internal/web3ext"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
 	"github.com/mattn/go-colorable"
 	"github.com/peterh/liner"
 	"github.com/robertkrimen/otto"

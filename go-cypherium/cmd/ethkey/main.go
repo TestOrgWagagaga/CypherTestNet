@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/cyphertestnet/go-cypherium/cmd/utils"
+	"github.com/cypherium/CypherTestNet/go-cypherium/cmd/utils"
 	"gopkg.in/urfave/cli.v1"
 )
 

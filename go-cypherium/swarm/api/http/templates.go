@@ -20,7 +20,7 @@ import (
 	"html/template"
 	"path"
 
-	"github.com/cyphertestnet/go-cypherium/swarm/api"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/api"
 )
 
 type htmlListData struct {

@@ -19,7 +19,7 @@ package params
 import (
 	"math/big"
 
-	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
 )
 
 // DAOForkBlockExtra is the block header extra-data field to set for the DAO fork

@@ -25,7 +25,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/cyphertestnet/go-cypherium/ethdb"
+	"github.com/cypherium/CypherTestNet/go-cypherium/ethdb"
 )
 
 func newTestLDB() (*ethdb.LDBDatabase, func()) {

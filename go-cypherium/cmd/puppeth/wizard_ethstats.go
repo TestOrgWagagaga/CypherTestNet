@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/cyphertestnet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 )
 
 // deployEthstats queries the user for various input on deploying an ethstats

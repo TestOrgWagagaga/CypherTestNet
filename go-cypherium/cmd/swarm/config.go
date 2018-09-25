@@ -29,13 +29,13 @@ import (
 
 	cli "gopkg.in/urfave/cli.v1"
 
-	"github.com/cyphertestnet/go-cypherium/cmd/utils"
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/log"
-	"github.com/cyphertestnet/go-cypherium/node"
+	"github.com/cypherium/CypherTestNet/go-cypherium/cmd/utils"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/node"
 	"github.com/naoina/toml"
 
-	bzzapi "github.com/cyphertestnet/go-cypherium/swarm/api"
+	bzzapi "github.com/cypherium/CypherTestNet/go-cypherium/swarm/api"
 )
 
 const SWARM_VERSION = "0.3"
@@ -93,7 +93,7 @@ var tomlSettings = toml.Config{
 	MissingField: func(rt reflect.Type, field string) error {
 		link := ""
 		if unicode.IsUpper(rune(rt.Name()[0])) && rt.PkgPath() != "main" {
-			link = fmt.Sprintf(", check github.com/cyphertestnet/go-cypherium/swarm/api/config.go for available fields")
+			link = fmt.Sprintf(", check github.com/cypherium/CypherTestNet/go-cypherium/swarm/api/config.go for available fields")
 		}
 		return fmt.Errorf("field '%s' is not defined in %s%s", field, rt.String(), link)
 	},

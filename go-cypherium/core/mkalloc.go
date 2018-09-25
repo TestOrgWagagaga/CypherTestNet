@@ -34,8 +34,8 @@ import (
 	"sort"
 	"strconv"
 
-	"github.com/cyphertestnet/go-cypherium/core"
-	"github.com/cyphertestnet/go-cypherium/rlp"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rlp"
 )
 
 type allocItem struct{ Addr, Balance *big.Int }

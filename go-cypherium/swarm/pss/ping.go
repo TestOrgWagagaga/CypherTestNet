@@ -22,9 +22,9 @@ import (
 	"errors"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/p2p"
-	"github.com/cyphertestnet/go-cypherium/p2p/protocols"
-	"github.com/cyphertestnet/go-cypherium/swarm/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/protocols"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/log"
 )
 
 // Generic ping protocol implementation for

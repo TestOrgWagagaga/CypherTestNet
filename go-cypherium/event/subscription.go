@@ -21,7 +21,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/common/mclock"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/mclock"
 )
 
 // Subscription represents a stream of events. The carrier of the events is typically a

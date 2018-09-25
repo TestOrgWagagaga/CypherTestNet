@@ -23,7 +23,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/cyphertestnet/go-cypherium/swarm/storage/mock/test"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/storage/mock/test"
 )
 
 // TestDBStore is running a test.MockStore tests

@@ -23,8 +23,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/cyphertestnet/go-cypherium/core"
-	"github.com/cyphertestnet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 	"github.com/olekukonko/tablewriter"
 )
 

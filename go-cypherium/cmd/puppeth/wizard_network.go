@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/cyphertestnet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 )
 
 // manageServers displays a list of servers the user can disconnect from, and an

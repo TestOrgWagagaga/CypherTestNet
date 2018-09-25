@@ -21,12 +21,12 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/common/hexutil"
-	"github.com/cyphertestnet/go-cypherium/p2p"
-	"github.com/cyphertestnet/go-cypherium/rlp"
-	"github.com/cyphertestnet/go-cypherium/swarm/storage"
-	whisper "github.com/cyphertestnet/go-cypherium/whisper/whisperv5"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/hexutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rlp"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/storage"
+	whisper "github.com/cypherium/CypherTestNet/go-cypherium/whisper/whisperv5"
 )
 
 const (

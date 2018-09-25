@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/cyphertestnet/go-cypherium/node"
-	"github.com/cyphertestnet/go-cypherium/p2p"
-	"github.com/cyphertestnet/go-cypherium/rpc"
+	"github.com/cypherium/CypherTestNet/go-cypherium/node"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
 )
 
 // SampleService is a trivial network service that can be attached to a node for

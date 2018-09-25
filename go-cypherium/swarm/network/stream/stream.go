@@ -23,17 +23,17 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/metrics"
-	"github.com/cyphertestnet/go-cypherium/p2p"
-	"github.com/cyphertestnet/go-cypherium/p2p/discover"
-	"github.com/cyphertestnet/go-cypherium/p2p/protocols"
-	"github.com/cyphertestnet/go-cypherium/rpc"
-	"github.com/cyphertestnet/go-cypherium/swarm/log"
-	"github.com/cyphertestnet/go-cypherium/swarm/network"
-	"github.com/cyphertestnet/go-cypherium/swarm/network/stream/intervals"
-	"github.com/cyphertestnet/go-cypherium/swarm/pot"
-	"github.com/cyphertestnet/go-cypherium/swarm/state"
-	"github.com/cyphertestnet/go-cypherium/swarm/storage"
+	"github.com/cypherium/CypherTestNet/go-cypherium/metrics"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/discover"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/protocols"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/network"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/network/stream/intervals"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/pot"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/state"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/storage"
 )
 
 const (

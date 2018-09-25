@@ -23,9 +23,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/accounts/usbwallet"
-	"github.com/cyphertestnet/go-cypherium/log"
-	"github.com/cyphertestnet/go-cypherium/rpc"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/usbwallet"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rpc"
 	"github.com/robertkrimen/otto"
 )
 

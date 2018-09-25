@@ -16,7 +16,7 @@
 
 package core
 
-import "github.com/cyphertestnet/go-cypherium/common"
+import "github.com/cypherium/CypherTestNet/go-cypherium/common"
 
 // BadHashes represent a set of manually tracked bad hashes (usually hard forks)
 var BadHashes = map[common.Hash]bool{

@@ -20,7 +20,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/cyphertestnet/go-cypherium/core/asm"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/asm"
 )
 
 func Compile(fn string, src []byte, debug bool) (string, error) {

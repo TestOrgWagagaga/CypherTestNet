@@ -24,9 +24,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/cyphertestnet/go-cypherium/cmd/utils"
-	"github.com/cyphertestnet/go-cypherium/swarm/api"
-	swarm "github.com/cyphertestnet/go-cypherium/swarm/api/client"
+	"github.com/cypherium/CypherTestNet/go-cypherium/cmd/utils"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/api"
+	swarm "github.com/cypherium/CypherTestNet/go-cypherium/swarm/api/client"
 	"gopkg.in/urfave/cli.v1"
 )
 

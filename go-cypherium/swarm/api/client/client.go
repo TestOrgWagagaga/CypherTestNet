@@ -34,7 +34,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/cyphertestnet/go-cypherium/swarm/api"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/api"
 )
 
 var (

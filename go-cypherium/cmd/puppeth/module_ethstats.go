@@ -25,7 +25,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/cyphertestnet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 )
 
 // ethstatsDockerfile is the Dockerfile required to build an ethstats backend

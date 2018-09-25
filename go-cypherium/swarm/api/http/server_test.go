@@ -29,14 +29,14 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/common/hexutil"
-	"github.com/cyphertestnet/go-cypherium/log"
-	"github.com/cyphertestnet/go-cypherium/swarm/api"
-	swarm "github.com/cyphertestnet/go-cypherium/swarm/api/client"
-	"github.com/cyphertestnet/go-cypherium/swarm/multihash"
-	"github.com/cyphertestnet/go-cypherium/swarm/storage"
-	"github.com/cyphertestnet/go-cypherium/swarm/testutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/hexutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/api"
+	swarm "github.com/cypherium/CypherTestNet/go-cypherium/swarm/api/client"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/multihash"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/storage"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/testutil"
 )
 
 func init() {

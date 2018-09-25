@@ -23,7 +23,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/swarm/network"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/network"
 )
 
 var (

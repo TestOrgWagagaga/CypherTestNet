@@ -19,7 +19,7 @@ package api
 import (
 	"path"
 
-	"github.com/cyphertestnet/go-cypherium/swarm/storage"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/storage"
 )
 
 type Response struct {

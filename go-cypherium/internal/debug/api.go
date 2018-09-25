@@ -34,7 +34,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 )
 
 // Handler is the global debugging handler.

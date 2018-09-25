@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 )
 
 // Enabled is checked by the constructor functions for all of the

@@ -40,7 +40,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/cyphertestnet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
 )
 
 var dumpEnc bool

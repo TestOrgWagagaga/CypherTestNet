@@ -7,7 +7,7 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/metrics"
+	"github.com/cypherium/CypherTestNet/go-cypherium/metrics"
 )
 
 // a regexp for extracting the unit from time.Duration.String

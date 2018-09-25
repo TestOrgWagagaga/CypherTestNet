@@ -26,7 +26,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cyphertestnet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
 	"golang.org/x/tools/imports"
 )
 

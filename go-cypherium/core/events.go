@@ -17,8 +17,8 @@
 package core
 
 import (
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
 )
 
 // NewTxsEvent is posted when a batch of transactions enter the transaction pool.

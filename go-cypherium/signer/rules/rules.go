@@ -22,12 +22,12 @@ import (
 	"os"
 	"strings"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/internal/ethapi"
-	"github.com/cyphertestnet/go-cypherium/log"
-	"github.com/cyphertestnet/go-cypherium/signer/core"
-	"github.com/cyphertestnet/go-cypherium/signer/rules/deps"
-	"github.com/cyphertestnet/go-cypherium/signer/storage"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/internal/ethapi"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/signer/core"
+	"github.com/cypherium/CypherTestNet/go-cypherium/signer/rules/deps"
+	"github.com/cypherium/CypherTestNet/go-cypherium/signer/storage"
 	"github.com/robertkrimen/otto"
 )
 

@@ -18,7 +18,7 @@ package storage
 import (
 	"sync"
 
-	"github.com/cyphertestnet/go-cypherium/swarm/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/log"
 )
 
 // PutChunks adds chunks  to localstore

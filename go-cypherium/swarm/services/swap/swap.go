@@ -27,14 +27,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/accounts/abi/bind"
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/contracts/chequebook"
-	"github.com/cyphertestnet/go-cypherium/contracts/chequebook/contract"
-	"github.com/cyphertestnet/go-cypherium/core/types"
-	"github.com/cyphertestnet/go-cypherium/crypto"
-	"github.com/cyphertestnet/go-cypherium/swarm/log"
-	"github.com/cyphertestnet/go-cypherium/swarm/services/swap/swap"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/abi/bind"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/contracts/chequebook"
+	"github.com/cypherium/CypherTestNet/go-cypherium/contracts/chequebook/contract"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
+	"github.com/cypherium/CypherTestNet/go-cypherium/crypto"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/services/swap/swap"
 )
 
 // SwAP       Swarm Accounting Protocol with

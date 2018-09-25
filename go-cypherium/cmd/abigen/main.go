@@ -24,8 +24,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/cyphertestnet/go-cypherium/accounts/abi/bind"
-	"github.com/cyphertestnet/go-cypherium/common/compiler"
+	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/abi/bind"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/compiler"
 )
 
 var (

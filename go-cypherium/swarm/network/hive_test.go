@@ -22,8 +22,8 @@ import (
 	"os"
 	"testing"
 
-	p2ptest "github.com/cyphertestnet/go-cypherium/p2p/testing"
-	"github.com/cyphertestnet/go-cypherium/swarm/state"
+	p2ptest "github.com/cypherium/CypherTestNet/go-cypherium/p2p/testing"
+	"github.com/cypherium/CypherTestNet/go-cypherium/swarm/state"
 )
 
 func newHiveTester(t *testing.T, params *HiveParams, n int, store state.Store) (*bzzTester, *Hive) {

@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/cyphertestnet/go-cypherium/event"
+	"github.com/cypherium/CypherTestNet/go-cypherium/event"
 )
 
 // This example demonstrates how SubscriptionScope can be used to control the lifetime of

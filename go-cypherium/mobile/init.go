@@ -22,7 +22,7 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/cyphertestnet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 )
 
 func init() {

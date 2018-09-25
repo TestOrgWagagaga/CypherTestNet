@@ -25,14 +25,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/common/mclock"
-	"github.com/cyphertestnet/go-cypherium/event"
-	"github.com/cyphertestnet/go-cypherium/log"
-	"github.com/cyphertestnet/go-cypherium/p2p/discover"
-	"github.com/cyphertestnet/go-cypherium/p2p/discv5"
-	"github.com/cyphertestnet/go-cypherium/p2p/nat"
-	"github.com/cyphertestnet/go-cypherium/p2p/netutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/mclock"
+	"github.com/cypherium/CypherTestNet/go-cypherium/event"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/discover"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/discv5"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/nat"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/netutil"
 )
 
 const (

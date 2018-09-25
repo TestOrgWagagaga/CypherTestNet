@@ -19,7 +19,7 @@ package vm
 import (
 	"math/big"
 
-	"github.com/cyphertestnet/go-cypherium/params"
+	"github.com/cypherium/CypherTestNet/go-cypherium/params"
 )
 
 // Gas costs

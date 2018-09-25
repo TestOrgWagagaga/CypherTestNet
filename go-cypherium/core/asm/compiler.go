@@ -22,8 +22,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/cyphertestnet/go-cypherium/common/math"
-	"github.com/cyphertestnet/go-cypherium/core/vm"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common/math"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/vm"
 )
 
 // Compiler contains information about the parsed source

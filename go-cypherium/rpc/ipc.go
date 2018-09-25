@@ -20,8 +20,8 @@ import (
 	"context"
 	"net"
 
-	"github.com/cyphertestnet/go-cypherium/log"
-	"github.com/cyphertestnet/go-cypherium/p2p/netutil"
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/p2p/netutil"
 )
 
 // ServeListener accepts connections on l, serving JSON-RPC on them.

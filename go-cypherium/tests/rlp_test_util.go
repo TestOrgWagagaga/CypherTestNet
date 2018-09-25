@@ -24,7 +24,7 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/cyphertestnet/go-cypherium/rlp"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rlp"
 )
 
 // RLPTest is the JSON structure of a single RLP test.

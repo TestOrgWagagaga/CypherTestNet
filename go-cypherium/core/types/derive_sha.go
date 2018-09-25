@@ -19,9 +19,9 @@ package types
 import (
 	"bytes"
 
-	"github.com/cyphertestnet/go-cypherium/common"
-	"github.com/cyphertestnet/go-cypherium/rlp"
-	"github.com/cyphertestnet/go-cypherium/trie"
+	"github.com/cypherium/CypherTestNet/go-cypherium/common"
+	"github.com/cypherium/CypherTestNet/go-cypherium/rlp"
+	"github.com/cypherium/CypherTestNet/go-cypherium/trie"
 )
 
 type DerivableList interface {
