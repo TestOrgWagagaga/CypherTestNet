@@ -460,13 +460,13 @@ func (self *worker) commitNewWork() {
 		log.Error("Failed to fetch pending transactions", "err", err)
 		return
 	}
-	if len(pending) == 0 {
-		log.Debug("Txpool have no transactions")
-		wait := 1 * time.Millisecond
-		time.Sleep(wait)
-		self.chainReCommitCh <- &ReCommitNewWork{Restart: true}
-		return
-	}
+	// if len(pending) == 0 {
+	// 	log.Debug("Txpool have no transactions")
+	// 	wait := 1 * time.Millisecond
+	// 	time.Sleep(wait)
+	// 	self.chainReCommitCh <- &ReCommitNewWork{Restart: true}
+	// 	return
+	// }
 	txs := types.NewTransactionsByPriceAndNonce(self.current.signer, pending)
 	work.commitTransactions(self.mux, txs, self.chain, self.coinbase)
 
