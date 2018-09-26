@@ -1,1 +1,1 @@
-if pgrep cypher; then pkill cypher; fi
+pkill -9 cypher
