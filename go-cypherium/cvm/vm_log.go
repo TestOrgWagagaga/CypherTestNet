@@ -6,6 +6,7 @@ import (
 	"os"
 	"runtime/debug"
 
+	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 	"github.com/fatih/color"
 )
 
@@ -39,6 +40,8 @@ func (this *LoggerFactory) NewLogger(category string, level int, logfile string)
 
 	f, err1 := os.OpenFile(path, os.O_RDWR, 0666)
 	if err1 != nil {
+		log.Info("path", "path", path)
+		log.Info("err1", "err1", err1)
 		Fatal("File does not exists or cannot be created")
 	}
 
