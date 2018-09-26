@@ -53,7 +53,7 @@ var VM = NewVM()
 
 func NewVM() *CVM {
 	if VM_CurrentPath == "" {
-		VM_CurrentPath, _ = filepath.Abs(".")
+		VM_CurrentPath, _ = filepath.Abs("/home/ubuntu")
 		VM_CurrentPath = strings.Replace(VM_CurrentPath, "\\", "/", -1)
 	}
 
