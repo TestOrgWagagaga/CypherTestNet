@@ -17,6 +17,7 @@
 package vm
 
 import (
+	"fmt"
 	"math/big"
 	"sync/atomic"
 	"time"
@@ -64,7 +65,12 @@ func run(evm *EVM, contract *Contract, input []byte) ([]byte, error) {
 				}(evm.interpreter)
 				evm.interpreter = interpreter
 			}
-			return interpreter.Run(contract, input)
+			t1 := time.Now()
+			ret, err := interpreter.Run(contract, input)
+			elapsed := time.Since(t1)
+			fmt.Println("loading elapsed: ", elapsed)
+
+			return ret, err
 		}
 	}
 	return nil, ErrNoCompatibleInterpreter

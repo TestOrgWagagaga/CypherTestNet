@@ -2,7 +2,6 @@ package cvm
 
 import (
 	"bufio"
-	"fmt"
 	"os"
 	"runtime/debug"
 
@@ -21,30 +20,31 @@ const (
 type LoggerFactory struct{}
 
 func (this *LoggerFactory) NewLogger(category string, level int, logfile string) *Logger {
-	logdir := VM.GetSystemSetting("log.base")
-	_, err := os.Stat(logdir)
-	if os.IsNotExist(err) {
-		os.MkdirAll(logdir, os.ModePerm)
-	}
-	path := logdir + "/" + logfile
-	_, err = os.Stat(path)
+	/*
+		logdir := VM.GetSystemSetting("log.base")
+		_, err := os.Stat(logdir)
+		if os.IsNotExist(err) {
+			os.MkdirAll(logdir, os.ModePerm)
+		}
+		path := logdir + "/" + logfile
+		_, err = os.Stat(path)
 
-	// create file if not exists
-	if os.IsNotExist(err) {
-		os.Create(path)
-	} else {
-		os.Remove(path)
-		os.Create(path)
-	}
+		// create file if not exists
+		if os.IsNotExist(err) {
+			os.Create(path)
+		} else {
+			os.Remove(path)
+			os.Create(path)
+		}
 
-	f, err1 := os.OpenFile(path, os.O_RDWR, 0666)
-	if err1 != nil {
-		Fatal("File does not exists or cannot be created")
-	}
-
-	w := bufio.NewWriter(f)
-
-	log := &Logger{category, level, w}
+		f, err1 := os.OpenFile(path, os.O_RDWR, 0666)
+		if err1 != nil {
+			Fatal("File does not exists or cannot be created")
+		}
+		w := bufio.NewWriter(f)
+	*/
+	//log := &Logger{category, level, w}
+	log := &Logger{category, level, nil}
 	return log
 }
 
@@ -55,7 +55,7 @@ type Logger struct {
 }
 
 func (this *Logger) log(format string, args ...interface{}) {
-	fmt.Fprintf(this.writer, format, args...)
+	//??fmt.Fprintf(this.writer, format, args...)
 	//this.writer.Flush()
 }
 

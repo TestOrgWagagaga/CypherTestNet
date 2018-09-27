@@ -28,6 +28,8 @@ import (
 	"strings"
 	"time"
 
+	onetLog "github.com/dedis/onet/log"
+	"github.com/elastic/gosigar"
 	"github.com/cypherium/CypherTestNet/go-cypherium/accounts"
 	"github.com/cypherium/CypherTestNet/go-cypherium/accounts/keystore"
 	"github.com/cypherium/CypherTestNet/go-cypherium/cmd/utils"
@@ -39,8 +41,6 @@ import (
 	"github.com/cypherium/CypherTestNet/go-cypherium/log"
 	"github.com/cypherium/CypherTestNet/go-cypherium/metrics"
 	"github.com/cypherium/CypherTestNet/go-cypherium/node"
-	onetLog "github.com/dedis/onet/log"
-	"github.com/elastic/gosigar"
 	"gopkg.in/urfave/cli.v1"
 )
 

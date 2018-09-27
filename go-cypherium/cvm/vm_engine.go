@@ -154,16 +154,16 @@ func (this *ExecutionEngine) NewThread(name string, run func(), exitHook func())
 
 		// pause here to wait start command
 		for !thread.started {
-			VM.ExecutionEngine.threadsLogger.Info("[thread ] Created thread '%s' #%d but wait to start\n", VM.CurrentThread().name, VM.CurrentThread().id)
+			//?? VM.ExecutionEngine.threadsLogger.Info("[thread ] Created thread '%s' #%d but wait to start\n", VM.CurrentThread().name, VM.CurrentThread().id)
 			thread.started = <-thread.ch == _start
 		}
 
-		VM.ExecutionEngine.threadsLogger.Info("[thread ] Start thread '%s' #%d\n", VM.CurrentThread().name, VM.CurrentThread().id)
+		//?? VM.ExecutionEngine.threadsLogger.Info("[thread ] Start thread '%s' #%d\n", VM.CurrentThread().name, VM.CurrentThread().id)
 		// start Java code execution
 		thread.runBlock.Do()
 
 		// prepare to exit
-		VM.ExecutionEngine.threadsLogger.Info("[thread ] Exit thread '%s' %d \n", thread.name, thread.id)
+		//?? VM.ExecutionEngine.threadsLogger.Info("[thread ] Exit thread '%s' %d \n", thread.name, thread.id)
 		this.UnregisterThread(thread)
 		VM_WG.Done()
 	}()
@@ -246,7 +246,7 @@ func (this *ExecutionEngine) InvokeMethod(method *Method, params ...Value) Value
 		if !method.isNative() {
 			Fatal("%s Not a native method", method.Qualifier())
 		}
-		thread.Debug("\n%s\t🔸[%s]%s", repeat("\t", thread.indexOf(thread.currentFrame())), thread.name, method.Qualifier())
+		//?? thread.Debug("\n%s\t🔸[%s]%s", repeat("\t", thread.indexOf(thread.currentFrame())), thread.name, method.Qualifier())
 
 		fun, found := VM.FindNative(method.Qualifier())
 
@@ -294,16 +294,18 @@ const (
 The whole project should use panic only here !!!!!
 */
 func (this *ExecutionEngine) Throw0(throwable Reference, thrownReason string) {
+	/*??
 	thread := this.CurrentThread()
 	if thread.currentFrame() != nil {
 		thread.Info("\n%s🔥Exception %s: %s at %s (%s:%d)",
-			repeat("\t", thread.indexOf(thread.currentFrame()) /*+1*/),
+			repeat("\t", thread.indexOf(thread.currentFrame()) ),//+1
 			thrownReason,
 			throwable.Class().name,
 			thread.currentFrame().method.Qualifier(),
 			thread.currentFrame().getSourceFile(),
 			thread.currentFrame().getLineNumber())
 	}
+	*/
 	panic(throwable)
 }
 

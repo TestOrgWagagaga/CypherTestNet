@@ -832,6 +832,9 @@ func (this *BootstrapClassLoader) LoadClass(N string, triggerReason *ClassTrigge
 func (this *BootstrapClassLoader) findClass(className string) []byte {
 	bytecode, err := this.classPath.ReadClass(className)
 	if err != nil {
+		if className == "java/lang/Thread" {
+			panic("not exists jdk class!") //os.Exit(5)
+		}
 		VM.Throw("java/lang/ClassNotFoundException", className)
 	}
 

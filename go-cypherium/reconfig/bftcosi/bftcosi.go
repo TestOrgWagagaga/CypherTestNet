@@ -20,19 +20,19 @@ import (
 	"sync"
 	"time"
 
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/state"
+	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
+	clog "github.com/cypherium/CypherTestNet/go-cypherium/log"
+	"github.com/cypherium/CypherTestNet/go-cypherium/reconfig/bftcosi/cosi"
 	"github.com/dedis/cothority"
 	"github.com/dedis/kyber"
 	"github.com/dedis/kyber/sign/schnorr"
 	"github.com/dedis/kyber/util/encoding"
 	"github.com/dedis/onet"
 	"github.com/dedis/onet/log"
-	"github.com/cypherium/CypherTestNet/go-cypherium/core/state"
-	"github.com/cypherium/CypherTestNet/go-cypherium/core/types"
-	clog "github.com/cypherium/CypherTestNet/go-cypherium/log"
-	"github.com/cypherium/CypherTestNet/go-cypherium/reconfig/bftcosi/cosi"
 )
 
-const defaultTimeout = 5 * time.Second
+const defaultTimeout = 60 * time.Second
 
 const defaultTimeoutViewChage = 10 * time.Second
 

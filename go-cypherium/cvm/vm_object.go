@@ -47,12 +47,12 @@ func NewMonitor(obj *Object) *Monitor {
 
 func (self *Monitor) Enter() {
 	thread := VM.CurrentThread()
-	VM.ExecutionEngine.threadsLogger.Info("[monitor] thread '%s' #%d enter monitor of object %p (%s) -> entry: %d \n", thread.name, thread.id, self.object, self.object.header.class.Name(), self.entryCount)
+	//?? VM.ExecutionEngine.threadsLogger.Info("[monitor] thread '%s' #%d enter monitor of object %p (%s) -> entry: %d \n", thread.name, thread.id, self.object, self.object.header.class.Name(), self.entryCount)
 
 	self.l.Lock()
 	if self.owner == thread {
 		self.entryCount++
-		VM.ExecutionEngine.threadsLogger.Info("[monitor] thread '%s' #%d enter already own monitor of object %p (%s)  -> entry: %d \n", thread.name, thread.id, self.object, self.object.header.class.Name(), self.entryCount)
+		//?? VM.ExecutionEngine.threadsLogger.Info("[monitor] thread '%s' #%d enter already own monitor of object %p (%s)  -> entry: %d \n", thread.name, thread.id, self.object, self.object.header.class.Name(), self.entryCount)
 		self.l.Unlock()
 		return
 	}
@@ -67,12 +67,12 @@ func (self *Monitor) Enter() {
 	self.waits.Remove(tid2str(thread.id))
 	self.l.Unlock()
 
-	VM.ExecutionEngine.threadsLogger.Info("[monitor] thread '%s' #%d acquire monitor of object %p (%s) -> entry: %d \n", thread.name, thread.id, self.object, self.object.header.class.Name(), self.entryCount)
+	//?? 	VM.ExecutionEngine.threadsLogger.Info("[monitor] thread '%s' #%d acquire monitor of object %p (%s) -> entry: %d \n", thread.name, thread.id, self.object, self.object.header.class.Name(), self.entryCount)
 }
 
 func (self *Monitor) Exit() {
 	thread := VM.CurrentThread()
-	VM.ExecutionEngine.threadsLogger.Info("[monitor] thread '%s' #%d exit monitor of object %p (%s) -> entry: %d \n", thread.name, thread.id, self.object, self.object.header.class.Name(), self.entryCount)
+	//?? VM.ExecutionEngine.threadsLogger.Info("[monitor] thread '%s' #%d exit monitor of object %p (%s) -> entry: %d \n", thread.name, thread.id, self.object, self.object.header.class.Name(), self.entryCount)
 
 	self.l.Lock()
 	var _unlock bool
@@ -82,13 +82,13 @@ func (self *Monitor) Exit() {
 			self.owner = nil
 			_unlock = true
 		}
-		VM.ExecutionEngine.threadsLogger.Info("[monitor] thread '%s' #%d exit already own monitor of object %p (%s) -> entry: %d \n", thread.name, thread.id, self.object, self.object.header.class.Name(), self.entryCount)
+		//?? VM.ExecutionEngine.threadsLogger.Info("[monitor] thread '%s' #%d exit already own monitor of object %p (%s) -> entry: %d \n", thread.name, thread.id, self.object, self.object.header.class.Name(), self.entryCount)
 	}
 	self.l.Unlock()
 
 	if _unlock {
 		self.lock.Unlock()
-		VM.ExecutionEngine.threadsLogger.Info("[monitor] thread '%s' #%d release monitor of object %p (%s) -> entry: %d \n", thread.name, thread.id, self.object, self.object.header.class.Name(), self.entryCount)
+		//?? VM.ExecutionEngine.threadsLogger.Info("[monitor] thread '%s' #%d release monitor of object %p (%s) -> entry: %d \n", thread.name, thread.id, self.object, self.object.header.class.Name(), self.entryCount)
 	}
 }
 
@@ -105,7 +105,7 @@ const _wait_timeout = 2
 
 func (self *Monitor) Wait(millis int64) (interrupted bool) {
 	thread := VM.CurrentThread()
-	VM.ExecutionEngine.threadsLogger.Info("[monitor] thread '%s' #%d wait of object %p (%s) -> entry: %d \n", thread.name, thread.id, self.object, self.object.header.class.Name(), self.entryCount)
+	//?? VM.ExecutionEngine.threadsLogger.Info("[monitor] thread '%s' #%d wait of object %p (%s) -> entry: %d \n", thread.name, thread.id, self.object, self.object.header.class.Name(), self.entryCount)
 
 	if thread.interrupted {
 		thread.interrupted = false
@@ -145,7 +145,7 @@ func (self *Monitor) Wait(millis int64) (interrupted bool) {
 		}
 	}
 
-	VM.ExecutionEngine.threadsLogger.Info("[monitor] thread '%s' #%d wait end of object %p (%s) -> entry: %d \n", thread.name, thread.id, self.object, self.object.header.class.Name(), self.entryCount)
+	//?? 	VM.ExecutionEngine.threadsLogger.Info("[monitor] thread '%s' #%d wait end of object %p (%s) -> entry: %d \n", thread.name, thread.id, self.object, self.object.header.class.Name(), self.entryCount)
 
 	self.Enter() // again compete to acquire owner
 
@@ -154,7 +154,7 @@ func (self *Monitor) Wait(millis int64) (interrupted bool) {
 
 func (self *Monitor) NotifyAll() {
 	thread := VM.CurrentThread()
-	VM.ExecutionEngine.threadsLogger.Info("[monitor] thread '%s' #%d notifyAll of object %p (%s) -> entry: %d \n", thread.name, thread.id, self.object, self.object.header.class.Name(), self.entryCount)
+	//?? VM.ExecutionEngine.threadsLogger.Info("[monitor] thread '%s' #%d notifyAll of object %p (%s) -> entry: %d \n", thread.name, thread.id, self.object, self.object.header.class.Name(), self.entryCount)
 
 	select {
 	case self.ch <- _notify:

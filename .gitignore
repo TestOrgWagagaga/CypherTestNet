@@ -10,3 +10,8 @@ go-cypherium/cmd/cypher/testdata/
 go-cypherium/cmd/cypher/public.toml
 
 go-cypherium/cmd/cypher/debug*
+
+go-cypherium/core/blockchain.go
+go-cypherium/miner/agent.go
+go-cypherium/reconfig/bftcosi/bftcosi.go
+go-cypherium/vendor/github.com/dedis
