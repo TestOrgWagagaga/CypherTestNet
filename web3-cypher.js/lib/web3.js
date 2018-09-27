@@ -50,6 +50,7 @@ function Web3 (provider) {
     this._requestManager = new RequestManager(provider);
     this.currentProvider = provider;
     this.cph = new Eth(this);
+    this.cph.isJava = false;
     this.db = new DB(this);
     this.shh = new Shh(this);
     this.net = new Net(this);
@@ -83,6 +84,10 @@ Web3.prototype.setProvider = function (provider) {
 Web3.prototype.reset = function (keepIsSyncing) {
     this._requestManager.reset(keepIsSyncing);
     this.settings = new Settings();
+};
+
+Web3.prototype.setIsJava = function (isJava) {
+    this.cph.isJava = isJava;
 };
 
 Web3.prototype.BigNumber = BigNumber;

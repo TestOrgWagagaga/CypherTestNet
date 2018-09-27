@@ -305,6 +305,7 @@ var Contract = function (eth, abi, address) {
     this.transactionHash = null;
     this.address = address;
     this.abi = abi;
+    // this.isJava = false;
 };
 
 module.exports = ContractFactory;

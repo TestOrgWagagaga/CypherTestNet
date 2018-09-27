@@ -89,7 +89,11 @@ SolidityFunction.prototype.toPayload = function (args) {
     }
     this.validateArgs(args);
     options.to = this._address;
-    options.data = '0x' + this.signature() + coder.encodeParams(this._inputTypes, args);
+    // options.data = '0x' + this.signature() + coder.encodeParams(this._inputTypes, args);
+    if(this._eth.isJava)
+        options.data = '0xfefefefe' + coder.encodeParam("bytes32", this._name) + coder.encodeParams(this._inputTypes, args);
+    else
+        options.data = '0x' + this.signature() + coder.encodeParams(this._inputTypes, args);
     return options;
 };
 
