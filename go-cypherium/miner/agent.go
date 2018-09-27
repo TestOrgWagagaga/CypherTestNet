@@ -19,6 +19,7 @@ package miner
 import (
 	"bytes"
 	"sync"
+	"time"
 
 	"sync/atomic"
 
@@ -108,10 +109,13 @@ func (self *CpuAgent) mine(work *Work, stop <-chan struct{}) {
 		m := make([]byte, 0)
 		buff := bytes.NewBuffer(m)
 		result.EncodeRLP(buff)
+		tstart := time.Now()
 		self.cypherEngine.Txblockconsensus(buff.Bytes())
 		r := <-self.cypherEngine.Txblockdonechan
 		if r == true {
-			log.Info("Successfully consensus new block", "number", result.Number(), "hash", result.Hash())
+			timeused := time.Now().Sub(tstart).Seconds()
+			log.Bftcosi("Successfully consensus new block", "number", result.Number(), "hash", result.Hash())
+			log.Bftcosi("Status", "txs", len(result.Transactions()), "TPS", float64(len(result.Transactions()))/timeused)
 			self.returnCh <- &Result{work, result}
 		} else {
 			log.Warn("BFTCOSI consensus failed")
