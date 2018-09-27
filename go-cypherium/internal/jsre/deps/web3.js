@@ -2527,6 +2527,7 @@ function Web3 (provider) {
     this._requestManager = new RequestManager(provider);
     this.currentProvider = provider;
     this.cph = new Eth(this);
+    this.cph.isJava = false;
     this.db = new DB(this);
     this.shh = new Shh(this);
     this.net = new Net(this);
@@ -2560,6 +2561,10 @@ Web3.prototype.setProvider = function (provider) {
 Web3.prototype.reset = function (keepIsSyncing) {
     this._requestManager.reset(keepIsSyncing);
     this.settings = new Settings();
+};
+
+Web3.prototype.setIsJava = function (isJava) {
+    this.cph.isJava = isJava;
 };
 
 Web3.prototype.BigNumber = BigNumber;
@@ -3093,6 +3098,7 @@ var Contract = function (eth, abi, address) {
     this.transactionHash = null;
     this.address = address;
     this.abi = abi;
+    // this.isJava = false;
 };
 
 module.exports = ContractFactory;
@@ -4049,7 +4055,11 @@ SolidityFunction.prototype.toPayload = function (args) {
     }
     this.validateArgs(args);
     options.to = this._address;
-    options.data = '0x' + this.signature() + coder.encodeParams(this._inputTypes, args);
+    // options.data = '0x' + this.signature() + coder.encodeParams(this._inputTypes, args);
+    if(this._eth.isJava)
+        options.data = '0xfefefefe' + coder.encodeParam("bytes32", this._name) + coder.encodeParams(this._inputTypes, args);
+    else
+        options.data = '0x' + this.signature() + coder.encodeParams(this._inputTypes, args);
     return options;
 };
 
@@ -5875,7 +5885,7 @@ module.exports = Shh;
  * @author Alex Beregszaszi <alex@rtfs.hu>
  * @date 2016
  *
- * Reference: https://github.com/cypherium/CypherTestNet/go-cypherium/blob/swarm/internal/web3ext/web3ext.go#L33
+ * Reference: https://github.com/ethereum/go-ethereum/blob/swarm/internal/web3ext/web3ext.go#L33
  */
 
 "use strict";
