@@ -2533,7 +2533,6 @@ function Web3 (provider) {
     this.personal = new Personal(this);
     this.bzz = new Swarm(this);
     this.settings = new Settings();
-    this.cph.isJava = false;
     
     this.version = {
         api: version.version
@@ -2557,10 +2556,6 @@ Web3.providers = {
 Web3.prototype.setProvider = function (provider) {
     this._requestManager.setProvider(provider);
     this.currentProvider = provider;
-};
-
-Web3.prototype.setIsJava = function (isJava) {
-    this.cph.isJava = isJava;
 };
 
 Web3.prototype.reset = function (keepIsSyncing) {
@@ -4055,10 +4050,7 @@ SolidityFunction.prototype.toPayload = function (args) {
     }
     this.validateArgs(args);
     options.to = this._address;
-  	if(this._eth.isJava)
-	    	options.data = '0xfefefefe' + coder.encodeParam("bytes32", this._name) + coder.encodeParams(this._inputTypes, args);
-  	else
-	    	options.data = '0x' + this.signature() + coder.encodeParams(this._inputTypes, args);
+   	options.data = '0x' + this.signature() + coder.encodeParams(this._inputTypes, args)+ coder.encodeParam("bytes32", this._name);
     return options;
 };
 
