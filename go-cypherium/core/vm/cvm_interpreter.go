@@ -59,11 +59,10 @@ func (in *JVMInterpreter) Run(contract *Contract, input []byte) (ret []byte, err
 	methodName := ""
 	methodArgs := []byte{}
 
-	if n >= (4+NP) && input[0] == 0xfe && input[1] == 0xfe && input[2] == 0xfe && input[3] == 0xfe {
-		i := 4
-		methodName = string(VM_GetSBytes(input[i:], NP))
-		if n > i+NP {
-			methodArgs = input[i+NP:]
+	if n >= (4+NP) { //&& input[0] == 0xfe && input[1] == 0xfe && input[2] == 0xfe && input[3] == 0xfe {
+		methodName = string(VM_GetSBytes(input[n-NP:n], NP))
+		if n-NP > 4 {
+			methodArgs = input[4:n-NP]
 		}
 	}
 
@@ -149,6 +148,7 @@ func (in *JVMInterpreter) startVM(memCode []byte, className, methodName string, 
 					return res.Bytes(), nil
 				}
 				s := VM_HashByteToRes(res.Bytes())
+
 				//fmt.Println(s)
 				return s, nil
 			} else if methodName == "decimals()" {

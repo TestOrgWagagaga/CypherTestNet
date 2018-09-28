@@ -14,7 +14,7 @@
             "host": "127.0.0.1",
             "program": "${fileDirname}",
             "env": {},
-            "args": ["--onetdir", "co1/private.toml", "--publickeydir", "public.toml","--datadir","co1","--networkid","123666","--port","5000","--rpcport","8000","--verbosity","4","--rpc","--rpccorsdomain","*","--rpcaddr","0.0.0.0","--rpcapi","eth,web3,personal","--nodiscover" ],
+            "args": ["--onetdir", "co1/private.toml", "--publickeydir", "public.toml","--datadir","co1","--networkid","123666","--port","5000","--rpcport","8000","--verbosity","4","--rpc","--rpccorsdomain","*","--rpcapi","eth,web3,personal","--rpcaddr","0.0.0.0","--nodiscover" ],
             "showLog": false
         }
     ]
