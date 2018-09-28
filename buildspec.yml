@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - sudo apt -y update
+      - sudo apt -y upgrade
+      - sudo apt -y install pip
+      - pip install --upgrade pip
+      - pip install awscli
+      - sudo apt -y install make
+      - sudo apt -y install golang-1.10-go
+      - sudo ln -s /usr/lib/go-1.10/bin/go /usr/bin/go
+  build:
+    commands:
+      - cd go-cypherium
+      - sudo make cypher
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: no
